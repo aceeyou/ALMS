@@ -8,15 +8,15 @@ html {
   font-family: "Rubik", sans-serif;
 }
 
-/* ::-webkit-scrollbar {
-  width: 5px;
-  background-color: rgb(184, 184, 184);
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(33, 33, 36);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(218, 214, 214);
-  border-radius: 50%;
-} */
+  background-color: rgb(218, 218, 218);
+  border-radius: 3px;
+}
 
 ::-webkit-input-placeholder {
   text-align: center;
@@ -38,7 +38,7 @@ nav {
   padding-left: 2%;
   justify-content: space-between;
   /* background: linear-gradient(to right, rgb(35, 48, 221), rgb(233, 94, 14)); */
-  background: linear-gradient(to right, rgb(165, 26, 165), rgb(185, 29, 185));
+  background: linear-gradient(to right, rgb(221, 40, 115), rgb(170, 14, 79));
   z-index: 5;
 }
 
@@ -334,14 +334,14 @@ main {
 
 #login .container {
   position: relative;
-  width: 45%;
-  height: 60%;
+  width: 700px;
+  height: 470px;
   border-radius: 30px;
   background-color: rgba(240, 248, 255, 0.849);
 }
 
 #login .right {
-  width: 45%;
+  width: 47%;
 }
 
 #login .right form {
@@ -416,17 +416,18 @@ main {
 
 #new-user-create {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(to right, rgb(35, 48, 221), rgb(233, 94, 14));
 }
 
-.container {
+#new-user-create .container {
   position: relative;
-  width: 60%;
-  height: 70%;
+  width: 1000px;
+  height: 730px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 30px;
   background-color: rgba(240, 248, 255, 0.849);
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.4);
@@ -441,6 +442,7 @@ main {
   position: absolute;
   width: 100%;
   margin-top: 150px;
+  opacity: 0.7;
 }
 
 .right {
@@ -461,7 +463,11 @@ main {
 
 #new-user-create .right .welcome-box {
   padding: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+}
+
+#new-user-create .right .welcome-box p {
+  font-size: 15px;
 }
 
 #new-user-create .right .welcome-box h2 {
