@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | GILOS </title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/img/book-icon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div id="logo-div">
+            <a href=""><img src="/img/book-icon.png" alt=""></a>
+            <a href="">Library Management System</a>
+        </div>
+        <div id="search-container">
+            <input type="text" placeholder="Search book, magazine, ..." name="search-input">
+            <button><img src="/img/magnifying-glass.png" alt=""></button>
+        </div>
+        <ul class="main-nav">
+            <li><a href="">Home</a></li>
+            <li onClick="showInnerUL()" class="li-book">Books <img id="book-arrow" src="/img/down-arrow-white.png" alt="">
+                <ul class="inner-ul">
+                    <li><a href="">Category 1</a></li>
+                    <li><a href="">Category 2</a></li>
+                    <li><a href="">Category 3</a></li>
+                    <li><a href="">Category 4</a></li>
+                </ul>
+            </li>
+            <li class="user-handle"><a href="login.html"><img class="user-img" src="/img/user-white.png" alt="">Librarian Susan</a></li>
+        </ul>
+    </nav>
+
+    <div id="header-card">
+        <div class="dashboard">
+            <div class="dash-h1"><h1>Dashboard</h1></div>
+        </div>
+        <div class="borrowed-books">
+        </div>
+    </div>
+
+    <main>
+        <section class="side-menu">
+    
+        </section>
+    
+        <div id="book-feed">
+
+            <h1 class="message">Results for "Computer Science"</h1>
+
+            <h1 class="category-name">Computer Science</h1>
+            <div class="grid">
+
+                <div class="item">
+                    <img src="/img/lib1.jpg" alt="">
+                    <div class="book-item-description">
+                        <h1>Intoduction to Programming | C++</h1>
+                        <h2>Ace Logronio</h2>
+                        <div class="library-info">
+                            <p>Borrowed Copies: <span style="color: red;">6</span></p>
+                            <p>Copies Available: <span style="color: green;">4</span></p>
+                            <p>Shelf: <span style="color: blue;">A4</span></p>
+                        </div>
+                        <div class="actions">
+                            <button class="add-to-cart"></button>
+                            <button class="rent-book"></button>
+                            <button class="rate-book"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/lib.jpg" alt="">
+                    <div class="book-item-description">
+                        <h1>Book title</h1>
+                        <h2>Author</h2>
+                        <p>Description about the book.</p>
+                        <div class="actions">
+                            <button class="add-to-cart"></button>
+                            <button class="rent-book"></button>
+                            <button class="rate-book"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/lib1.jpg" alt="">
+                    <div class="book-item-description">
+                        <h1>Book title</h1>
+                        <h2>Author</h2>
+                        <p>Description about the book.</p>
+                        <div class="actions">
+                            <button class="add-to-cart"></button>
+                            <button class="rent-book"></button>
+                            <button class="rate-book"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="/img/lib.jpg" alt="">
+                    <div class="book-item-description">
+                        <h1>Book title</h1>
+                        <h2>Author</h2>
+                        <p>Description about the book.</p>
+                        <div class="actions">
+                            <button class="add-to-cart"></button>
+                            <button class="rent-book"></button>
+                            <button class="rate-book"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img src="/img/lib1.jpg" alt="">
+                    <div class="book-item-description">
+                        <h1>Book title</h1>
+                        <h2>Author</h2>
+                        <p>Description about the book.</p>
+                        <div class="actions">
+                            <button class="add-to-cart"></button>
+                            <button class="rent-book"></button>
+                            <button class="rate-book"></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/root/index.js"></script>
+</body>
+</html>
