@@ -39,7 +39,7 @@ function openSideMenu() {
     document.querySelector("main").style.marginLeft = "300px";
 
     document.querySelector("#open-btn").style.display = "none";
-    document.querySelector("#open-btn").style.transform = "rotate(180deg)";
+    document.querySelector("#open-btn").style.transform = "rotate(360deg)";
     closeBtn.style.transform = "rotate(360deg)";
 
 
@@ -55,7 +55,7 @@ function closeSideMenu() {
     document.querySelector("main").style.marginLeft = "0";
 
     document.querySelector("#open-btn").style.display = "block";
-    document.querySelector("#open-btn").style.transform = "rotate(-180deg)";
+    document.querySelector("#open-btn").style.transform = "rotate(-360deg)";
 
     closeBtn.style.transform = "rotate(-180deg)";
 }
