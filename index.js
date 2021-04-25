@@ -39,6 +39,10 @@ function openSideMenu() {
     document.querySelector(".side-menu").style.position = "fixed";
     
     document.querySelector("main").style.marginLeft = "300px";
+    document.querySelector(".reports").style.width= "71rem";
+    document.querySelector(".transactions").style.width = "45rem";
+    document.querySelector(".new-patrons").style.width = "24rem";
+
 
     document.querySelector("#open-btn").style.display = "none";
     document.querySelector("#open-btn").style.transform = "rotate(360deg)";
@@ -56,6 +60,9 @@ function closeSideMenu() {
     document.querySelector(".side-menu").style.boxShadow = "0";
     
     document.querySelector("main").style.marginLeft = "0";
+    document.querySelector(".reports").style.width= "81.625rem";
+    document.querySelector(".transactions").style.width = "52rem";
+    document.querySelector(".new-patrons").style.width = "27rem";
 
     document.querySelector("#open-btn").style.display = "block";
     document.querySelector("#open-btn").style.transform = "rotate(-360deg)";

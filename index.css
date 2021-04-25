@@ -214,12 +214,16 @@ nav .active {
   min-width: 13.125rem;
   font-weight: 700;
   color: #fff;
-  background-color: #267fff;
+  background: #267fff;
   border: none;
   border-radius: 10px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.274);
   outline: none;
   cursor: pointer;
+}
+
+.box .bottom button:hover {
+  background: linear-gradient(to bottom, #0e66e2, #267fff);
 }
 
 /* SIDE MENU */
@@ -372,6 +376,7 @@ main {
   background-color: #fff;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
   padding-bottom: 1rem;
+  transition: 500ms;
 }
 
 .reports-header {
@@ -476,6 +481,7 @@ main {
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
+  transition: 500ms;
 }
 
 .new-patrons .new-user-list .user {
