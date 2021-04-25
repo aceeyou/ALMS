@@ -12,10 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="images/logo">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/alms-logo.png">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <!-- NAV BAR -->
     <nav>
         <div class="menu-btn">
             <button id="open-btn" onclick="openSideMenu()">
@@ -26,19 +31,20 @@
             </button>
         </div>
         <div id="logo-div">
-            <a href=""><img src="images/logo" alt=""></a>
+            <a href=""><img src="images/alms-logo.png" alt=""></a>
             <a href="">ALMS</a>
         </div>
         <div id="search-container">
             <input type="text" placeholder="Search" name="search-input">
         </div>
         <ul class="main-nav">
-            <li><a href="">Home</a></li>
-            <li onClick="showInnerUL()"><a href="">Books</a></li>
+            <li class="active"><a href="">Home</a></li>
+            <li onClick="showInnerUL()"><a href="book-feed.html">Books</a></li>
             <li class="user-handle"><a href="index.html"><img class="user-img" src="images/user.png" alt=""></a></li>
         </ul>
     </nav>
 
+    <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
         <button id="close-btn" onclick="closeSideMenu()"><img src="images/arrow-white.png" alt=""></button>
 
@@ -181,101 +187,301 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
         </div>
 
-
-
-
-
-
-
-
-
-
-        <!-- <div id="book-feed">
-
-            <h1 class="message">Results for "Computer Science"</h1>
-
-            <h1 class="category-name">Computer Science</h1>
-            <div class="grid">
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Intoduction to Programming | C++</h1>
-                        <h2>Ace Logronio</h2>
-                        <div class="library-info">
-                            <p>Borrowed Copies: <span style="color: red;">6</span></p>
-                            <p>Copies Available: <span style="color: green;">4</span></p>
-                            <p>Shelf: <span style="color: blue;">A4</span></p>
-                        </div>
-                        <div class="book-actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
+        <!-- REPORTS -->
+        <div class="reports">
+            <div class="transactions">
+                <div class="reports-header">
+                    <h2>Recent Transactions</h2>
+                    <a href="">See all <img src="images/arrow-white.png" alt=""></a>
+                </div>
+                <div class="col-name">
+                    <h3>Patron Name</h3>
+                    <h3>Transaction</h3>
+                    <h3>Status</h3>
+                </div>
+                <div class="transaction-list">
+                    <div class="transaction">
+                        <a href="">Marc</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
+                    <div class="transaction">
+                        <a href="">JP</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
+                    <div class="transaction">
+                        <a href="">Ace</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="yellow"></div>
+                            <p>pending</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
+                    <div class="transaction">
+                        <a href="">Dana</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <div class="library-info">
-                            <p>Borrowed Copies: <span style="color: red;">3</span></p>
-                            <p>Copies Available: <span style="color: green;">6</span></p>
-                            <p>Shelf: <span style="color: blue;">B1</span></p>
+                    <div class="transaction">
+                        <a href="">Patrick</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
                         </div>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
+                    </div>
+
+                    <div class="transaction">
+                        <a href="">Marc</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">JP</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Ace</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="yellow"></div>
+                            <p>pending</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Dana</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Patrick</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
+                        </div>
+                    </div>
+
+                    <div class="transaction">
+                        <a href="">Marc</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">JP</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Ace</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="yellow"></div>
+                            <p>pending</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Dana</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="purple"></div>
+                            <p>review</p>
+                        </div>
+                    </div>
+                    <div class="transaction">
+                        <a href="">Patrick</a>
+                        <a href="">Harmonis</a>
+                        <div class="trans-status">
+                            <div class="orange"></div>
+                            <p>in progress</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+
+            <div class="new-patrons">
+                <div class="reports-header">
+                    <h2>New Patrons</h2>
+                    <a href="">See all <img src="images/arrow-white.png" alt=""></a>
+                </div>
+
+                <div class="new-user-list">
+                    <div class="user">
+                        <div class="user-dp">
+                            <img src="images/default.jpg" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3>Marc Angelo Galan</h3>
+                            <p>position</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="16" height="16"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M43,14.33333v25.02734l-21.55599,12.56966c-4.386,2.5585 -7.11068,7.30653 -7.11068,12.3877v71.84863c0,7.90483 6.4285,14.33333 14.33333,14.33333h114.66667c7.90483,0 14.33333,-6.4285 14.33333,-14.33333v-71.84863c0,-5.08117 -2.72468,-9.8292 -7.11068,-12.3877l-21.55599,-12.56966v-25.02734zM57.33333,28.66667h57.33333v52.56022l-28.66667,17.83269l-28.66667,-17.84668zM71.66667,43v14.33333h28.66667v-14.33333zM43,55.94759v16.34896l-13.56348,-8.44043zM129,55.96159l13.56348,7.90853l-13.56348,8.44043zM71.66667,64.5v14.33333h28.66667v-14.33333zM28.66667,80.26107l57.33333,35.67936l57.33333,-35.67936l0.014,55.9056h-114.68066z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="user-dp">
+                            <img src="images/default.jpg" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3>Jose Paolo Indiongco</h3>
+                            <p>position</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="16" height="16"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M43,14.33333v25.02734l-21.55599,12.56966c-4.386,2.5585 -7.11068,7.30653 -7.11068,12.3877v71.84863c0,7.90483 6.4285,14.33333 14.33333,14.33333h114.66667c7.90483,0 14.33333,-6.4285 14.33333,-14.33333v-71.84863c0,-5.08117 -2.72468,-9.8292 -7.11068,-12.3877l-21.55599,-12.56966v-25.02734zM57.33333,28.66667h57.33333v52.56022l-28.66667,17.83269l-28.66667,-17.84668zM71.66667,43v14.33333h28.66667v-14.33333zM43,55.94759v16.34896l-13.56348,-8.44043zM129,55.96159l13.56348,7.90853l-13.56348,8.44043zM71.66667,64.5v14.33333h28.66667v-14.33333zM28.66667,80.26107l57.33333,35.67936l57.33333,-35.67936l0.014,55.9056h-114.68066z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="user-dp">
+                            <img src="images/default.jpg" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3>Ace Arwin Logronio</h3>
+                            <p>position</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="16" height="16"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M43,14.33333v25.02734l-21.55599,12.56966c-4.386,2.5585 -7.11068,7.30653 -7.11068,12.3877v71.84863c0,7.90483 6.4285,14.33333 14.33333,14.33333h114.66667c7.90483,0 14.33333,-6.4285 14.33333,-14.33333v-71.84863c0,-5.08117 -2.72468,-9.8292 -7.11068,-12.3877l-21.55599,-12.56966v-25.02734zM57.33333,28.66667h57.33333v52.56022l-28.66667,17.83269l-28.66667,-17.84668zM71.66667,43v14.33333h28.66667v-14.33333zM43,55.94759v16.34896l-13.56348,-8.44043zM129,55.96159l13.56348,7.90853l-13.56348,8.44043zM71.66667,64.5v14.33333h28.66667v-14.33333zM28.66667,80.26107l57.33333,35.67936l57.33333,-35.67936l0.014,55.9056h-114.68066z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="user-dp">
+                            <img src="images/default.jpg" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3>Dana Jane Orogo</h3>
+                            <p>position</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="16" height="16"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M43,14.33333v25.02734l-21.55599,12.56966c-4.386,2.5585 -7.11068,7.30653 -7.11068,12.3877v71.84863c0,7.90483 6.4285,14.33333 14.33333,14.33333h114.66667c7.90483,0 14.33333,-6.4285 14.33333,-14.33333v-71.84863c0,-5.08117 -2.72468,-9.8292 -7.11068,-12.3877l-21.55599,-12.56966v-25.02734zM57.33333,28.66667h57.33333v52.56022l-28.66667,17.83269l-28.66667,-17.84668zM71.66667,43v14.33333h28.66667v-14.33333zM43,55.94759v16.34896l-13.56348,-8.44043zM129,55.96159l13.56348,7.90853l-13.56348,8.44043zM71.66667,64.5v14.33333h28.66667v-14.33333zM28.66667,80.26107l57.33333,35.67936l57.33333,-35.67936l0.014,55.9056h-114.68066z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="user-dp">
+                            <img src="images/default.jpg" alt="">
+                        </div>
+                        <div class="user-info">
+                            <h3>Patrick Ray Sapusao</h3>
+                            <p>position</p>
+                        </div>
+                        <div class="buttons">
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="16" height="16"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M43,14.33333v25.02734l-21.55599,12.56966c-4.386,2.5585 -7.11068,7.30653 -7.11068,12.3877v71.84863c0,7.90483 6.4285,14.33333 14.33333,14.33333h114.66667c7.90483,0 14.33333,-6.4285 14.33333,-14.33333v-71.84863c0,-5.08117 -2.72468,-9.8292 -7.11068,-12.3877l-21.55599,-12.56966v-25.02734zM57.33333,28.66667h57.33333v52.56022l-28.66667,17.83269l-28.66667,-17.84668zM71.66667,43v14.33333h28.66667v-14.33333zM43,55.94759v16.34896l-13.56348,-8.44043zM129,55.96159l13.56348,7.90853l-13.56348,8.44043zM71.66667,64.5v14.33333h28.66667v-14.33333zM28.66667,80.26107l57.33333,35.67936l57.33333,-35.67936l0.014,55.9056h-114.68066z"></path></g></g></svg>
+                            </div>
+                            <div class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#293c7d"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </main>
 
     <a href="https://icons8.com/icon/MztIdXvT0oDl/add-book" style="display: none;">Add Book icon by Icons8</a>
