@@ -62,7 +62,7 @@ function closeSideMenu() {
     document.querySelector("main").style.marginLeft = "0";
     document.querySelector(".reports").style.width= "81.625rem";
     document.querySelector(".transactions").style.width = "52rem";
-    document.querySelector(".new-patrons").style.width = "27rem";
+    document.querySelector(".new-patrons").style.width = "25rem";
 
     document.querySelector("#open-btn").style.display = "block";
     document.querySelector("#open-btn").style.transform = "rotate(-360deg)";

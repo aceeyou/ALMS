@@ -360,7 +360,6 @@ main {
 /* REPORTS */
 .reports {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   width: 81.625rem;
   margin-top: 3.5rem;
@@ -372,6 +371,7 @@ main {
 .reports .transactions {
   width: 52rem;
   min-height: 500px;
+  margin-right: 2.3rem;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
@@ -475,7 +475,7 @@ main {
 /* REPORTS USER CARDS */
 
 .reports .new-patrons {
-  width: 27rem;
+  width: 25rem;
   min-height: 300px;
   padding-bottom: 10px;
   border-radius: 15px;
