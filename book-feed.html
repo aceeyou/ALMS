@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management System | GILOS </title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/logo">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rubik:wght@300&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="images/logo">
-    <link rel="stylesheet" href="index.css">
+    <title>Books | ALMS</title>
 </head>
 <body>
+
+    <!-- NAV BAR -->
     <nav>
         <div class="menu-btn">
             <button id="open-btn" onclick="openSideMenu()">
@@ -33,12 +36,13 @@
             <input type="text" placeholder="Search" name="search-input">
         </div>
         <ul class="main-nav">
-            <li><a href="">Home</a></li>
-            <li onClick="showInnerUL()"><a href="">Books</a></li>
+            <li><a href="dashboard.html">Home</a></li>
+            <li onClick="showInnerUL()" class="active"><a href="">Books</a></li>
             <li class="user-handle"><a href="index.html"><img class="user-img" src="images/user.png" alt=""></a></li>
         </ul>
     </nav>
 
+    <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
         <button id="close-btn" onclick="closeSideMenu()"><img src="images/arrow-white.png" alt=""></button>
 
@@ -89,108 +93,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>
     </section>
 
-
-    <main>
-
-        <!-- DASHBOARD -->
-        <div class="boxes grid-dashboard">
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/books.png"/>
-                        </div>
-                        <div class="data">100</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Book Listed</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/material-outlined/96/000000/book-shelf.png"/>
-                        </div>
-                        <div class="data">5</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Times Books Issued</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/cute-clipart/64/000000/return.png"/>
-                        </div>
-                        <div class="data">27</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Times Books Returned</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png"/>
-                        </div>
-                        <div class="data">1</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Registered Users</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/william-shakespeare.png"/>
-                        </div>
-                        <div class="data">73</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Authors Listed</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="content">
-                    <div class="top">
-                        <div class="image">
-                            <img src="https://img.icons8.com/dusk/64/000000/elective.png"/>
-                        </div>
-                        <div class="data">525</div>
-                    </div>
-                    <div class="bottom">
-                        <button>Listed Categories</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <!-- <div id="book-feed">
+     <div id="book-feed">
 
             <h1 class="message">Results for "Computer Science"</h1>
 
@@ -275,11 +178,9 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                     </div>
                 </div>
             </div>
-        </div> -->
-    </main>
+        </div>
+    
 
-    <a href="https://icons8.com/icon/MztIdXvT0oDl/add-book" style="display: none;">Add Book icon by Icons8</a>
-
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 </body>
 </html>
