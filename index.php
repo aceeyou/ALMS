@@ -49,13 +49,10 @@
       </form>
     </div>
 
-
-
     <p class="create">
       Not yet registered? <a href="dashboard.php">Create an account</a>
     </p>
   </div>
-
 
   <!-- Bootstrap Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
