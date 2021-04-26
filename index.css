@@ -19,6 +19,10 @@ html {
   border-radius: 3px;
 }
 
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
 body {
   background-color: #f2f6ff;
 }
@@ -586,7 +590,6 @@ main {
   border-radius: 10px;
   text-align: start;
   text-indent: 0.9rem;
-  font-style: italic;
   outline: none;
 }
 
