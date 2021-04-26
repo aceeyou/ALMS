@@ -14,7 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Books | ALMS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <title>Add Book Form | ALMS</title>
 </head>
 <body>
 
@@ -29,22 +32,22 @@
             </button>
         </div>
         <div id="logo-div">
-            <a href=""><img src="images/logo" alt=""></a>
-            <a href="">ALMS</a>
+            <a href="dashboard.html"><img src="images/logo" alt=""></a>
+            <a href="dashboard.html">ALMS</a>
         </div>
         <div id="search-container">
             <input type="text" placeholder="Search" name="search-input">
         </div>
         <ul class="main-nav">
-            <li><a href="dashboard.html">Home</a></li>
-            <li onClick="showInnerUL()" class="active"><a href="">Books</a></li>
-            <li class="user-handle"><a href="index.html"><img class="user-img" src="images/user.png" alt=""></a></li>
+            <li><a href="dashboard.html" class="">Home</a></li>
+            <li onClick="showInnerUL()"><a href="#">Books</a></li>
+            <li class="user-handle"><a href="index.html"><img class="user-img" src="images/default.jpg" alt=""></a></li>
         </ul>
     </nav>
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
-        <button id="close-btn" onclick="closeSideMenu()"><img src="images/arrow-white.png" alt=""></button>
+        <button class="close-btn" onclick="closeSideMenu()"><img src="images/arrow-white.png" alt=""></button>
 
         <div class="tasks">
 
@@ -55,12 +58,12 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item menu-active">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="24" height="24"
 viewBox="0 0 172 172"
 style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M30.96,13.76c-9.44436,0 -17.2,7.75564 -17.2,17.2v110.08c0,9.44437 7.75564,17.2 17.2,17.2h110.08c9.44437,0 17.2,-7.75563 17.2,-17.2v-110.08c0,-9.44436 -7.75563,-17.2 -17.2,-17.2zM30.96,20.64h110.08c5.69163,0 10.32,4.62836 10.32,10.32v110.08c0,5.69163 -4.62837,10.32 -10.32,10.32h-110.08c-5.69164,0 -10.32,-4.62837 -10.32,-10.32v-110.08c0,-5.69164 4.62836,-10.32 10.32,-10.32zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z"></path></g></g></g></svg>
-                <a href="" class="task">Add New Book</a>
+                <a href="#" class="task">Add New Book</a>
             </div>
             <div class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -93,94 +96,26 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>
     </section>
 
-     <div id="book-feed">
 
-            <h1 class="message">Results for "Computer Science"</h1>
-
-            <h1 class="category-name">Computer Science</h1>
-            <div class="grid">
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Intoduction to Programming | C++</h1>
-                        <h2>Ace Logronio</h2>
-                        <div class="library-info">
-                            <p>Borrowed Copies: <span style="color: red;">6</span></p>
-                            <p>Copies Available: <span style="color: green;">4</span></p>
-                            <p>Shelf: <span style="color: blue;">A4</span></p>
-                        </div>
-                        <div class="book-actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <p>Description about the book.</p>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="/img/lib1.jpg" alt="">
-                    <div class="book-item-description">
-                        <h1>Book title</h1>
-                        <h2>Author</h2>
-                        <div class="library-info">
-                            <p>Borrowed Copies: <span style="color: red;">3</span></p>
-                            <p>Copies Available: <span style="color: green;">6</span></p>
-                            <p>Shelf: <span style="color: blue;">B1</span></p>
-                        </div>
-                        <div class="actions">
-                            <button class="add-to-cart"></button>
-                            <button class="rent-book"></button>
-                            <button class="rate-book"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main>
+        <div id="book-form-container">
+           <div class="book-form">
+               <h2>New Book Entry</h2>
+               <form action="">
+                   <label for="">ISBN</label>  <input type="text" name="" id="" placeholder="XXX-X-XX-XXXXXX-X">
+                   <label for="">Book Title</label>    <input type="text" name="" id="" placeholder="Harry Potter">
+                   <label for="">Book Publisher</label>    <input type="text" name="" id="" placeholder="IDW Publishing">
+                   <label for="">Date Published</label>    <input type="text" name="" id="" placeholder="2012-28-11">
+                   <label for="">Book Edition</label>    <input type="text" name="" id="" placeholder="First Edition">
+   
+                </form>
+           <input type="submit" value="ADD BOOK">
+   
+           </div>
+       </div>
+    </main>
     
 
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
