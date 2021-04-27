@@ -1,31 +1,19 @@
 let innerUL = document.querySelector(".inner-ul");
 let isShown = false;
 
-let closeBtn = document.querySelector("#close-btn");
+let closeBtn = document.getElementById("close-btn");
+let openBtn = document.getElementById("open-btn");
 
+window.addEventListener('load', () => {
+    openSideMenu();
+});
 
-function showInnerUL() {
-    let bookArrow = document.querySelector('#book-arrow');
-
-    if(isShown){
-        innerUL.style.display = 'none';
-        isShown = false;
-        
-        bookArrow.style.transform = "rotate(360deg)";
-    } else {
-        innerUL.style.display = 'block';
-        isShown = true;
-
-        bookArrow.style.transform = "rotate(180deg)";
-    }
+function hideBtn(){
+    openBtn.style.visibility = "hidden";
 }
 
-function bookArrow() {
-    if(isDown) {
-        bookArrow.style.transforme = 'rotate(180deg)';
-    } else {
-        bookArrow.style.transform = 'rotate(0deg)';
-    }
+function showBtn() {
+    openBtn.style.visibility = "visible";
 }
 
 
@@ -43,11 +31,8 @@ function openSideMenu() {
     document.querySelector(".transactions").style.width = "45rem";
     document.querySelector(".new-patrons").style.width = "24rem";
 
-
-    document.querySelector("#open-btn").style.display = "none";
-    document.querySelector("#open-btn").style.transform = "rotate(360deg)";
+    hideBtn();
     closeBtn.style.transform = "rotate(360deg)";
-
 
 }
 
@@ -64,8 +49,8 @@ function closeSideMenu() {
     document.querySelector(".transactions").style.width = "52rem";
     document.querySelector(".new-patrons").style.width = "25rem";
 
-    document.querySelector("#open-btn").style.display = "block";
-    document.querySelector("#open-btn").style.transform = "rotate(-360deg)";
-
+    showBtn();
+    document.querySelector("#open-btn-dashb").style.display = "none";
     closeBtn.style.transform = "rotate(-180deg)";
 }
+
