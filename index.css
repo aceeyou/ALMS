@@ -257,16 +257,24 @@ nav .menu-btn #open-btn {
   display: block;
 }
 
+.side-menu::-webkit-scrollbar:vertical {
+  background-color: #293c7d;
+}
+
+.side-menu::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
 .side-menu {
-  /* transform: translateX(-300px); */
-  width: 300px;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 300px;
+  height: 100%;
   background-color: #18213e;
-  /* box-shadow: 3px 0px 13px rgba(0, 0, 0, 0.4); */
   transition: 0ms;
+  overflow-x: scroll;
+
   z-index: 6;
 }
 
@@ -550,6 +558,7 @@ main {
 #book-form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   margin-top: 65px;
 }
@@ -596,9 +605,7 @@ main {
 .book-form input[type="submit"] {
   width: 270px;
   padding: 8px 12px;
-  margin-top: 35px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 20px;
   border-radius: 10px;
   font-weight: 700;
   color: #fff;
