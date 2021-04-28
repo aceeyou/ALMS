@@ -231,10 +231,10 @@ nav .active {
 
 nav .menu-btn {
   display: flex;
-  position: absolute;
+  position: fixed;
+  top: 20px;
   left: 30px;
   width: 35px;
-  height: 100%;
   align-items: center;
 }
 
@@ -258,15 +258,15 @@ nav .menu-btn #open-btn {
 }
 
 .side-menu {
-  transform: translateX(-300px);
+  /* transform: translateX(-300px); */
   width: 300px;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background-color: #18213e;
   /* box-shadow: 3px 0px 13px rgba(0, 0, 0, 0.4); */
-  transition: 500ms;
+  transition: 0ms;
   z-index: 6;
 }
 
@@ -382,7 +382,7 @@ main {
 
 .reports .transactions {
   width: 52rem;
-  min-height: 500px;
+  min-height: 200px;
   margin-right: 2.3rem;
   border-radius: 15px;
   background-color: #fff;
@@ -488,7 +488,7 @@ main {
 
 .reports .new-patrons {
   width: 25rem;
-  min-height: 300px;
+  min-height: 100px;
   padding-bottom: 10px;
   border-radius: 15px;
   background-color: #fff;

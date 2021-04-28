@@ -25,6 +25,7 @@ function openSideMenu() {
     document.querySelector(".side-menu").style.transform = "translateX(0px)";
     document.querySelector(".side-menu").style.boxShadow = "3px 0px 13px rgba(0, 0, 0, 0.4)";
     document.querySelector(".side-menu").style.position = "fixed";
+    document.querySelector(".side-menu").style.transition = "500ms";
     
     document.querySelector("main").style.marginLeft = "300px";
     document.querySelector(".reports").style.width= "71rem";
