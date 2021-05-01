@@ -592,7 +592,8 @@ main {
   text-shadow: 3px 3px 8px rgba(128, 125, 125, 0.164);
 }
 
-.book-form form input[type="text"] {
+.book-form form input[type="text"],
+.book-form form input[type="password"] {
   width: 80%;
   padding: 8px 30px 8px 0;
   border: 1px solid #cfcfcf;
@@ -617,4 +618,22 @@ main {
 
 .book-form form input[type="submit"]:hover {
   background: linear-gradient(to bottom, #0b68eb, #267fff);
+}
+
+/* Library Form */
+
+.form-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.form-title img {
+  width: 5rem;
+}
+
+.form-title h2 {
+  margin-left: 1.375rem;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
 }
