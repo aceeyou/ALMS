@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include "includes/display.php"
+?>
 
 <head>
     <meta charset="UTF-8" />
@@ -102,10 +105,14 @@
             </div>
 
             <div class="item">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="32" height="32"
-viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#ffffff">
+                            <path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path>
+                        </g>
+                    </g>
+                </svg>
                 <a href="new-author.html" class="task">Add New Author</a>
             </div>
 
@@ -143,7 +150,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/color/96/000000/books.png" />
                         </div>
-                        <div class="data">100</div>
+                        <div class="data"><?php echo $totalBooks ?></div>
                     </div>
                     <div class="bottom">
                         <button>Book Listed</button>
@@ -157,7 +164,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/material-outlined/96/000000/book-shelf.png" />
                         </div>
-                        <div class="data">5</div>
+                        <div class="data"><?php echo $bookIssued ?></div>
                     </div>
                     <div class="bottom">
                         <button>Books Borrowed</button>
@@ -171,7 +178,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/cute-clipart/64/000000/return.png" />
                         </div>
-                        <div class="data">27</div>
+                        <div class="data"><?php echo $bookReturned  ?></div>
                     </div>
                     <div class="bottom">
                         <button>Books Returned</button>
@@ -185,7 +192,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png" />
                         </div>
-                        <div class="data">1</div>
+                        <div class="data"><?php echo $totalPatron ?></div>
                     </div>
                     <div class="bottom">
                         <button>Registered Users</button>
@@ -199,7 +206,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/ios-filled/100/000000/william-shakespeare.png" />
                         </div>
-                        <div class="data">73</div>
+                        <div class="data"><?php echo $totalAuthors ?></div>
                     </div>
                     <div class="bottom">
                         <button>Authors Listed</button>
@@ -213,7 +220,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="image">
                             <img src="https://img.icons8.com/dusk/64/000000/elective.png" />
                         </div>
-                        <div class="data">525</div>
+                        <div class="data"><?php echo $numberCategories ?></div>
                     </div>
                     <div class="bottom">
                         <button>Listed Categories</button>
@@ -278,9 +285,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                 </div>
             </div>
 
-            <?php
-            include "includes/display.php"
-            ?>
+
 
             <div class="new-patrons">
                 <div class="reports-header">
