@@ -223,8 +223,15 @@ nav .active {
   cursor: pointer;
 }
 
-.box .bottom button:hover {
-  background: linear-gradient(to bottom, #0e66e2, #267fff);
+.checkbox-container input {
+  width: 15px;
+  height: 15px;
+  outline: none;
+}
+
+.checkbox-container em {
+  font-size: 0.8rem;
+  line-height: 20px;
 }
 
 /* SIDE MENU */
@@ -560,14 +567,14 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 65px;
+  margin-top: 20px;
 }
 
 .book-form {
   display: flex;
   flex-direction: column;
   width: 700px;
-  padding: 35px 0 35px 60px;
+  padding: 30px 0 20px 60px;
   border-radius: 0.7rem;
   background-color: #fff;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
@@ -620,6 +627,15 @@ main {
   background: linear-gradient(to bottom, #0b68eb, #267fff);
 }
 
+.book-form .bottom button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.book-form input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
 /* Library Form */
 
 .form-title {
@@ -636,4 +652,106 @@ main {
   margin-left: 1.375rem;
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
+}
+
+/* Manage Author / Patron */
+
+main .book-list-table {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(128, 125, 125, 0.274);
+  transition: 500ms;
+}
+
+.book-list-table .table-name {
+  padding: 30px 25px 20px 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #294978;
+  color: #fff;
+}
+
+.book-list-table .column-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(94, 94, 94, 0.274);
+  border-bottom: 1px solid rgba(94, 94, 94, 0.274);
+}
+
+.book-list-table .column-name h2 {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.book-list-table .column-name h2:last-child {
+  text-align: center;
+}
+
+.table-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  width: 100%;
+}
+
+.table-data:hover {
+  background-color: rgba(225, 226, 228, 0.363);
+}
+
+.table-data:last-child {
+  padding-bottom: 5px;
+}
+
+.table-data div {
+  padding: 10px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-data div:hover {
+  white-space: normal;
+}
+
+.table-data .action {
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-data .action a {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  outline: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.table-data .action .edit {
+  background: url("images/edit-black.png");
+  background-size: 1.5rem;
+  transition: 100ms;
+}
+
+.table-data .action .delete {
+  background: url("images/delete-black.png");
+  background-size: 1.5rem;
+  transition: 100ms;
+}
+
+.table-data .action .edit:hover {
+  background: url("images/edit-green.png");
+  background-size: 1.5rem;
+}
+
+.table-data .action .delete:hover {
+  background: url("images/delete-red.png");
+  background-size: 1.5rem;
 }

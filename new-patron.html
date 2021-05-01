@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/logo" />
+    <link rel="icon" href="images/alms-logo.png" />
 
     <title>Reservation</title>
   </head>
@@ -290,15 +290,16 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
           <form action="includes/new-patron.php" method="POST">
             <label for="">First Name</label>
             <input type="text" name="firstName" id="" placeholder="Juan" />
+            <label for="">middle Name</label>
+            <input type="text" name="middleName" id="" placeholder="Felipe" />
             <label for="">Last Name</label>
             <input type="text" name="lastName" id="" placeholder="Pedro" />
-            <label for="">Email Address</label>
-            <input
-              type="text"
-              name="emailAddress"
-              id=""
-              placeholder="contoso@example.com"
-            />
+            <label for="">City Address</label>
+            <input type="text" name="" id="" placeholder="Legazpi" />
+            <label for="">Province Address</label>
+            <input type="text" name="" id="" placeholder="Albay" />
+            <label for="">Zip Code</label>
+            <input type="text" name="" id="" placeholder="4500" />
             <label for="">Mailing Address</label>
             <input
               type="text"
@@ -306,6 +307,27 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               id=""
               placeholder="Street, Subdivision"
             />
+            <label for="">Email Address</label>
+            <input
+              type="text"
+              name="emailAddress"
+              id=""
+              placeholder="contoso@example.com"
+            />
+            <label for="">Contact Number</label>
+            <input type="text" name="" id="" placeholder="+639123456789" />
+
+            <div>
+              <label for="">Create Patron Account?</label>
+
+            </div>
+            <div class="checkbox-container">
+              
+              <input type="checkbox">
+              <em> &nbsp;&nbsp;&nbsp;&nbsp; Patron can borrow and apply for reservation of <br> materials in the library</em>
+            </div>
+            
+            
             <input type="submit" value="CREATE ACCOUNT" />
           </form>
         </div>
