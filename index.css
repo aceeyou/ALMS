@@ -381,7 +381,7 @@ main {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
-  transition: 500ms;
+  transition: 100ms;
 }
 
 /* REPORTS */
@@ -584,6 +584,13 @@ main {
   margin-top: 2rem;
 }
 
+.book-form h2 img {
+  width: 30px;
+  margin-left: 20px;
+  transform: translatey(-5px);
+  animation: rotation 5s infinite linear;
+}
+
 .book-form form {
   display: grid;
   justify-content: center;
@@ -627,6 +634,14 @@ main {
   background: linear-gradient(to bottom, #0b68eb, #267fff);
 }
 
+.book-form input[type="submit"].edit-save-btn {
+  background: rgb(8, 172, 109);
+}
+
+.book-form input[type="submit"].edit-save-btn:hover {
+  background: linear-gradient(to bottom, rgb(8, 172, 109), rgb(7, 153, 97));
+}
+
 .book-form .bottom button a {
   text-decoration: none;
   color: #fff;
@@ -635,6 +650,8 @@ main {
 .book-form input[type="checkbox"]:checked ~ .checkmark {
   background-color: #2196f3;
 }
+
+/
 
 /* Library Form */
 
@@ -669,7 +686,8 @@ main .book-list-table {
   transition: 500ms;
 }
 
-.book-list-table .table-name {
+.book-list-table .table-name,
+.manage-book-table .table-name {
   padding: 30px 25px 20px 25px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -691,7 +709,8 @@ main .book-list-table {
   padding: 10px 20px;
 }
 
-.book-list-table .column-name h2:last-child {
+.book-list-table .column-name h2:last-child,
+.manage-book-table .column-name h2:last-child {
   text-align: center;
 }
 
@@ -725,6 +744,7 @@ main .book-list-table {
   justify-content: space-around;
 }
 
+.table-data .action button,
 .table-data .action a {
   width: 1.5rem;
   height: 1.5rem;
@@ -754,4 +774,134 @@ main .book-list-table {
 .table-data .action .delete:hover {
   background: url("images/delete-red.png");
   background-size: 1.5rem;
+}
+
+main .manage-book-table {
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(128, 125, 125, 0.274);
+  transition: 500ms;
+}
+
+main .manage-book-table .column-name {
+  display: grid;
+  grid-template-columns: 0.7fr 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.4fr 0.4fr 0.5fr;
+  width: 100%;
+  padding: 0 2px;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(94, 94, 94, 0.274);
+  border-bottom: 1px solid rgba(94, 94, 94, 0.274);
+}
+
+main .manage-book-table .column-name h2 {
+  font-size: 1rem;
+  padding: 10px 8px;
+}
+
+main .manage-book-table .column-name h2:nth-child(7),
+main .manage-book-table .column-name h2:nth-child(8) {
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+main .manage-book-table .column-name h2:nth-child(7),
+main .manage-book-table .column-name h2:nth-child(8),
+main .manage-book-table .column-name h2:nth-child(7) {
+  text-align: center;
+}
+
+.manage-book-table .table-data {
+  display: grid;
+  grid-template-columns: 0.7fr 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.4fr 0.4fr 0.5fr;
+  width: 100%;
+}
+
+.manage-book-table .table-data div:nth-child(7),
+.manage-book-table .table-data div:nth-child(8),
+.manage-book-table .table-data div:nth-child(9) {
+  text-align: center;
+}
+
+.total-copies {
+  color: #112aa7;
+}
+
+.copies-available {
+  color: rgb(14, 165, 72);
+}
+
+.pop-up-delete-container {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(175, 170, 170, 0.363);
+  visibility: hidden;
+  z-index: 50;
+}
+
+.pop-up-delete {
+  display: absolute;
+  width: 500px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 8px rgba(128, 125, 125, 0.274);
+}
+
+.pop-up-delete h2 {
+  position: absolute;
+  width: 460px;
+  padding: 20px 20px 10px 20px;
+  color: #fff;
+  background: #e62832;
+}
+
+.pop-up-delete form {
+  position: relative;
+  height: 100px;
+  margin-top: 80px;
+  padding: 10px 20px 20px 20px;
+}
+
+.pop-up-delete form h3 {
+  font-size: 1rem;
+}
+
+.pop-up-delete form input,
+.pop-up-delete form button {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  width: 80px;
+  font-weight: 500;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pop-up-delete form input {
+  margin-right: 100px;
+  background: #e62832;
+  color: #fff;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
