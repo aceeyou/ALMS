@@ -46,6 +46,7 @@ function closeSideMenu() {
     document.querySelector(".side-menu").style.boxShadow = "0";
     
     document.querySelector("main").style.marginLeft = "0";
+    document.querySelector("main").style.transition = "500ms";
     document.querySelector(".reports").style.width= "81.625rem";
     document.querySelector(".transactions").style.width = "52rem";
     document.querySelector(".new-patrons").style.width = "25rem";
@@ -53,5 +54,14 @@ function closeSideMenu() {
     showBtn();
     document.querySelector("#open-btn-dashb").style.display = "none";
     closeBtn.style.transform = "rotate(-180deg)";
+}
+
+function showPopUpConfirmation() {
+    document.querySelector(".pop-up-delete-container").style.visibility = "visible";
+}
+
+function closeConfirmationWindow() {
+    document.querySelector(".pop-up-delete-container").style.visibility = "hidden";
+
 }
 
