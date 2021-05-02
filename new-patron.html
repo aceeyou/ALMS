@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/logo" />
+    <link rel="icon" href="images/alms-logo.png" />
 
     <title>Reservation</title>
   </head>
@@ -200,10 +200,38 @@
         </div>
 
         <div class="item">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="32" height="32"
-viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="32"
+            height="32"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"
+                ></path>
+              </g>
+            </g>
           </svg>
           <a href="new-author.html" class="task">Add New Author</a>
         </div>
@@ -290,15 +318,21 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
           <form action="includes/new-patron.php" method="POST">
             <label for="">First Name</label>
             <input type="text" name="firstName" id="" placeholder="Juan" />
+            <label for="">middle Name</label>
+            <input type="text" name="middleName" id="" placeholder="Felipe" />
             <label for="">Last Name</label>
             <input type="text" name="lastName" id="" placeholder="Pedro" />
-            <label for="">Email Address</label>
+            <label for="">City Address</label>
+            <input type="text" name="cityAddress" id="" placeholder="Legazpi" />
+            <label for="">Province Address</label>
             <input
               type="text"
-              name="emailAddress"
+              name="provinceAddress"
               id=""
-              placeholder="contoso@example.com"
+              placeholder="Albay"
             />
+            <label for="">Zip Code</label>
+            <input type="text" name="zipCode" id="" placeholder="4500" />
             <label for="">Mailing Address</label>
             <input
               type="text"
@@ -306,6 +340,33 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               id=""
               placeholder="Street, Subdivision"
             />
+            <label for="">Email Address</label>
+            <input
+              type="text"
+              name="emailAddress"
+              id=""
+              placeholder="contoso@example.com"
+            />
+            <label for="">Contact Number</label>
+            <input
+              type="text"
+              name="contactNumber"
+              id=""
+              placeholder="+639123456789"
+            />
+
+            <div>
+              <label for="">Create Patron Account?</label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" name="account" />
+              <em>
+                &nbsp;&nbsp;&nbsp;&nbsp; Patron can borrow and apply for
+                reservation of <br />
+                materials in the library</em
+              >
+            </div>
+
             <input type="submit" value="CREATE ACCOUNT" />
           </form>
         </div>
