@@ -755,3 +755,24 @@ main .book-list-table {
   background: url("images/delete-red.png");
   background-size: 1.5rem;
 }
+
+/* Manage Patrons w/o Account*/
+
+.manage-patrons .book-list-table,
+.manage-patron-accounts .book-list-table {
+  width: 75rem;
+}
+
+.manage-patrons .column-name,
+.manage-patrons .table-data {
+  grid-template-columns: 0.17fr 0.25fr 0.25fr 0.25fr 0.2fr 0.15fr;
+}
+
+.manage-patron-accounts .column-name,
+.manage-patron-accounts .table-data {
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.15fr;
+}
+
+.manage-patron-accounts .book-list-table {
+  margin-top: 5rem;
+}
