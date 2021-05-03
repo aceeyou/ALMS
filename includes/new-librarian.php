@@ -11,7 +11,6 @@ $Contact_Number = $_POST["Contact_Number"];
 $Librarian_Type = $_POST["Librarian_Type"];
 $Username = $_POST["Username"];
 $Password = $_POST["Password"];
-$Confirm_Password = $_POST["Confirm_Password"];
 
 $sql = "INSERT INTO librarian(Librarian_FirstName , Librarian_MiddleName , Librarian_LastName , Librarian_CityAddress , Librarian_ProvinceAddress , Librarian_MailingAddress , Contact_Number , Librarian_Type )
 VALUES ('$Librarian_FirstName','$Librarian_MiddleName','$Librarian_LastName','$Librarian_CityAdress','$Librarian_ProvinceAddress','$Librarian_MailingAddress','$Contact_Number','$Librarian_Type')";
