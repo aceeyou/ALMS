@@ -31,6 +31,7 @@ function openSideMenu() {
     document.querySelector(".reports").style.width= "71rem";
     document.querySelector(".transactions").style.width = "45rem";
     document.querySelector(".new-patrons").style.width = "24rem";
+    document.querySelector(".edit-form").style.marginLeft = "300px";
 
     hideBtn();
     closeBtn.style.transform = "rotate(360deg)";
@@ -49,6 +50,8 @@ function closeSideMenu() {
     document.querySelector(".reports").style.width= "81.625rem";
     document.querySelector(".transactions").style.width = "52rem";
     document.querySelector(".new-patrons").style.width = "25rem";
+    document.querySelector(".edit-form .book-form-container").style.marginLeft = "0";
+
 
     showBtn();
     document.querySelector("#open-btn-dashb").style.display = "none";

@@ -636,6 +636,17 @@ main {
   background-color: #2196f3;
 }
 
+.book-form h2 img {
+  width: 30px;
+  margin-right: 15px;
+  transform: translate(0px, 6px);
+}
+
+.book-form form .save-edit {
+  background: rgb(6, 167, 113);
+  margin-bottom: 10px;
+}
+
 /* Library Form */
 
 .form-title {
@@ -836,6 +847,11 @@ main .manage-booklist {
 
 .manage-patron-accounts .book-list-table {
   margin-top: 5rem;
+}
+
+/* Edit form - on page */
+.edit-form {
+  margin-bottom: 100px;
 }
 
 /* Delete Prompt */
