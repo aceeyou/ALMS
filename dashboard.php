@@ -209,7 +209,7 @@ include "includes/display.php"
                         <div class="data"><?php echo $totalAuthors ?></div>
                     </div>
                     <div class="bottom">
-                        <button>Authors Listed</button>
+                        <a href="manage-authors(2).php"><button>Authors Listed</button></a>
                     </div>
                 </div>
             </div>
