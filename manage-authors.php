@@ -295,7 +295,7 @@
                 <div>'.$row["Author_StateAddress"].' '.$row["Author_CountryAddress"].'</div>
                 <div class="action">
                   <a href="includes/manage-authors(backend).php?edit ='.$row['Author_ID'].'" class="edit"></a>
-                  <a href="includes/manage-authors(backend).php?delete='.$row['Author_ID'].'" class="delete"></a>
+                  <button href="includes/manage-authors(backend).php?delete='.$row['Author_ID'].'" class="delete"></button>
                 </div>
               </div>');
               };
