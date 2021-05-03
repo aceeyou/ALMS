@@ -661,6 +661,9 @@ main {
   margin-bottom: 10px;
 }
 
+.book-form form .save-edit:hover {
+}
+
 /* Library Form */
 
 .form-title {
@@ -930,7 +933,7 @@ main .manage-booklist {
 }
 
 .delete-prompt .confirm-delete form button {
-  background: rgb(230, 227, 227);
+  background: rgb(241, 241, 241);
 }
 
 .delete-prompt .confirm-delete form button:hover {
