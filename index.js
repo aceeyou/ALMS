@@ -57,13 +57,20 @@ function closeSideMenu() {
 
 
 function openDeletePrompt() {
-    document.querySelector(".delete-prompt").style.visibility = "visible";  
-    document.querySelector(".delete-prompt").addEventListener('mousemove', (e) => {
+    document.querySelector("main").style.opacity = "0.2";
+
+    document.querySelector("body").style.overflowY = "hidden";
+
+    let deleteprompt = document.querySelector(".delete-prompt");
+
+    deleteprompt.style.visibility = "visible";  
+    deleteprompt.addEventListener('mousemove', (e) => {
         e.preventDefault();
-    })
+    });
 }
 
 function closeDeletePrompt() {
+    document.querySelector("main").style.opacity = "1";
     document.querySelector(".delete-prompt").style.visibility = "hidden";
-
+    document.querySelector("body").style.overflowY = "scroll";
 }
