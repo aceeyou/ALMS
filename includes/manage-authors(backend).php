@@ -23,20 +23,4 @@ if (isset($_GET['delete'])){
 		}
 }
 
-
-//edit/update author
-/*if (isset($_GET['edit'])){
-	$author_ID = $_GET['delete'];
-	$sql = "DELETE FROM AUTHOR WHERE Author_ID = $author_ID";
-	$delete = mysqli_query($conn, $sql);
-		if($delete)
-		{
-    		mysqli_close($conn); 
-    		header("location:../manage-authors.php");
-    		exit;	
-		}
-		else
-		{
-    		echo "Error deleting record";
-		}
-}*/
+//edit author
