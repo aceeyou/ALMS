@@ -19,6 +19,9 @@
   <body>
     <main>
       <div id="book-form-container">
+        <!-- <div class="alms-info" style="width: 250px; height:600px; padding: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(35, 13, 231);transform: translateX(10px); z-index: -1; color: #fff;">
+          <h1>ALMS</h1>
+        </div> -->
         <div class="book-form">
           <div class="form-title">
             <img src="images/alms-logo.png" alt="">
@@ -29,7 +32,7 @@
             <label for="">First Name</label>
             <input
               type="text"
-              name=""
+              name="Librarian_FirstName"
               id=""
               placeholder="Juan"
             />
@@ -39,7 +42,7 @@
             <label for="">Middle Name</label>
             <input
               type="text"
-              name=""
+              name="Librarian_MiddleName"
               id=""
               placeholder="Ramos"
             />
@@ -49,7 +52,7 @@
             <label for="">Last Name</label>
             <input
               type="text"
-              name=""
+              name="Librarian_LastName"
               id=""
               placeholder="Dela Cruz"
             />
@@ -64,12 +67,14 @@
               placeholder="contoso@example.com"
             />
             <!-- end -->
+            <!-- Email address does not exist in db-->
+            <!-- Librarian_ProvinceAddress exists in alms db, but not in page-->
 
             <!-- Input form -->
             <label for="">Mailing Address</label>
             <input
               type="text"
-              name=""
+              name="Librarian_MailingAddress"
               id=""
               placeholder="Street, Subdivision"
             />
@@ -78,7 +83,7 @@
             <label for="">Username</label>
             <input
               type="text"
-              name=""
+              name="Username"
               id=""
               placeholder="@juandela_cruz"
             />
@@ -86,7 +91,7 @@
             <label for="">Password</label>
             <input
               type="password"
-              name=""
+              name="Password"
               id=""
               placeholder="8-20 characters"
             />
@@ -94,7 +99,7 @@
             <label for="">Confirm Password</label>
             <input
               type="password"
-              name=""
+              name="Confirm_Password"
               id=""
               placeholder="Re-enter password"
             />

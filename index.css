@@ -381,7 +381,7 @@ main {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
-  transition: 500ms;
+  transition: 100ms;
 }
 
 /* REPORTS */
@@ -584,6 +584,13 @@ main {
   margin-top: 2rem;
 }
 
+.book-form h2 img {
+  width: 30px;
+  margin-left: 20px;
+  transform: translatey(-5px);
+  animation: rotation 5s infinite linear;
+}
+
 .book-form form {
   display: grid;
   justify-content: center;
@@ -625,6 +632,14 @@ main {
 
 .book-form form input[type="submit"]:hover {
   background: linear-gradient(to bottom, #0b68eb, #267fff);
+}
+
+.book-form input[type="submit"].edit-save-btn {
+  background: rgb(8, 172, 109);
+}
+
+.book-form input[type="submit"].edit-save-btn:hover {
+  background: linear-gradient(to bottom, rgb(8, 172, 109), rgb(7, 153, 97));
 }
 
 .book-form .bottom button a {

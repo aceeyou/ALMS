@@ -47,6 +47,7 @@ function closeSideMenu() {
     document.querySelector(".side-menu").style.boxShadow = "0";
     
     document.querySelector("main").style.marginLeft = "0";
+    document.querySelector("main").style.transition = "500ms";
     document.querySelector(".reports").style.width= "81.625rem";
     document.querySelector(".transactions").style.width = "52rem";
     document.querySelector(".new-patrons").style.width = "25rem";
