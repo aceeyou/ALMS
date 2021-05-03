@@ -56,12 +56,22 @@ function closeSideMenu() {
     closeBtn.style.transform = "rotate(-180deg)";
 }
 
-function showPopUpConfirmation() {
-    document.querySelector(".pop-up-delete-container").style.visibility = "visible";
+
+function openDeletePrompt() {
+    document.querySelector("main").style.opacity = "0.2";
+
+    document.querySelector("body").style.overflowY = "hidden";
+
+    let deleteprompt = document.querySelector(".delete-prompt");
+
+    deleteprompt.style.visibility = "visible";  
+    deleteprompt.addEventListener('mousemove', (e) => {
+        e.preventDefault();
+    });
 }
 
-function closeConfirmationWindow() {
-    document.querySelector(".pop-up-delete-container").style.visibility = "hidden";
-
+function closeDeletePrompt() {
+    document.querySelector("main").style.opacity = "1";
+    document.querySelector(".delete-prompt").style.visibility = "hidden";
+    document.querySelector("body").style.overflowY = "scroll";
 }
-

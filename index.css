@@ -671,10 +671,11 @@ main {
 
 /* Manage Author / Patron */
 
-main .book-list-table {
+main .book-list-table,
+main .manage-booklist {
   display: flex;
   flex-direction: column;
-  width: 60rem;
+  width: 70rem;
   margin-top: 2.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -684,8 +685,12 @@ main .book-list-table {
   transition: 500ms;
 }
 
+main .manage-booklist {
+  width: 76rem;
+}
+
 .book-list-table .table-name,
-.manage-book-table .table-name {
+.manage-booklist .table-name {
   padding: 30px 25px 20px 25px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -702,13 +707,14 @@ main .book-list-table {
   border-bottom: 1px solid rgba(94, 94, 94, 0.274);
 }
 
-.book-list-table .column-name h2 {
+.book-list-table .column-name h2,
+.manage-booklist .column-name h2 {
   font-size: 1rem;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 
 .book-list-table .column-name h2:last-child,
-.manage-book-table .column-name h2:last-child {
+.manage-booklist .column-name h2:last-child {
   text-align: center;
 }
 
@@ -716,6 +722,55 @@ main .book-list-table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 0.5fr;
   width: 100%;
+}
+
+.manage-booklist .column-name {
+  display: grid;
+  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(94, 94, 94, 0.274);
+  border-bottom: 1px solid rgba(94, 94, 94, 0.274);
+}
+
+/* 
+.manage-booklist .column-name h2 {
+  border-right: 1px solid black;
+} */
+
+.manage-booklist .column-name h2:nth-child(7),
+.manage-booklist .column-name h2:nth-child(8),
+.manage-booklist .column-name h2:nth-child(9) {
+  font-size: 0.8rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.manage-booklist .column-name h2:nth-child(10) {
+  font-size: 0.94rem;
+}
+
+.manage-booklist .table-data {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  width: 100%;
+  padding: 10 5px;
+}
+
+.manage-booklist .table-data div:nth-child(7),
+.manage-booklist .table-data div:nth-child(8),
+.manage-booklist .table-data div:nth-child(9) {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.total-copies {
+  color: #0b68eb;
+}
+
+.copies-available {
+  color: rgb(8, 187, 142);
 }
 
 .table-data:hover {
@@ -732,6 +787,9 @@ main .book-list-table {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.manage-booklist .table-data div {
+  padding: 10px;
+}
 
 .table-data div:hover {
   white-space: normal;
@@ -742,8 +800,8 @@ main .book-list-table {
   justify-content: space-around;
 }
 
-.table-data .action button,
-.table-data .action a {
+.table-data .action a,
+.table-data .action button {
   width: 1.5rem;
   height: 1.5rem;
   border: none;
@@ -774,132 +832,92 @@ main .book-list-table {
   background-size: 1.5rem;
 }
 
-main .manage-book-table {
-  display: flex;
-  flex-direction: column;
+/* Manage Patrons w/o Account*/
+
+.manage-patrons .book-list-table,
+.manage-patron-accounts .book-list-table {
   width: 75rem;
-  margin-top: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 1px 2px 8px rgba(128, 125, 125, 0.274);
-  transition: 500ms;
 }
 
-main .manage-book-table .column-name {
-  display: grid;
-  grid-template-columns: 0.7fr 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.4fr 0.4fr 0.5fr;
-  width: 100%;
-  padding: 0 2px;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(94, 94, 94, 0.274);
-  border-bottom: 1px solid rgba(94, 94, 94, 0.274);
+.manage-patrons .column-name,
+.manage-patrons .table-data {
+  grid-template-columns: 0.17fr 0.25fr 0.25fr 0.25fr 0.2fr 0.15fr;
 }
 
-main .manage-book-table .column-name h2 {
-  font-size: 1rem;
-  padding: 10px 8px;
+.manage-patron-accounts .column-name,
+.manage-patron-accounts .table-data {
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.15fr;
 }
 
-main .manage-book-table .column-name h2:nth-child(7),
-main .manage-book-table .column-name h2:nth-child(8) {
-  padding-top: 10px;
-  font-size: 0.9rem;
+.manage-patron-accounts .book-list-table {
+  margin-top: 5rem;
 }
 
-main .manage-book-table .column-name h2:nth-child(7),
-main .manage-book-table .column-name h2:nth-child(8),
-main .manage-book-table .column-name h2:nth-child(7) {
-  text-align: center;
-}
+/* Delete Prompt */
 
-.manage-book-table .table-data {
-  display: grid;
-  grid-template-columns: 0.7fr 1.2fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.4fr 0.4fr 0.5fr;
-  width: 100%;
-}
-
-.manage-book-table .table-data div:nth-child(7),
-.manage-book-table .table-data div:nth-child(8),
-.manage-book-table .table-data div:nth-child(9) {
-  text-align: center;
-}
-
-.total-copies {
-  color: #112aa7;
-}
-
-.copies-available {
-  color: rgb(14, 165, 72);
-}
-
-.pop-up-delete-container {
-  position: absolute;
+.delete-prompt {
+  visibility: hidden;
   position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(175, 170, 170, 0.363);
-  visibility: hidden;
-  z-index: 50;
+  height: 100%;
+  background-color: rgba(230, 230, 230, 0.637);
+  z-index: 20;
+  /* overflow: hidden; */
 }
 
-.pop-up-delete {
-  display: absolute;
+.delete-prompt .confirm-delete {
   width: 500px;
   height: 250px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 1px 2px 8px rgba(128, 125, 125, 0.274);
+  background-color: honeydew;
+  box-shadow: 2px 2px 15px 10px rgba(128, 125, 125, 0.274);
 }
 
-.pop-up-delete h2 {
-  position: absolute;
-  width: 460px;
-  padding: 20px 20px 10px 20px;
+.delete-prompt .confirm-delete h2 {
+  padding: 30px 20px 10px 20px;
+  background-color: rgb(228, 37, 37);
   color: #fff;
-  background: #e62832;
 }
 
-.pop-up-delete form {
+.delete-prompt .confirm-delete form {
   position: relative;
+  margin-top: 20px;
+  padding: 10px 30px;
   height: 100px;
-  margin-top: 80px;
-  padding: 10px 20px 20px 20px;
 }
 
-.pop-up-delete form h3 {
-  font-size: 1rem;
-}
-
-.pop-up-delete form input,
-.pop-up-delete form button {
+.delete-prompt .confirm-delete form input,
+.delete-prompt .confirm-delete form button {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   right: 50px;
-  width: 80px;
-  font-weight: 500;
-  padding: 5px 10px;
+  padding: 5px 15px;
   outline: none;
   border: none;
+  background: none;
+  font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.pop-up-delete form input {
-  margin-right: 100px;
-  background: #e62832;
+.delete-prompt .confirm-delete form input {
+  margin-right: 110px;
+  background: rgb(228, 37, 37);
   color: #fff;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+.delete-prompt .confirm-delete form input:hover {
+  background: rgb(255, 67, 67);
+}
+
+.delete-prompt .confirm-delete form button {
+  background: rgb(230, 227, 227);
+}
+
+.delete-prompt .confirm-delete form button:hover {
+  background: rgb(233, 229, 229);
 }

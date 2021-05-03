@@ -264,7 +264,7 @@
               </g>
             </g>
           </svg>
-          <a href="" class="task">Manage Patron</a>
+          <a href="manage-patrons.html" class="task">Manage Patron</a>
         </div>
         <!-- end -->
 
@@ -283,27 +283,27 @@
                 <h2>Action</h2>
               </div>
               <!-- end: column-name div -->
-    
+
               <!-- table row data -->
               <div class="table-data">
                 <div>100</div>
                 <div>Dana Jane</div>
                 <div>Cam Norte</div>
                 <div class="action">
-                  <a href="manage-author-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="showPopUpConfirmation()"></button>
+                  <a href="" class="edit"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
                 </div>
               </div>
               <!-- end -->
-    
+
               <!-- table row data -->
               <div class="table-data">
                 <div>101</div>
                 <div>Jose Paolo</div>
                 <div>Sorsogon</div>
                 <div class="action">
-                  <a href="manage-author-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="showPopUpConfirmation()"></button>
+                  <a href="" class="edit"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
                 </div>
               </div>
               <!-- end -->
@@ -321,6 +321,20 @@
           </div>
 
     </main>
+
+    <!-- Delete Prompt Div -->
+    <div class="delete-prompt">
+      <div class="confirm-delete">
+        <h2>Confirm Delete Entry</h2>
+        <form action="">
+          <p>Are you sure to delete this entry from the database?</p>
+
+          <input type="submit" value="DELETE">
+          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+        </form>
+      </div>
+    </div>
+    <!-- end -->
 
     <script src="index.js"></script>
   </body>
