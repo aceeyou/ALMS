@@ -268,6 +268,69 @@
 
       </div>
     </section>
+    <main>
+
+      <div class="manage-books-borrowed">
+        <div class="book-list-table">
+          <h2 class="table-name">Manage Books Borrowed</h2>
+            <div class="column-name">
+              <!-- colomn titles -->
+              <h2>Slip No.</h2>
+              <h2>Borrow Date</h2>
+              <h2>Due Date</h2>
+              <h2>Return Date</h2>
+              <h2>Patron Account ID</h2>
+              <h2>Copy ID</h2>
+              <h2>Action</h2>
+            </div>
+              <!-- end: column-name div -->
+
+            <!-- table row data -->
+            <div class="table-data">
+              <div>S100dfgdfgdfgdgdf</div>
+              <div>2020-04-20</div>
+              <div>2020-04-30</div>
+              <div>2020-05-03</div>
+              <div>100</div>
+              <div>C1</div>
+              <div class="action">
+                <a href="manage-patron-edit.html" class="edit"></a>
+                <button href="" class="delete" onclick="openDeletePrompt()"></button>
+              </div>
+            </div>
+              <!-- end -->
+
+            <!-- table row data -->
+            <div class="table-data">
+              <div>S101</div>
+              <div>2020-04-20</div>
+              <div>2020-04-30</div>
+              <div>2020-05-03</div>
+              <div>101</div>
+              <div>C2</div>
+              <div class="action">
+                <a href="manage-patron-edit.html" class="edit"></a>
+                <button href="" class="delete" onclick="openDeletePrompt()"></button>
+              </div>
+            </div>
+              <!-- end -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Delete Prompt Div -->
+    <div class="delete-prompt">
+      <div class="confirm-delete">
+        <h2>Confirm Delete Entry</h2>
+        <form action="">
+          <p>Are you sure to delete this entry from the database?</p>
+
+          <input type="submit" value="DELETE">
+          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+        </form>
+      </div>
+    </div>
+    <!-- end -->
 
     <script src="index.js"></script>
   </body>
