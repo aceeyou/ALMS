@@ -5,51 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/alms-logo.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/alms-logo.png" />
-
-    <title>Manage Book Entry | ALMS</title>
+    <title>Manage Book List | ALMS</title>
   </head>
   <body>
-
-        <!-- NAV BAR -->
-        <nav>
-            <div class="menu-btn">
-                <button id="open-btn" onclick="openSideMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-        width="24" height="24"
-        viewBox="0 0 172 172"
-        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"></path></g></g></svg>
-                </button>
-            </div>
-            <div id="logo-div">
-                <a href="dashboard.html"><img src="images/logo" alt=""></a>
-                <a href="dashboard.html">ALMS</a>
-            </div>
-            <div id="search-container">
-                <input type="text" placeholder="Search" name="search-input">
-            </div>
-            <ul class="main-nav">
-                <li><a href="dashboard.html" class="">Home</a></li>
-                <li onClick="showInnerUL()"><a href="#">Books</a></li>
-                <li class="user-handle"><a href="index.html"><img class="user-img" src="images/default.jpg" alt=""></a></li>
-            </ul>
-        </nav>
+    <!-- NAV BAR -->
+    <nav>
+      <div class="menu-btn">
+        <button id="open-btn" onclick="openSideMenu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#000000">
+                <path
+                  d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div id="logo-div">
+        <a href="dashboard.html"><img src="images/logo" alt="" /></a>
+        <a href="dashboard.html">ALMS</a>
+      </div>
+      <div id="search-container">
+        <input type="text" placeholder="Search" name="search-input" />
+      </div>
+      <ul class="main-nav">
+        <li><a href="dashboard.html" class="">Home</a></li>
+        <li onClick="showInnerUL()"><a href="#">Books</a></li>
+        <li class="user-handle" onmouseover="openUserMenu()" onmouseout="closeUserMenu()">
+          <a href="#"><img class="user-img" src="images/defaul.png" alt=""/></a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
-      <!-- Close button -->
       <button onclick="closeSideMenu()">
         <img class="close-btn" src="images/arrow-white.png" alt="" />
       </button>
 
-      <!-- User/librarian profile picture -->
       <div class="tasks">
         <div class="item user-profile">
           <img src="images/default.jpg" alt="" />
@@ -58,9 +92,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
-
-        <!-- Action: Add new book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,11 +128,8 @@
               </g>
             </g>
           </svg>
-          <a href="new-book.html" class="task">Add New Book</a>
+          <a href="#" class="task">Add New Book</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Borrow Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -138,9 +166,7 @@
           </svg>
           <a href="book-borrow-slip.html" class="task">Borrow Book</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Reserve Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -177,20 +203,16 @@
           </svg>
           <a href="book-reservation.html" class="task">Reserve Book</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Add new author -->
         <div class="item">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-  width="32" height="32"
-  viewBox="0 0 172 172"
-  style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g>
-            </svg>
-            <a href="new-author.html" class="task">Add New Author</a>
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="32" height="32"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g>
+          </svg>
+          <a href="new-author.html" class="task">Add New Author</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Register Patron -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -225,11 +247,9 @@
               </g>
             </g>
           </svg>
-          <a href="new-patron.html" class="task">Register Patron</a>
+          <a href="" class="task">Register Patron</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Manage Patron -->
+        
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -264,84 +284,72 @@
               </g>
             </g>
           </svg>
-          <a href="manage-patrons.html" class="task">Manage Patron</a>
+          <a href="" class="task">Manage Patron</a>
         </div>
-        <!-- end -->
-
       </div>
     </section>
 
+    <section class="heading">
+      <h1>Book Listed</h1>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore harum accusamus quibusdam officia <br> dolores eveniet omnis, assumenda fugiat quisquam.</p> -->
+    </section>
+  
+    
     <main>
-
-        <div class="manage-booklist">
-            <h2 class="table-name">Books Listed</h2>
-              <div class="column-name">
-                <!-- colomn titles -->
-                <h2>ISBN</h2>
-                <h2>Book Title</h2>
-                <h2>Authors</h2>
-                <h2>Book Edition</h2>
-                <h2>Publication</h2>
-                <h2>Date Published</h2>
-                <h2>Total Copies</h2>
-                <h2>Copies Available</h2>
-                <h2>Shelf</h2>
-                <h2>Action</h2>
-              </div>
-              <!-- end: column-name div -->
-
-              <!-- table row data -->
-              <div class="table-data book-listed-data">
-                <div>100-11-1111</div>
-                <div>Introduction to Programming | C Lang</div>
-                <div>Dana Jane, Patrick Ray</div>
-                <div>1st Edition</div>
-                <div>EEE Publication department company</div>
-                <div>2015-01-25</div>
-                <div class="total-copies">550</div>
-                <div class="copies-available">35</div>
-                <div>a6</div>
-                <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
-                </div>
-              </div>
-              <!-- end -->
-
-              <!-- table row data -->
-              <div class="table-data book-listed-data">
-                <div>101-55-5555</div>
-                <div>Data Structure and Algorithm</div>
-                <div>Jose Paolo, Marc Angelo</div>
-                <div>OnlyFans Edition</div>
-                <div>EEE Publication</div>
-                <div>2014-02-14</div>
-                <div class="total-copies">30</div>
-                <div class="copies-available">22</div>
-                <div>mm555</div>
-                <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
-                </div>
-              </div>
-              <!-- end -->
+      <div class="manage-book-table">
+        <h2 class="table-name">Books Listed</h2>
+          <div class="column-name">
+            <!-- colomn titles -->
+            <h2>ISBN</h2>
+            <h2>Book Title</h2>
+            <h2>Authors</h2>
+            <h2>Book Edition</h2>
+            <h2>Publication</h2>
+            <h2>Date Published</h2>
+            <h2>Total Copies</h2>
+            <h2>Copies Available</h2>
+            <h2>Shelf</h2>
+            <h2>Action</h2>
           </div>
+          <!-- end: column-name div -->
 
-    </main>
+          <!-- table row data -->
+          <div class="table-data">
+            <div>100-11-1111</div>
+            <div>Introduction to Programming | C Lang</div>
+            <div>Dana Jane, Patrick Ray</div>
+            <div>1st Edition</div>
+            <div>EEE Publication</div>
+            <div>2015-01-25</div>
+            <div class="total-copies">50</div>
+            <div class="copies-available">35</div>
+            <div>a6</div>
+            <div class="action">
+              <a href="manage-book-edit.html" class="edit"></a>
+              <button href="" class="delete"></button>
+            </div>
+          </div>
+          <!-- end -->
 
-    <!-- Delete Prompt Div -->
-    <div class="delete-prompt">
-      <div class="confirm-delete">
-        <h2>Confirm Delete Entry</h2>
-        <form action="">
-          <p>Are you sure to delete this entry from the database?</p>
-
-          <input type="submit" value="DELETE">
-          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-        </form>
+          <!-- table row data -->
+          <div class="table-data book-listed-data">
+            <div>101-55-5555</div>
+            <div>Data Structure and Algorithm</div>
+            <div>Jose Paolo, Marc Angelo</div>
+            <div>4th Edition</div>
+            <div>EEE Publication</div>
+            <div>2014-02-14</div>
+            <div class="total-copies">30</div>
+            <div class="copies-available">22</div>
+            <div>d0111</div>
+            <div class="action">
+              <a href="manage-book-edit.html" class="edit"></a>
+              <button href="" class="delete"></button>
+            </div>
+          </div>
+          <!-- end -->
       </div>
-    </div>
-    <!-- end -->
+    </main>
 
     <script src="index.js"></script>
   </body>

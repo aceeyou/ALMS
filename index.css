@@ -381,7 +381,7 @@ main {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
-  transition: 500ms;
+  transition: 100ms;
 }
 
 /* REPORTS */
@@ -584,6 +584,13 @@ main {
   margin-top: 2rem;
 }
 
+.book-form h2 img {
+  width: 30px;
+  margin-left: 20px;
+  transform: translatey(-5px);
+  animation: rotation 5s infinite linear;
+}
+
 .book-form form {
   display: grid;
   justify-content: center;
@@ -627,6 +634,14 @@ main {
   background: linear-gradient(to bottom, #0b68eb, #267fff);
 }
 
+.book-form input[type="submit"].edit-save-btn {
+  background: rgb(8, 172, 109);
+}
+
+.book-form input[type="submit"].edit-save-btn:hover {
+  background: linear-gradient(to bottom, rgb(8, 172, 109), rgb(7, 153, 97));
+}
+
 .book-form .bottom button a {
   text-decoration: none;
   color: #fff;
@@ -634,6 +649,19 @@ main {
 
 .book-form input[type="checkbox"]:checked ~ .checkmark {
   background-color: #2196f3;
+}
+
+.book-form h2 img {
+  width: 30px;
+  transform: translate(-20px, 6px);
+}
+
+.book-form form .save-edit {
+  background: rgb(6, 167, 113);
+  margin-bottom: 10px;
+}
+
+.book-form form .save-edit:hover {
 }
 
 /* Library Form */
@@ -723,7 +751,6 @@ main .manage-booklist {
   border-right: 1px solid black;
 } */
 
-.manage-booklist .column-name h2:nth-child(5),
 .manage-booklist .column-name h2:nth-child(7),
 .manage-booklist .column-name h2:nth-child(8),
 .manage-booklist .column-name h2:nth-child(9) {
@@ -839,6 +866,11 @@ main .manage-booklist {
   margin-top: 5rem;
 }
 
+/* Edit form - on page */
+.edit-form {
+  margin-bottom: 100px;
+}
+
 /* Delete Prompt */
 
 .delete-prompt {
@@ -851,7 +883,7 @@ main .manage-booklist {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(219, 216, 216, 0.637);
+  background-color: rgba(230, 230, 230, 0.637);
   z-index: 20;
   /* overflow: hidden; */
 }
@@ -901,7 +933,7 @@ main .manage-booklist {
 }
 
 .delete-prompt .confirm-delete form button {
-  background: rgb(211, 211, 211);
+  background: rgb(241, 241, 241);
 }
 
 .delete-prompt .confirm-delete form button:hover {

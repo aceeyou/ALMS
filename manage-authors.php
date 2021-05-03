@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="images/alms-logo.png" />
 
-    <title>Manage Book Entry | ALMS</title>
+    <title>Manage Author | ALMS</title>
   </head>
   <body>
 
@@ -273,59 +273,34 @@
 
     <main>
 
-        <div class="manage-booklist">
-            <h2 class="table-name">Books Listed</h2>
+        <div class="book-list-table">
+            <h2 class="table-name">Manage Authors</h2>
               <div class="column-name">
                 <!-- colomn titles -->
-                <h2>ISBN</h2>
-                <h2>Book Title</h2>
-                <h2>Authors</h2>
-                <h2>Book Edition</h2>
-                <h2>Publication</h2>
-                <h2>Date Published</h2>
-                <h2>Total Copies</h2>
-                <h2>Copies Available</h2>
-                <h2>Shelf</h2>
+                <h2>Author ID</h2>
+                <h2>Author</h2>
+                <h2>Address</h2>
                 <h2>Action</h2>
               </div>
               <!-- end: column-name div -->
 
               <!-- table row data -->
-              <div class="table-data book-listed-data">
-                <div>100-11-1111</div>
-                <div>Introduction to Programming | C Lang</div>
-                <div>Dana Jane, Patrick Ray</div>
-                <div>1st Edition</div>
-                <div>EEE Publication department company</div>
-                <div>2015-01-25</div>
-                <div class="total-copies">550</div>
-                <div class="copies-available">35</div>
-                <div>a6</div>
+              <?php 
+              include "includes/manage-authors(backend).php";
+              if (mysqli_num_rows($authors) > 0) {
+                        while ($row = mysqli_fetch_assoc($authors)) { echo('
+              <div class="table-data">
+                <div>'.$row["Author_ID"].'</div>
+                <div>'.$row["Author_FirstName"].' '.$row["Author_MiddleName"].' '.$row["Author_LastName"].'</div>
+                <div>'.$row["Author_StateAddress"].', '.$row["Author_CountryAddress"].'</div>
                 <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
+                  <a href="editpage-author.html" class="edit"></a>
+                   <a href="?delete='.$row['Author_ID'].'"> <button class="delete" onclick="openDeletePrompt()"></button> </a>
                 </div>
-              </div>
-              <!-- end -->
-
-              <!-- table row data -->
-              <div class="table-data book-listed-data">
-                <div>101-55-5555</div>
-                <div>Data Structure and Algorithm</div>
-                <div>Jose Paolo, Marc Angelo</div>
-                <div>OnlyFans Edition</div>
-                <div>EEE Publication</div>
-                <div>2014-02-14</div>
-                <div class="total-copies">30</div>
-                <div class="copies-available">22</div>
-                <div>mm555</div>
-                <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
-                </div>
-              </div>
-              <!-- end -->
-          </div>
+              </div>              
+          </div>');
+              };
+              } ?> 
 
     </main>
 
@@ -333,7 +308,7 @@
     <div class="delete-prompt">
       <div class="confirm-delete">
         <h2>Confirm Delete Entry</h2>
-        <form action="">
+        <form action="includes/manage-authors(backend).php" method="GET">
           <p>Are you sure to delete this entry from the database?</p>
 
           <input type="submit" value="DELETE">
@@ -342,6 +317,7 @@
       </div>
     </div>
     <!-- end -->
+
 
     <script src="index.js"></script>
   </body>

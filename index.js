@@ -31,6 +31,7 @@ function openSideMenu() {
     document.querySelector(".reports").style.width= "71rem";
     document.querySelector(".transactions").style.width = "45rem";
     document.querySelector(".new-patrons").style.width = "24rem";
+    document.querySelector(".edit-form").style.marginLeft = "300px";
 
     hideBtn();
     closeBtn.style.transform = "rotate(360deg)";
@@ -46,9 +47,12 @@ function closeSideMenu() {
     document.querySelector(".side-menu").style.boxShadow = "0";
     
     document.querySelector("main").style.marginLeft = "0";
+    document.querySelector("main").style.transition = "500ms";
     document.querySelector(".reports").style.width= "81.625rem";
     document.querySelector(".transactions").style.width = "52rem";
     document.querySelector(".new-patrons").style.width = "25rem";
+    document.querySelector(".edit-form .book-form-container").style.marginLeft = "0";
+
 
     showBtn();
     document.querySelector("#open-btn-dashb").style.display = "none";
@@ -57,13 +61,20 @@ function closeSideMenu() {
 
 
 function openDeletePrompt() {
-    document.querySelector(".delete-prompt").style.visibility = "visible";  
-    document.querySelector(".delete-prompt").addEventListener('mousemove', (e) => {
+    document.querySelector("main").style.opacity = "0.2";
+
+    document.querySelector("body").style.overflowY = "hidden";
+
+    let deleteprompt = document.querySelector(".delete-prompt");
+
+    deleteprompt.style.visibility = "visible";  
+    deleteprompt.addEventListener('mousemove', (e) => {
         e.preventDefault();
-    })
+    });
 }
 
 function closeDeletePrompt() {
+    document.querySelector("main").style.opacity = "1";
     document.querySelector(".delete-prompt").style.visibility = "hidden";
-
+    document.querySelector("body").style.overflowY = "scroll";
 }
