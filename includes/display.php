@@ -11,7 +11,7 @@ $totalBooks = mysqli_fetch_row($result)[0];
 //books issued
 $sql1 = "SELECT COUNT(slip_number) FROM borrow_slip WHERE return_date IS NULL;";
 $result1 = mysqli_query($conn, $sql1);
-$bookIssued = mysqli_num_rows($result1);
+$bookIssued = mysqli_fetch_row($result1)[0];
 
 // //books returned
 $sql2 = "SELECT COUNT(slip_number) FROM borrow_slip WHERE return_date IS NOT NULL;";

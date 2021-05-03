@@ -656,10 +656,11 @@ main {
 
 /* Manage Author / Patron */
 
-main .book-list-table {
+main .book-list-table,
+main .manage-booklist {
   display: flex;
   flex-direction: column;
-  width: 60rem;
+  width: 70rem;
   margin-top: 2.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -669,7 +670,12 @@ main .book-list-table {
   transition: 500ms;
 }
 
-.book-list-table .table-name {
+main .manage-booklist {
+  width: 76rem;
+}
+
+.book-list-table .table-name,
+.manage-booklist .table-name {
   padding: 30px 25px 20px 25px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -686,12 +692,14 @@ main .book-list-table {
   border-bottom: 1px solid rgba(94, 94, 94, 0.274);
 }
 
-.book-list-table .column-name h2 {
+.book-list-table .column-name h2,
+.manage-booklist .column-name h2 {
   font-size: 1rem;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 
-.book-list-table .column-name h2:last-child {
+.book-list-table .column-name h2:last-child,
+.manage-booklist .column-name h2:last-child {
   text-align: center;
 }
 
@@ -699,6 +707,56 @@ main .book-list-table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 0.5fr;
   width: 100%;
+}
+
+.manage-booklist .column-name {
+  display: grid;
+  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(94, 94, 94, 0.274);
+  border-bottom: 1px solid rgba(94, 94, 94, 0.274);
+}
+
+/* 
+.manage-booklist .column-name h2 {
+  border-right: 1px solid black;
+} */
+
+.manage-booklist .column-name h2:nth-child(5),
+.manage-booklist .column-name h2:nth-child(7),
+.manage-booklist .column-name h2:nth-child(8),
+.manage-booklist .column-name h2:nth-child(9) {
+  font-size: 0.8rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.manage-booklist .column-name h2:nth-child(10) {
+  font-size: 0.94rem;
+}
+
+.manage-booklist .table-data {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  width: 100%;
+  padding: 10 5px;
+}
+
+.manage-booklist .table-data div:nth-child(7),
+.manage-booklist .table-data div:nth-child(8),
+.manage-booklist .table-data div:nth-child(9) {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.total-copies {
+  color: #0b68eb;
+}
+
+.copies-available {
+  color: rgb(8, 187, 142);
 }
 
 .table-data:hover {
@@ -715,6 +773,9 @@ main .book-list-table {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.manage-booklist .table-data div {
+  padding: 10px;
+}
 
 .table-data div:hover {
   white-space: normal;
@@ -725,7 +786,8 @@ main .book-list-table {
   justify-content: space-around;
 }
 
-.table-data .action a {
+.table-data .action a,
+.table-data .action button {
   width: 1.5rem;
   height: 1.5rem;
   border: none;
@@ -775,4 +837,73 @@ main .book-list-table {
 
 .manage-patron-accounts .book-list-table {
   margin-top: 5rem;
+}
+
+/* Delete Prompt */
+
+.delete-prompt {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(219, 216, 216, 0.637);
+  z-index: 20;
+  /* overflow: hidden; */
+}
+
+.delete-prompt .confirm-delete {
+  width: 500px;
+  height: 250px;
+  background-color: honeydew;
+  box-shadow: 2px 2px 15px 10px rgba(128, 125, 125, 0.274);
+}
+
+.delete-prompt .confirm-delete h2 {
+  padding: 30px 20px 10px 20px;
+  background-color: rgb(228, 37, 37);
+  color: #fff;
+}
+
+.delete-prompt .confirm-delete form {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 30px;
+  height: 100px;
+}
+
+.delete-prompt .confirm-delete form input,
+.delete-prompt .confirm-delete form button {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  background: none;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.delete-prompt .confirm-delete form input {
+  margin-right: 110px;
+  background: rgb(228, 37, 37);
+  color: #fff;
+}
+
+.delete-prompt .confirm-delete form input:hover {
+  background: rgb(255, 67, 67);
+}
+
+.delete-prompt .confirm-delete form button {
+  background: rgb(211, 211, 211);
+}
+
+.delete-prompt .confirm-delete form button:hover {
+  background: rgb(233, 229, 229);
 }
