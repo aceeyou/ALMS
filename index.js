@@ -55,3 +55,15 @@ function closeSideMenu() {
     closeBtn.style.transform = "rotate(-180deg)";
 }
 
+
+function openDeletePrompt() {
+    document.querySelector(".delete-prompt").style.visibility = "visible";  
+    document.querySelector(".delete-prompt").addEventListener('mousemove', (e) => {
+        e.preventDefault();
+    })
+}
+
+function closeDeletePrompt() {
+    document.querySelector(".delete-prompt").style.visibility = "hidden";
+
+}

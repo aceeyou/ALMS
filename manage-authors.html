@@ -291,7 +291,7 @@
                 <div>Cam Norte</div>
                 <div class="action">
                   <a href="" class="edit"></a>
-                  <a href="" class="delete"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
                 </div>
               </div>
               <!-- end -->
@@ -303,13 +303,27 @@
                 <div>Sorsogon</div>
                 <div class="action">
                   <a href="" class="edit"></a>
-                  <a href="" class="delete"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
                 </div>
               </div>
               <!-- end -->
           </div>
 
     </main>
+
+    <!-- Delete Prompt Div -->
+    <div class="delete-prompt">
+      <div class="confirm-delete">
+        <h2>Confirm Delete Entry</h2>
+        <form action="">
+          <p>Are you sure to delete this entry from the database?</p>
+
+          <input type="submit" value="DELETE">
+          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+        </form>
+      </div>
+    </div>  
+    <!-- end -->
 
     <script src="index.js"></script>
   </body>
