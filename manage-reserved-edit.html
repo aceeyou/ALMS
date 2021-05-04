@@ -329,7 +329,45 @@
         <!-- end -->
       </div>
     </section>
-    
+
+    <main>
+        <div id="book-form-container">
+            <div class="book-form">
+              <h2><img class="edit-icon" src="/images/edit-black.png" alt="">Edit Book Reserved</h2>
+              <form action="includes/new-book.php" method="POST">
+                <label for="">Reservation ID</label>
+                <input
+                  type="text"
+                  name="reservation-id"
+                  id=""
+                  placeholder="R100"
+                />
+
+                <label for="">Reservation Date</label>
+                <input type="text" name="reservation-date" id="" placeholder="2020-05-03" />
+
+                <label for="">Patron ID</label>
+                <input
+                  type="text"
+                  name="patron-id"
+                  id=""
+                  placeholder="100"
+                />
+
+                <label for="">Copy ID</label>
+                <input
+                  type="text"
+                  name="copy-no"
+                  id=""
+                  placeholder="C3"
+                />
+
+                <input type="submit" value="SAVE CHANGES" class="save-edit"/>
+              </form>
+            </div>
+          </div>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
