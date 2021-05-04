@@ -21,4 +21,14 @@ if (isset($_GET['delete'])) {
 	}
 }
 
+if (isset($_POST['SAVE'])) {
+	$Author_FirstName = $_POST["Author_FirstName"];
+	$Author_MiddleName = $_POST["Author_MiddleName"];
+	$Author_LastName = $_POST["Author_LastName"];
+	$Author_StateAddress = $_POST["Author_StateAddress"];
+	$Author_CountryAddress = $_POST["Author_CountryAddress"];
+}
 //edit author
+
+
+// 
