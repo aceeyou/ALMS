@@ -170,6 +170,7 @@ if (isset($_GET["edit"])) {
         <h2><img src="images/edit-black.png" alt="" />Edit Author Details</h2>
         <form action="includes/manage-authors(backend).php" method="POST">
           <!-- Input form -->
+          <input type="hidden" name="Author_ID" value="<?php echo $row['Author_ID'];?>"/>
           <label for="">First Name</label>
           <input type="text" name="Author_FirstName" id="" placeholder="JK" value="<?php echo $row['Author_FirstName'] ?>" />
           <!-- end -->
