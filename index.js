@@ -60,9 +60,7 @@ function closeSideMenu() {
 }
 
 function openDeletePrompt(el) {
-  console.log(el.value);
   document.getElementsByName("confirmDelete")[0].value = el.value;
-  console.log(document.getElementsByName("confirmDelete")[0]);
 
   document.querySelector("main").style.opacity = "0.2";
 
