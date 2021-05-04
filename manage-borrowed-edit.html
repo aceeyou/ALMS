@@ -12,9 +12,9 @@
     />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/alms-logo.png" />
+    <link rel="icon" href="images/edit-black.png" />
 
-    <title>Edit Author Details | ALMS</title>
+    <title>Edit Book Borrowed | ALMS</title>
   </head>
   <body>
     <!-- NAV BAR -->
@@ -331,61 +331,47 @@
     </section>
 
     <main>
-      <div id="book-form-container">
-        <div class="book-form">
-          <h2><img src="images/edit-black.png" alt="" />Edit Author Details</h2>
-          <form action="includes/new-author.php" method="POST">
-            <!-- Input form -->
-            <label for="">First Name</label>
-            <input type="text" name="Author_FirstName" id="" placeholder="JK" />
-            <!-- end -->
+        <div id="book-form-container">
+            <div class="book-form">
+              <h2><img class="edit-icon" src="/images/edit-black.png" alt="">Edit Book Borrowed</h2>
+              <form action="includes/new-book.php" method="POST">
+                <label for="">Slip No.</label>
+                <input
+                  type="text"
+                  name="slip-no"
+                  id=""
+                  placeholder="S100"
+                />
 
-            <!-- Input form -->
-            <label for="">Middle Name</label>
-            <input
-              type="text"
-              name="Author_MiddleName"
-              id=""
-              placeholder="Something"
-            />
-            <!-- end -->
+                <label for="">Borrow Date</label>
+                <input type="text" name="borrow-date" id="" placeholder="2020-04-20" />
 
-            <!-- Input form -->
-            <label for="">Last Name</label>
-            <input
-              type="text"
-              name="Author_LastName"
-              id=""
-              placeholder="Rowling"
-            />
-            <!-- end -->
+                <label for="">Due Date</label>
+                <input type="text" name="due-date" id="" placeholder="2020-04-30" />
 
-            <!-- Input form -->
-            <label for="">State Address</label>
-            <input
-              type="text"
-              name="Author_StateAddress"
-              id=""
-              placeholder="Texas"
-            />
-            <!-- end -->
+                <label for="">Return Date</label>
+                <input type="text" name="due-date" id="" placeholder="2020-05-03" />
 
-            <!-- Input form -->
-            <label for="">Country Address</label>
-            <input
-              type="text"
-              name="Author_CountryAddress"
-              id=""
-              placeholder="USA"
-            />
-            <!-- end -->
+                <label for="">Patron Account ID</label>
+                <input
+                  type="text"
+                  name="pacct-id"
+                  id=""
+                  placeholder="100"
+                />
 
-            <!-- Button -->
-            <input type="submit" value="SAVE CHANGES" class="save-edit" />
-            <!-- end -->
-          </form>
-        </div>
-      </div>
+                <label for="">Copy ID</label>
+                <input
+                  type="text"
+                  name="copy-no"
+                  id=""
+                  placeholder="C1"
+                />
+
+                <input type="submit" value="SAVE CHANGES" class="save-edit"/>
+              </form>
+            </div>
+          </div>
     </main>
 
     <script src="index.js"></script>
