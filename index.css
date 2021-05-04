@@ -661,6 +661,9 @@ main {
   margin-bottom: 10px;
 }
 
+.book-form form .save-edit:hover {
+}
+
 /* Library Form */
 
 .form-title {
@@ -743,7 +746,7 @@ main .manage-booklist {
   border-bottom: 1px solid rgba(94, 94, 94, 0.274);
 }
 
-/* 
+/*
 .manage-booklist .column-name h2 {
   border-right: 1px solid black;
 } */
@@ -842,11 +845,20 @@ main .manage-booklist {
   background-size: 1.5rem;
 }
 
-/* Manage Patrons w/o Account*/
+/* Manage Patrons w/o Account, Manage Books Borrowed/Reserved, and Manage Authors*/
 
 .manage-patrons .book-list-table,
-.manage-patron-accounts .book-list-table {
+.manage-patron-accounts .book-list-table,
+.manage-books-borrowed .book-list-table {
   width: 75rem;
+}
+
+.manage-authors .table-data div,
+.manage-patrons .table-data div,
+.manage-patron-accounts .table-data div,
+.manage-books-borrowed .table-data div,
+.manage-books-reserved .table-data div {
+  padding: 10px;
 }
 
 .manage-patrons .column-name,
@@ -861,6 +873,16 @@ main .manage-booklist {
 
 .manage-patron-accounts .book-list-table {
   margin-top: 5rem;
+}
+
+.manage-books-borrowed .column-name,
+.manage-books-borrowed .table-data {
+  grid-template-columns: 0.22fr 0.25fr 0.25fr 0.25fr 0.33fr 0.25fr 0.15fr;
+}
+
+.manage-books-reserved .column-name,
+.manage-books-reserved .table-data {
+  grid-template-columns: 0.28fr 0.31fr 0.27fr 0.25fr 0.15fr;
 }
 
 /* Edit form - on page */
@@ -930,7 +952,7 @@ main .manage-booklist {
 }
 
 .delete-prompt .confirm-delete form button {
-  background: rgb(230, 227, 227);
+  background: rgb(241, 241, 241);
 }
 
 .delete-prompt .confirm-delete form button:hover {
