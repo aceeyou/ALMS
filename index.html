@@ -42,7 +42,10 @@
               <input type="password" class="form-control border-0" placeholder="Enter your password" aria-label="Password" aria-describedby="basic-addon1" name="password" />
             </div>
           </div>
-          <p class="verification"></p>
+
+          <!-- login error message if credentials are incorrect... use display: none; as default-->
+          <p class="verification" style="display: block;">Username or password is either incorrect</p>
+
           <button type="submit" class="btn btn-primary">Sign In</button>
           <p class="forgot"><a href="dashboard.html">Forgot password?</a></p>
         </div>
