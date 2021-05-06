@@ -845,7 +845,7 @@ main .manage-booklist {
   background-size: 1.5rem;
 }
 
-/* Manage Patrons w/o Account, Manage Books Borrowed/Reserved, and Manage Authors*/
+/* Manage Patrons w/o Account, Manage Books Borrowed/Reserved, Manage Authors, and Manage Shelf*/
 
 .manage-patrons .book-list-table,
 .manage-patron-accounts .book-list-table,
@@ -857,7 +857,8 @@ main .manage-booklist {
 .manage-patrons .table-data div,
 .manage-patron-accounts .table-data div,
 .manage-books-borrowed .table-data div,
-.manage-books-reserved .table-data div {
+.manage-books-reserved .table-data div,
+.manage-shelf .table-data div {
   padding: 10px;
 }
 
@@ -904,7 +905,7 @@ main .manage-booklist {
   font-size: 1.8rem;
   transform: translateX(-400px);
 }
-/* 
+/*
 .search-container {
   display: flex;
   justify-content: center;
