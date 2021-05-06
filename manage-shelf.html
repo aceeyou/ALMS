@@ -336,6 +336,62 @@
       </div>
     </section>
 
+    <main>
+
+        <div class="book-list-table manage-shelf">
+            <h2 class="table-name">Manage Authors</h2>
+              <div class="column-name">
+                <!-- colomn titles -->
+                <h2>Shelf ID</h2>
+                <h2>Shelf Row</h2>
+                <h2>Shelf Name</h2>
+                <h2>Action</h2>
+              </div>
+              <!-- end: column-name div -->
+
+              <!-- table row data -->
+              <div class="table-data">
+                <div>S1</div>
+                <div>21</div>
+                <div>History</div>
+                <div class="action">
+                  <a href="manage-shelf-edit.html" class="edit"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
+                </div>
+              </div>
+              <!-- end -->
+
+              <!-- table row data -->
+              <div class="table-data">
+                <div>S2</div>
+                <div>12</div>
+                <div>Literature</div>
+                <div class="action">
+                  <a href="manage-shelf-edit.html" class="edit"></a>
+                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
+                </div>
+              </div>
+              <!-- end -->
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </main>
+
+    <!-- Delete Prompt Div -->
+    <div class="delete-prompt">
+      <div class="confirm-delete">
+        <h2>Confirm Delete Entry</h2>
+        <form action="">
+          <p>Are you sure to delete this entry from the database?</p>
+
+          <input type="submit" value="DELETE" />
+          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+        </form>
+      </div>
+    </div>
+    <!-- end -->
+
     <script src="index.js"></script>
   </body>
 </html>
