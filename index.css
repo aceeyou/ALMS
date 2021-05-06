@@ -890,6 +890,53 @@ main .manage-booklist {
   margin-bottom: 100px;
 }
 
+/* Search Results Page */
+
+.h22 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.h22 h2 {
+  font-size: 1.8rem;
+  transform: translateX(-400px);
+}
+/* 
+.search-container {
+  display: flex;
+  justify-content: center;
+  background-color: #11a876;
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-container .book-form {
+  padding-top: 200px;
+} */
+
+/* .manage-booklist .search-feed {
+  margin-top: 1rem;
+} */
+
+.letter input {
+  margin-left: 15px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+.letter {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
 /* Delete Prompt */
 
 .delete-prompt {
