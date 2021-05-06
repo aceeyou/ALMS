@@ -3,7 +3,7 @@ include "includes/db.php";
 
 if (isset($_GET["edit"])) {
   $editID = $_GET['edit'];
-  $sql2 = "SELECT * FROM `author` WHERE Author_ID = $editID;";
+  $sql2 = "SELECT * FROM `borrow_slip` WHERE Slip_Number = $editID;";
   $resultEdit = mysqli_query($conn, $sql2);
   $row = mysqli_fetch_assoc($resultEdit);
 };
@@ -22,9 +22,9 @@ if (isset($_GET["edit"])) {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
+  <link rel="icon" href="images/edit-black.png" />
 
-  <title>Edit Author Details | ALMS</title>
+  <title>Edit Book Borrowed | ALMS</title>
 </head>
 
 <body>
@@ -167,37 +167,27 @@ if (isset($_GET["edit"])) {
   <main>
     <div id="book-form-container">
       <div class="book-form">
-        <h2><img src="images/edit-black.png" alt="" />Edit Author Details</h2>
-        <form action="includes/manage-authors(backend).php" method="POST">
-          <!-- Input form -->
-          <input type="hidden" name="Author_ID" value="<?php echo $row['Author_ID']; ?>" />
-          <label for="">First Name</label>
-          <input type="text" name="Author_FirstName" id="" placeholder="JK" value="<?php echo $row['Author_FirstName'] ?>" />
-          <!-- end -->
+        <h2><img class="edit-icon" src="/images/edit-black.png" alt="">Edit Book Borrowed</h2>
+        <form action="includes/manage-borrowed(backend).php" method="POST">
+          <label for="">Slip No.</label>
+          <input type="text" name="slip-no" id="" placeholder="S100" value="<?php echo $row['Slip_Number'] ?>" />
 
-          <!-- Input form -->
-          <label for="">Middle Name</label>
-          <input type="text" name="Author_MiddleName" id="" placeholder="Something" value="<?php echo $row['Author_MiddleName'] ?>" />
-          <!-- end -->
+          <label for="">Borrow Date</label>
+          <input type="text" name="borrow-date" id="" placeholder="2020-04-20" value="<?php echo $row['Borrow_Date'] ?>" />
 
-          <!-- Input form -->
-          <label for="">Last Name</label>
-          <input type="text" name="Author_LastName" id="" placeholder="Rowling" value="<?php echo $row['Author_LastName'] ?>" />
-          <!-- end -->
+          <label for="">Due Date</label>
+          <input type="text" name="due-date" id="" placeholder="2020-04-30" value="<?php echo $row['Due_Date'] ?>" />
 
-          <!-- Input form -->
-          <label for="">State Address</label>
-          <input type="text" name="Author_StateAddress" id="" placeholder="Texas" value="<?php echo $row['Author_StateAddress'] ?>" />
-          <!-- end -->
+          <label for="">Return Date</label>
+          <input type="text" name="return-date" id="" placeholder="Null" value="<?php echo $row['Return_Date'] ?>" />
 
-          <!-- Input form -->
-          <label for="">Country Address</label>
-          <input type="text" name="Author_CountryAddress" id="" placeholder="USA" value="<?php echo $row['Author_CountryAddress'] ?>" />
-          <!-- end -->
+          <label for="">Patron Account ID</label>
+          <input type="text" name="pacct-id" id="" placeholder="100" value="<?php echo $row['PatronAccount_ID'] ?>" />
 
-          <!-- Button -->
+          <label for="">Copy ID</label>
+          <input type="text" name="copy-no" id="" placeholder="C1" value="<?php echo $row['Copy_ID'] ?>" />
+
           <input type="submit" name="SAVE" class="save-edit" />
-          <!-- end -->
         </form>
       </div>
     </div>
