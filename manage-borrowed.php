@@ -1,15 +1,3 @@
-<?php
-include "includes/db.php";
-
-if (isset($_GET["edit"])) {
-  $editID = $_GET['edit'];
-  $sql2 = "SELECT * FROM `author` WHERE Author_ID = $editID;";
-  $resultEdit = mysqli_query($conn, $sql2);
-  $row = mysqli_fetch_assoc($resultEdit);
-};
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,15 +12,14 @@ if (isset($_GET["edit"])) {
   <link rel="stylesheet" href="index.css" />
   <link rel="icon" href="images/alms-logo.png" />
 
-  <title>Edit Author Details | ALMS</title>
+  <title>Manage Books Borrowed | ALMS</title>
 </head>
 
 <body>
-  <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#000000">
@@ -43,18 +30,16 @@ if (isset($_GET["edit"])) {
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
+      <a href="dashboard.html"><img src="images/logo" alt=""></a>
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" />
+      <input type="text" placeholder="Search" name="search-input">
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
       <li onClick="showInnerUL()"><a href="#">Books</a></li>
-      <li class="user-handle">
-        <a href="index.html"><img class="user-img" src="images/default.jpg" alt="" /></a>
-      </li>
+      <li class="user-handle"><a href="index.html"><img class="user-img" src="images/default.jpg" alt=""></a></li>
     </ul>
   </nav>
 
@@ -122,7 +107,7 @@ if (isset($_GET["edit"])) {
 
       <!-- Action: Add new author -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -149,7 +134,7 @@ if (isset($_GET["edit"])) {
       <!-- end -->
 
       <!-- Action: Manage Patron -->
-      <div class="item">
+      <div class="item menu-active">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
@@ -158,50 +143,70 @@ if (isset($_GET["edit"])) {
             </g>
           </g>
         </svg>
-        <a href="manage-patrons.html" class="task">Manage Patron</a>
+        <a href="#" class="task">Manage Patron</a>
       </div>
       <!-- end -->
+
     </div>
   </section>
-
   <main>
-    <div id="book-form-container">
-      <div class="book-form">
-        <h2><img src="images/edit-black.png" alt="" />Edit Author Details</h2>
-        <form action="includes/manage-authors(backend).php" method="POST">
-          <!-- Input form -->
-          <input type="hidden" name="Author_ID" value="<?php echo $row['Author_ID']; ?>" />
-          <label for="">First Name</label>
-          <input type="text" name="Author_FirstName" id="" placeholder="JK" value="<?php echo $row['Author_FirstName'] ?>" />
-          <!-- end -->
 
-          <!-- Input form -->
-          <label for="">Middle Name</label>
-          <input type="text" name="Author_MiddleName" id="" placeholder="Something" value="<?php echo $row['Author_MiddleName'] ?>" />
-          <!-- end -->
+    <div class="manage-books-borrowed">
+      <div class="book-list-table">
+        <h2 class="table-name">Manage Books Borrowed</h2>
+        <div class="column-name">
+          <!-- colomn titles -->
+          <h2>Slip No.</h2>
+          <h2>Borrow Date</h2>
+          <h2>Due Date</h2>
+          <h2>Return Date</h2>
+          <h2>Patron Account ID</h2>
+          <h2>Copy ID</h2>
+          <h2>Action</h2>
+        </div>
+        <!-- end: column-name div -->
 
-          <!-- Input form -->
-          <label for="">Last Name</label>
-          <input type="text" name="Author_LastName" id="" placeholder="Rowling" value="<?php echo $row['Author_LastName'] ?>" />
-          <!-- end -->
+        <?php
+        include "includes/manage-borrowed(backend).php";
+        if (mysqli_num_rows($borrowed) > 0) {
+          while ($row = mysqli_fetch_assoc($borrowed)) {
+            echo ('
+            <div class="table-data">
+            <div>' . $row["Slip_Number"] . '</div>
+            <div>' . $row["Borrow_Date"] . '</div>
+            <div>' . $row["Due_Date"] . '</div>
+            <div>' . $row["Return_Date"] . '</div>
+            <div>' . $row["PatronAccount_ID"] . '</div>
+            <div>' . $row["Copy_ID"] . '</div>  
+            <div class="action">
+            <a href="manage-borrowed-edit.php?edit=' . $row["Slip_Number"] . '" class="edit" name="edit"></a>
+            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Slip_Number"] . '></button>
+          </div>      
+            </div>
+            
+            
+            ');
+          };
+        }
+        ?>
 
-          <!-- Input form -->
-          <label for="">State Address</label>
-          <input type="text" name="Author_StateAddress" id="" placeholder="Texas" value="<?php echo $row['Author_StateAddress'] ?>" />
-          <!-- end -->
-
-          <!-- Input form -->
-          <label for="">Country Address</label>
-          <input type="text" name="Author_CountryAddress" id="" placeholder="USA" value="<?php echo $row['Author_CountryAddress'] ?>" />
-          <!-- end -->
-
-          <!-- Button -->
-          <input type="submit" name="SAVE" class="save-edit" />
-          <!-- end -->
-        </form>
       </div>
     </div>
   </main>
+
+  <!-- Delete Prompt Div -->
+  <div class="delete-prompt">
+    <div class="confirm-delete">
+      <h2>Confirm Delete Entry</h2>
+      <form action="includes/manage-borrowed(backend).php" method="GET">
+        <p>Are you sure to delete this entry from the database?</p>
+        <input type="hidden" name="confirmDelete">
+        <input type="submit" name="delete">
+        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+      </form>
+    </div>
+  </div>
+  <!-- end -->
 
   <script src="index.js"></script>
 </body>
