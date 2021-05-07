@@ -33,7 +33,7 @@
                 <a href="dashboard.html">ALMS</a>
             </div>
             <div id="search-container">
-                <input type="text" placeholder="Search" name="search-input">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
             </div>
             <ul class="main-nav">
                 <li><a href="dashboard.html" class="">Home</a></li>
@@ -274,12 +274,11 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
         <div class="manage-booklist">
             <!-- <h2 class="table-name">Books Listed</h2> -->
+            <!-- &nbsp == whitespace/space -->
 
-            <h3 class="table-name">Results for the keyword " <!-- Search input --> "</h3>
+            <h3 class="table-name">Results for the keyword &nbsp;&nbsp; "&nbsp;<span class="keyword-value"></span> &nbsp;"</h3>
 
             <!-- <h3 class="table-name letter">
-                
-
                 <input type="radio" name="" id="">a
                 <input type="radio" name="" id="">b
                 <input type="radio" name="" id="">c
@@ -362,5 +361,12 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     </main>
 
     <script src="index.js"></script>
+    <script>
+      window.onload = function searchQuery(){
+        let keyW = localStorage["value"];
+
+        document.querySelector('.keyword-value').innerHTML = keyW;
+      }
+    </script>
   </body>
 </html>

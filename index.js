@@ -80,3 +80,16 @@ function closeDeletePrompt() {
   document.querySelector(".delete-prompt").style.visibility = "hidden";
   document.querySelector("body").style.overflowY = "scroll";
 }
+
+// takes input from search bar
+// then places the input to the localstrage to 
+// be able other pages to fetch the input
+document.querySelector(".search-input").addEventListener('keydown', function (e) {
+  var value = this.value;
+    if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
+        console.log(value);
+        document.querySelector('.search-input').value = '';
+        localStorage["value"] = value;
+        window.location.href = "search.html";
+      }
+});
