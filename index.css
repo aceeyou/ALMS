@@ -339,10 +339,11 @@ nav .menu-btn #open-btn {
   margin-bottom: 3.25rem;
 }
 
-/* .tasks .item:hover:not(:nth-child(1)) {
-  background-color: #f2f6ff;
+.tasks .item:hover:not(:nth-child(1)) {
+  background: #2f5ecc;
 }
 
+/*
 .tasks .item p:hover {
   color: black;
 } */
@@ -398,7 +399,7 @@ nav .menu-btn #open-btn {
 }
 
 .tasks .menu-active {
-  background: #4a76dd;
+  background: #2f5ecc;
   padding-top: 15px;
   padding-bottom: 15px;
 }
