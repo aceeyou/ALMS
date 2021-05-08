@@ -21,6 +21,7 @@ function openSideMenu() {
   document.querySelector("nav").style.width = "calc(100vw - 300px)";
   document.querySelector("#logo-div").style.paddingLeft =
     "calc(10rem - 6.25rem)";
+  document.querySelector('.search-input').style.width = "25rem";
 
   document.querySelector(".side-menu").style.transform = "translateX(0px)";
   document.querySelector(".side-menu").style.boxShadow =
@@ -34,6 +35,10 @@ function openSideMenu() {
   document.querySelector(".new-patrons").style.width = "24rem";
   document.querySelector(".edit-form").style.marginLeft = "300px";
 
+  document.querySelector("footer").style.marginLeft = "300px";
+  document.querySelector("footer").style.width = "calc(99vw - 300px)";
+
+
   hideBtn();
   closeBtn.style.transform = "rotate(360deg)";
 }
@@ -42,6 +47,8 @@ function closeSideMenu() {
   document.querySelector("nav").style.width = "100vw";
   document.querySelector("nav").style.marginLeft = "0";
   document.querySelector("#logo-div").style.paddingLeft = "10rem";
+  document.querySelector('.search-input').style.width = "32rem";
+
 
   document.querySelector(".side-menu").style.transform = "translateX(-300px)";
   document.querySelector(".side-menu").style.boxShadow = "0";
@@ -53,6 +60,11 @@ function closeSideMenu() {
   document.querySelector(".new-patrons").style.width = "25rem";
   document.querySelector(".edit-form .book-form-container").style.marginLeft =
     "0";
+
+    document.querySelector("footer").style.marginLeft = "0";
+    document.querySelector("footer").style.width = "99vw";
+
+
 
   showBtn();
   document.querySelector("#open-btn-dashb").style.display = "none";
