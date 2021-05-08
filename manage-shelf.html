@@ -67,7 +67,7 @@
         <a href="dashboard.html">ALMS</a>
       </div>
       <div id="search-container">
-        <input type="text" placeholder="Search" name="search-input" />
+        <input type="text" placeholder="Search" name="search-input" class="search-input"/>
       </div>
       <ul class="main-nav">
         <li><a href="dashboard.html" class="">Home</a></li>
@@ -82,12 +82,10 @@
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
-      <!-- Close button -->
       <button onclick="closeSideMenu()">
         <img class="close-btn" src="images/arrow-white.png" alt="" />
       </button>
 
-      <!-- User/librarian profile picture -->
       <div class="tasks">
         <div class="item user-profile">
           <img src="images/default.jpg" alt="" />
@@ -96,9 +94,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
-
-        <!-- Action: Add new book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -137,9 +132,17 @@
           </svg>
           <a href="new-book.html" class="task">Add New Book</a>
         </div>
+
+        <!-- Action: Add new shelf -->
+        <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M30.96,13.76c-9.44436,0 -17.2,7.75564 -17.2,17.2v110.08c0,9.44437 7.75564,17.2 17.2,17.2h110.08c9.44437,0 17.2,-7.75563 17.2,-17.2v-110.08c0,-9.44436 -7.75563,-17.2 -17.2,-17.2zM30.96,20.64h110.08c5.69163,0 10.32,4.62836 10.32,10.32v110.08c0,5.69163 -4.62837,10.32 -10.32,10.32h-110.08c-5.69164,0 -10.32,-4.62837 -10.32,-10.32v-110.08c0,-5.69164 4.62836,-10.32 10.32,-10.32zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z"></path></g></g></g></svg>
+            <a href="new-shelf.html" class="task">Add New Shelf</a>
+        </div>
         <!-- end -->
 
-        <!-- Action: Borrow Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -176,9 +179,6 @@
           </svg>
           <a href="book-borrow-slip.html" class="task">Borrow Book</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Reserve Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -215,9 +215,7 @@
           </svg>
           <a href="book-reservation.html" class="task">Reserve Book</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Add new author -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -254,10 +252,8 @@
           </svg>
           <a href="new-author.html" class="task">Add New Author</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Register Patron -->
-        <div class="item">
+        <div class="item menu-active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -293,9 +289,6 @@
           </svg>
           <a href="new-patron.html" class="task">Register Patron</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Manage Patron -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +325,6 @@
           </svg>
           <a href="manage-patrons.html" class="task">Manage Patron</a>
         </div>
-        <!-- end -->
       </div>
     </section>
 

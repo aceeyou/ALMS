@@ -880,14 +880,12 @@ main .manage-booklist {
 /* Manage Patrons w/o Account, Manage Books Borrowed/Reserved, Manage Authors, and Manage Shelf*/
 
 .manage-patrons .book-list-table,
-.manage-patron-accounts .book-list-table,
 .manage-books-borrowed .book-list-table {
   width: 75rem;
 }
 
 .manage-authors .table-data div,
 .manage-patrons .table-data div,
-.manage-patron-accounts .table-data div,
 .manage-books-borrowed .table-data div,
 .manage-books-reserved .table-data div,
 .manage-shelf .table-data div {
@@ -896,16 +894,7 @@ main .manage-booklist {
 
 .manage-patrons .column-name,
 .manage-patrons .table-data {
-  grid-template-columns: 0.17fr 0.25fr 0.25fr 0.25fr 0.2fr 0.15fr;
-}
-
-.manage-patron-accounts .column-name,
-.manage-patron-accounts .table-data {
-  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.15fr;
-}
-
-.manage-patron-accounts .book-list-table {
-  margin-top: 5rem;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.2fr 0.2fr;
 }
 
 .manage-books-borrowed .column-name,

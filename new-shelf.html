@@ -12,9 +12,9 @@
     />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/edit-black.png" />
+    <link rel="icon" href="images/alms-logo.png" />
 
-    <title>Edit Patron | ALMS</title>
+    <title>Add Shelf Form | ALMS</title>
   </head>
   <body>
     <!-- NAV BAR -->
@@ -76,12 +76,10 @@
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
-      <!-- Close button -->
       <button onclick="closeSideMenu()">
         <img class="close-btn" src="images/arrow-white.png" alt="" />
       </button>
 
-      <!-- User/librarian profile picture -->
       <div class="tasks">
         <div class="item user-profile">
           <img src="images/default.jpg" alt="" />
@@ -90,9 +88,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
-
-        <!-- Action: Add new book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +126,6 @@
           </svg>
           <a href="new-book.html" class="task">Add New Book</a>
         </div>
-        <!-- end -->
 
         <!-- Action: Add new shelf -->
         <div class="item">
@@ -143,7 +137,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
         </div>
         <!-- end -->
 
-        <!-- Action: Borrow Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -180,9 +173,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="book-borrow-slip.html" class="task">Borrow Book</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Reserve Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -219,9 +209,7 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="book-reservation.html" class="task">Reserve Book</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Add new author -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -258,10 +246,8 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="new-author.html" class="task">Add New Author</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Register Patron -->
-        <div class="item">
+        <div class="item menu-active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -297,10 +283,7 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="new-patron.html" class="task">Register Patron</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Manage Patron -->
-        <div class="item menu-active">
+        <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -336,74 +319,27 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="manage-patrons.html" class="task">Manage Patron</a>
         </div>
-        <!-- end -->
       </div>
     </section>
 
     <main>
       <div id="book-form-container">
         <div class="book-form">
-          <h2><img class="edit-icon" src="images/edit-black.png" alt="">Edit Patron Details</h2>
+          <h2>Add New Shelf</h2>
           <form action="includes/new-patron.php" method="POST">
-            <label for="">First Name</label>
-            <input type="text" name="firstName" id="" placeholder="Juan" />
-            <label for="">Middle Name</label>
-            <input type="text" name="middleName" id="" placeholder="Felipe" />
-            <label for="">Last Name</label>
-            <input type="text" name="lastName" id="" placeholder="Pedro" />
-            <label for="">City Address</label>
-            <input type="text" name="cityAddress" id="" placeholder="Legazpi" />
-            <label for="">Province Address</label>
-            <input
-              type="text"
-              name="provinceAddress"
-              id=""
-              placeholder="Albay"
-            />
-            <label for="">Zip Code</label>
-            <input type="text" name="zipCode" id="" placeholder="4500" />
-            <label for="">Mailing Address</label>
-            <input
-              type="text"
-              name="mailingAddress"
-              id=""
-              placeholder="Street, Subdivision"
-            />
-            <label for="">Email Address</label>
-            <input
-              type="text"
-              name="emailAddress"
-              id=""
-              placeholder="contoso@example.com"
-            />
-            <label for="">Contact Number</label>
-            <input
-              type="text"
-              name="contactNumber"
-              id=""
-              placeholder="+639123456789"
-            />
+            <label for="">Shelf ID</label>
+            <input type="text" name="shelfID" id="" placeholder="S1" />
+            <label for="">Shelf Row</label>
+            <input type="text" name="shelfRow" id="" placeholder="21" />
+            <label for="">Shelf Name</label>
+            <input type="text" name="shelfName" id="" placeholder="History" />
 
-            <div>
-              <label for="">Create Patron Account?</label>
-            </div>
-            <div class="checkbox-container">
-              <input type="checkbox" name="account" />
-              <em>
-                &nbsp;&nbsp;&nbsp;&nbsp; Patron can borrow and apply for
-                reservation of <br />
-                materials in the library</em
-              >
-            </div>
-
-            <input type="submit" value="SAVE CHANGES" class="save-edit"/>
+            <input type="submit" value="CREATE ACCOUNT" />
           </form>
         </div>
       </div>
     </main>
 
-    <script src="index.js">
-
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
