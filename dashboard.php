@@ -159,7 +159,8 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/books.png" />
+                        <img src="https://img.icons8.com/color/96/000000/books.png"/>
+
                         </div>
                         <div class="data"><?php echo $totalBooks ?></div>
                     </div>
@@ -173,7 +174,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/material-outlined/96/000000/book-shelf.png" />
+                        <img src="https://img.icons8.com/color/96/000000/take-out.png"/>
                         </div>
                         <div class="data"><?php echo $bookIssued ?></div>
                     </div>
@@ -187,7 +188,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/cute-clipart/64/000000/return.png" />
+                        <img src="https://img.icons8.com/color/96/000000/reservation.png"/>
                         </div>
                         <div class="data"><?php echo $bookReturned  ?></div>
                     </div>
@@ -201,7 +202,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png" />
+                        <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png"/>
                         </div>
                         <div class="data"><?php echo $totalPatron ?></div>
                     </div>
@@ -215,7 +216,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/william-shakespeare.png" />
+                        <img src="https://img.icons8.com/color/96/000000/typewriter-with-paper.png"/>
                         </div>
                         <div class="data"><?php echo $totalAuthors ?></div>
                     </div>
@@ -229,7 +230,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/dusk/64/000000/elective.png" />
+                        <img src="https://img.icons8.com/color/96/000000/tidy-shelf.png"/>
                         </div>
                         <div class="data"><?php echo $numberCategories ?></div>
                     </div>
