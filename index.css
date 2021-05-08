@@ -335,8 +335,16 @@ nav .menu-btn #open-btn {
 .tasks .item {
   display: flex;
   align-items: center;
-  padding: 0 0 0 2.5rem;
+  padding: 10px 10px 10px 2rem;
   margin-bottom: 3.25rem;
+}
+
+.tasks .item:hover:not(:nth-child(1)) {
+  background-color: #f2f6ff;
+}
+
+.tasks .item p:hover {
+  color: black;
 }
 
 .tasks .item:nth-child(1) {
@@ -367,14 +375,14 @@ nav .menu-btn #open-btn {
 }
 
 .tasks .item:nth-child(1) p {
-  padding: 5px 8px;
+  padding: 8px 10px;
   font-family: "Gothic A1", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   text-overflow: clip;
   color: black;
   border-radius: 20px;
-  min-width: 100px;
+  min-width: 150px;
   margin-top: 1rem;
   text-align: center;
   background-color: #fff;
