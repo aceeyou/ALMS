@@ -67,7 +67,7 @@
         <a href="dashboard.html">ALMS</a>
       </div>
       <div id="search-container">
-        <input type="text" placeholder="Search" name="search-input" />
+        <input type="text" placeholder="Search" name="search-input" class="search-input"/>
       </div>
       <ul class="main-nav">
         <li><a href="dashboard.html" class="">Home</a></li>
@@ -82,12 +82,10 @@
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
-      <!-- Close button -->
       <button onclick="closeSideMenu()">
         <img class="close-btn" src="images/arrow-white.png" alt="" />
       </button>
 
-      <!-- User/librarian profile picture -->
       <div class="tasks">
         <div class="item user-profile">
           <img src="images/default.jpg" alt="" />
@@ -96,9 +94,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
-
-        <!-- Action: Add new book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +132,6 @@
           </svg>
           <a href="new-book.html" class="task">Add New Book</a>
         </div>
-        <!-- end -->
 
         <!-- Action: Add new shelf -->
         <div class="item">
@@ -149,7 +143,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
         </div>
         <!-- end -->
 
-        <!-- Action: Borrow Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -186,9 +179,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="book-borrow-slip.html" class="task">Borrow Book</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Reserve Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -225,9 +215,7 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="book-reservation.html" class="task">Reserve Book</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Add new author -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -264,10 +252,8 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="new-author.html" class="task">Add New Author</a>
         </div>
-        <!-- end -->
 
-        <!-- Action: Register Patron -->
-        <div class="item">
+        <div class="item menu-active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -303,9 +289,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="new-patron.html" class="task">Register Patron</a>
         </div>
-        <!-- end -->
-
-        <!-- Action: Manage Patron -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +325,6 @@ style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke
           </svg>
           <a href="manage-patrons.html" class="task">Manage Patron</a>
         </div>
-        <!-- end -->
       </div>
     </section>
 
