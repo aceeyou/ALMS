@@ -339,13 +339,13 @@ nav .menu-btn #open-btn {
   margin-bottom: 3.25rem;
 }
 
-.tasks .item:hover:not(:nth-child(1)) {
+/* .tasks .item:hover:not(:nth-child(1)) {
   background-color: #f2f6ff;
 }
 
 .tasks .item p:hover {
   color: black;
-}
+} */
 
 .tasks .item:nth-child(1) {
   visibility: visible;

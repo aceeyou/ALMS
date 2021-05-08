@@ -102,6 +102,6 @@ document.querySelector(".search-input").addEventListener('keydown', function (e)
         console.log(value);
         document.querySelector('.search-input').value = '';
         localStorage["value"] = value;
-        window.location.href = "search.html";
+        window.location = "search.html";
       }
 });
