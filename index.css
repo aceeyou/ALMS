@@ -14,7 +14,12 @@ html {
   background-color: rgb(212, 212, 212);
 }
 
+::-webkit-scrollbar-track {
+  padding: 2px;
+}
+
 ::-webkit-scrollbar-thumb {
+  height: 40px;
   background-color: #293c7d;
   border-radius: 3px;
 }
@@ -265,7 +270,13 @@ nav .menu-btn #open-btn {
 }
 
 .side-menu::-webkit-scrollbar:vertical {
+  background-color: #18213e;
+  padding: 1px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:vertical {
   background-color: #293c7d;
+  padding: 1px;
 }
 
 .side-menu::-webkit-scrollbar:horizontal {
@@ -662,6 +673,11 @@ main {
 }
 
 .book-form form .save-edit:hover {
+  background: rgb(9, 211, 144);
+}
+
+input .save-edit:hover {
+  background: rgb(9, 211, 144);
 }
 
 /* Library Form */
@@ -810,7 +826,7 @@ main .manage-booklist {
 
 .table-data .action {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .table-data .action a,
@@ -821,6 +837,11 @@ main .manage-booklist {
   outline: none;
   background-color: none;
   cursor: pointer;
+}
+
+.table-data .action a:first-child,
+.table-data .action button:first-child {
+  margin-right: 10px;
 }
 
 .table-data .action .edit {
