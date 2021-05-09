@@ -81,6 +81,17 @@ include "includes/display.php"
                 </svg>
                 <a href="new-book.html" class="task">Add New Book</a>
             </div>
+
+            <!-- Action: Add new shelf -->
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="28" height="28"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M34.4,10.32c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v92.88h-20.64c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v13.76c0.00019,1.89978 1.54022,3.43981 3.44,3.44h10.32v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h89.44v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h10.32c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-13.76c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-72.24c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-24.08v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44zM37.84,17.2h20.64v3.44v86h-20.64zM44.72,24.08c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM65.36,24.08h20.64v3.44v79.12h-20.64zM72.24,30.96c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM92.88,30.96h17.2v3.44v72.24h-17.2zM99.76,37.84c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM116.96,37.84h17.2v68.8h-17.2zM123.84,44.72c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM44.72,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM72.24,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM99.76,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM123.84,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM13.76,113.52h20.64h27.52h27.52h24.08h24.08h20.64v6.88h-10.32h-13.76h-96.32h-13.76h-10.32zM27.52,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44zM137.6,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44z"></path></g></g></svg>
+                <a href="new-shelf.html" class="task">Add New Shelf</a>
+            </div>
+            <!-- end -->
+
             <div class="item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
                     <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -148,7 +159,8 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/books.png" />
+                        <img src="https://img.icons8.com/color/96/000000/books.png"/>
+
                         </div>
                         <div class="data"><?php echo $totalBooks ?></div>
                     </div>
@@ -162,7 +174,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/material-outlined/96/000000/book-shelf.png" />
+                        <img src="https://img.icons8.com/color/96/000000/take-out.png"/>
                         </div>
                         <div class="data"><?php echo $bookIssued ?></div>
                     </div>
@@ -176,7 +188,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/cute-clipart/64/000000/return.png" />
+                        <img src="https://img.icons8.com/color/96/000000/reservation.png"/>
                         </div>
                         <div class="data"><?php echo $bookReturned  ?></div>
                     </div>
@@ -190,7 +202,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png" />
+                        <img src="https://img.icons8.com/color/96/000000/male-female-user-group.png"/>
                         </div>
                         <div class="data"><?php echo $totalPatron ?></div>
                     </div>
@@ -204,7 +216,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/william-shakespeare.png" />
+                        <img src="https://img.icons8.com/color/96/000000/typewriter-with-paper.png"/>
                         </div>
                         <div class="data"><?php echo $totalAuthors ?></div>
                     </div>
@@ -218,7 +230,7 @@ include "includes/display.php"
                 <div class="content">
                     <div class="top">
                         <div class="image">
-                            <img src="https://img.icons8.com/dusk/64/000000/elective.png" />
+                        <img src="https://img.icons8.com/color/96/000000/tidy-shelf.png"/>
                         </div>
                         <div class="data"><?php echo $numberCategories ?></div>
                     </div>

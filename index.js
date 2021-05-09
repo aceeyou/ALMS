@@ -1,22 +1,28 @@
 let innerUL = document.querySelector(".inner-ul");
 let isShown = false;
 
+let isOpen;
+let isTrue = localStorage["isOpen"];
+isOpen = isTrue;
+console.log(isOpen);
+
 let closeBtn = document.getElementById("close-btn");
-let openBtn = document.getElementById("open-btn");
 
 window.addEventListener("load", () => {
-  openSideMenu();
+  if(isOpen){
+    openSideMenu();
+  } else {
+    closeSideMenu();
+  }
 });
 
-function hideBtn() {
-  openBtn.style.visibility = "hidden";
-}
-
-function showBtn() {
-  openBtn.style.visibility = "visible";
-}
 
 function openSideMenu() {
+  isOpen = true;
+  localStorage["isOpen"] = isOpen;
+  console.log(isOpen);
+
+
   document.querySelector("nav").style.marginLeft = "300px";
   document.querySelector("nav").style.width = "calc(100vw - 300px)";
   document.querySelector("#logo-div").style.paddingLeft =
@@ -38,12 +44,14 @@ function openSideMenu() {
   document.querySelector("footer").style.marginLeft = "300px";
   document.querySelector("footer").style.width = "calc(99vw - 300px)";
 
-
-  hideBtn();
-  closeBtn.style.transform = "rotate(360deg)";
 }
 
 function closeSideMenu() {
+  isOpen = false;
+  localStorage["isOpen"] = isOpen;
+  console.log(isOpen);
+
+
   document.querySelector("nav").style.width = "100vw";
   document.querySelector("nav").style.marginLeft = "0";
   document.querySelector("#logo-div").style.paddingLeft = "10rem";
@@ -61,14 +69,10 @@ function closeSideMenu() {
   document.querySelector(".edit-form .book-form-container").style.marginLeft =
     "0";
 
-    document.querySelector("footer").style.marginLeft = "0";
-    document.querySelector("footer").style.width = "99vw";
+  document.querySelector("footer").style.marginLeft = "0";
+  document.querySelector("footer").style.width = "99vw";
 
-
-
-  showBtn();
   document.querySelector("#open-btn-dashb").style.display = "none";
-  closeBtn.style.transform = "rotate(-180deg)";
 }
 
 function openDeletePrompt(el) {
@@ -102,6 +106,6 @@ document.querySelector(".search-input").addEventListener('keydown', function (e)
         console.log(value);
         document.querySelector('.search-input').value = '';
         localStorage["value"] = value;
-        window.location.href = "search.html";
+        window.location = "search.html";
       }
 });

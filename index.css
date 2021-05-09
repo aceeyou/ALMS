@@ -12,7 +12,7 @@ html {
 ::-webkit-scrollbar {
   width: 12px;
   height: 18px;
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(243, 239, 239);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -31,6 +31,11 @@ html {
 
 ::-webkit-input-placeholder {
   font-style: italic;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 11px;
+  background-color: azure;
 }
 
 body {
@@ -335,9 +340,18 @@ nav .menu-btn #open-btn {
 .tasks .item {
   display: flex;
   align-items: center;
-  padding: 0 0 0 2.5rem;
+  padding: 10px 10px 10px 2rem;
   margin-bottom: 3.25rem;
 }
+
+.tasks .item:hover:not(:nth-child(1)) {
+  background: #2f5ecc;
+}
+
+/*
+.tasks .item p:hover {
+  color: black;
+} */
 
 .tasks .item:nth-child(1) {
   visibility: visible;
@@ -367,14 +381,14 @@ nav .menu-btn #open-btn {
 }
 
 .tasks .item:nth-child(1) p {
-  padding: 5px 8px;
+  padding: 8px 10px;
   font-family: "Gothic A1", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   text-overflow: clip;
   color: black;
   border-radius: 20px;
-  min-width: 100px;
+  min-width: 150px;
   margin-top: 1rem;
   text-align: center;
   background-color: #fff;
@@ -390,7 +404,7 @@ nav .menu-btn #open-btn {
 }
 
 .tasks .menu-active {
-  background: #4a76dd;
+  background: #2f5ecc;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -850,9 +864,18 @@ main .manage-booklist {
   cursor: pointer;
 }
 
-.table-data .action a:first-child,
-.table-data .action button:first-child {
-  margin-right: 10px;
+.table-data .action a:nth-child(2),
+.table-data .action button:nth-child(1),
+.table-data .action button:nth-child(3) {
+  margin-right: 7px;
+}
+
+.table-data .action .plus-account {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("images/checkmark-black.png");
+  background-size: 1.5rem;
+  transition: 100ms;
 }
 
 .table-data .action .edit {
@@ -865,6 +888,11 @@ main .manage-booklist {
   background: url("images/delete-black.png");
   background-size: 1.5rem;
   transition: 100ms;
+}
+
+.table-data .action .plus-account:hover {
+  background: url("/images/checkmark-green.png");
+  background-size: 1.5rem;
 }
 
 .table-data .action .edit:hover {
@@ -905,6 +933,15 @@ main .manage-booklist {
 .manage-books-reserved .column-name,
 .manage-books-reserved .table-data {
   grid-template-columns: 0.28fr 0.31fr 0.27fr 0.25fr 0.15fr;
+}
+
+.manage-shelf .column-name,
+.manage-shelf .table-data {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.manage-shelf .action a {
+  margin-right: 10px;
 }
 
 /* Edit form - on page */
