@@ -299,7 +299,7 @@ nav .menu-btn #open-btn {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 0;
   height: 100%;
   background-color: #18213e;
   transition: 0ms;
@@ -382,7 +382,7 @@ nav .menu-btn #open-btn {
 
 .tasks .item:nth-child(1) p {
   padding: 8px 10px;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   text-overflow: clip;
@@ -654,9 +654,10 @@ main {
 }
 
 .book-form input[type="submit"] {
-  width: 270px;
+  width: 250px;
   padding: 8px 12px;
   margin-top: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
   font-weight: 700;
   color: #fff;
@@ -994,6 +995,29 @@ main .manage-booklist {
 .letter {
   font-weight: 400;
   font-size: 0.9rem;
+}
+
+/* Search page */
+
+.search-page .action .borrow {
+  background: url("https://img.icons8.com/small/96/000000/borrow-book.png");
+  background-size: 1.5rem;
+  transform: translateY(2px);
+}
+
+.search-page .action .reserve {
+  background: url("https://img.icons8.com/small/96/000000/reservation-2.png");
+  background-size: 1.6rem;
+}
+
+.search-page .action .borrow:hover {
+  background: url("/images/borrow-green.png");
+  background-size: 1.5rem;
+}
+
+.search-page .action .reserve:hover {
+  background: url("/images/reserve-blue.png");
+  background-size: 1.6rem;
 }
 
 /* Delete Prompt */

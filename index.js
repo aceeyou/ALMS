@@ -1,27 +1,13 @@
 let innerUL = document.querySelector(".inner-ul");
 let isShown = false;
-
-let isOpen;
-let isTrue = localStorage["isOpen"];
-isOpen = isTrue;
-console.log(isOpen);
-
 let closeBtn = document.getElementById("close-btn");
 
 window.addEventListener("load", () => {
-  if(isOpen){
-    openSideMenu();
-  } else {
-    closeSideMenu();
-  }
+  openSideMenu();
 });
 
 
 function openSideMenu() {
-  isOpen = true;
-  localStorage["isOpen"] = isOpen;
-  console.log(isOpen);
-
 
   document.querySelector("nav").style.marginLeft = "300px";
   document.querySelector("nav").style.width = "calc(100vw - 300px)";
@@ -29,6 +15,7 @@ function openSideMenu() {
     "calc(10rem - 6.25rem)";
   document.querySelector('.search-input').style.width = "25rem";
 
+  document.querySelector(".side-menu").style.width = "300px";
   document.querySelector(".side-menu").style.transform = "translateX(0px)";
   document.querySelector(".side-menu").style.boxShadow =
     "3px 0px 13px rgba(0, 0, 0, 0.4)";
@@ -47,17 +34,13 @@ function openSideMenu() {
 }
 
 function closeSideMenu() {
-  isOpen = false;
-  localStorage["isOpen"] = isOpen;
-  console.log(isOpen);
-
 
   document.querySelector("nav").style.width = "100vw";
   document.querySelector("nav").style.marginLeft = "0";
   document.querySelector("#logo-div").style.paddingLeft = "10rem";
   document.querySelector('.search-input').style.width = "32rem";
 
-
+  document.querySelector(".side-menu").style.width = "0";
   document.querySelector(".side-menu").style.transform = "translateX(-300px)";
   document.querySelector(".side-menu").style.boxShadow = "0";
 

@@ -322,7 +322,19 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
     <script src="index.js"></script>
     <script>
-        // localStorage["isOpen"] = true;
+        let temp = localStorage["v"] = true;
+        JSON.parse(temp);
+        let isOpen = localStorage.getItem(isOpen);
+        console.log(isOpen);
+        
+        window.addEventListener("load", () => {
+            if(isOpen){
+                console.log('true');
+                openSideMenu();
+            } else {
+                closeSideMenu();
+            }
+        });
     </script>
 </body>
 </html>

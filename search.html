@@ -282,7 +282,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     <main>
         <!-- <div class="h22"><h2>Results for the keyword " Search input "</h2></div> -->
 
-        <div class="manage-booklist">
+        <div class="manage-booklist search-page">
             <!-- <h2 class="table-name">Books Listed</h2> -->
             <!-- &nbsp == whitespace/space -->
 
@@ -344,8 +344,8 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                 <div class="copies-available">35</div>
                 <div>a6</div>
                 <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
+                  <a href="book-borrow-slip.html" class="borrow"></a>
+                  <a href="book-reservation.html" class="reserve"></a>
                 </div>
               </div>
               <!-- end -->
@@ -362,8 +362,8 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                 <div class="copies-available">22</div>
                 <div>mm555</div>
                 <div class="action">
-                  <a href="manage-book-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
+                  <a href="book-borrow-slip.html" class="borrow"></a>
+                  <a href="book-reservation.html" class="reserve"></a>
                 </div>
               </div>
               <!-- end -->
@@ -374,7 +374,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     <script>
       window.onload = function searchQuery(){
         let keyW = localStorage["value"];
-
+        
         document.querySelector('.keyword-value').innerHTML = keyW;
       }
     </script>

@@ -354,5 +354,16 @@
     <!-- end -->
 
     <script src="index.js"></script>
+    <script>
+      let isOpen = localStorage["isOpen"];
+      
+      window.addEventListener("load", () => {
+          if(isOpen){
+              openSideMenu();
+          } else {
+              break;
+          }
+      });
+  </script>
   </body>
 </html>
