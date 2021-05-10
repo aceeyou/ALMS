@@ -851,8 +851,8 @@ main .manage-booklist {
 }
 
 .table-data .action {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .table-data .action a,
@@ -880,20 +880,21 @@ main .manage-booklist {
 }
 
 .table-data .action .edit {
+  grid-column: 2/3;
   background: url("images/edit-black.png");
   background-size: 1.5rem;
   transition: 100ms;
 }
 
 .table-data .action .delete {
+  grid-column: 3/3;
   background: url("images/delete-black.png");
   background-size: 1.5rem;
   transition: 100ms;
 }
 
 .table-data .action .plus-account:hover {
-  background: url("/images/checkmark-green.png");
-  background-size: 1.5rem;
+  transform: scale(1.13);
 }
 
 .table-data .action .edit:hover {
@@ -1011,12 +1012,12 @@ main .manage-booklist {
 }
 
 .search-page .action .borrow:hover {
-  background: url("/images/borrow-green.png");
+  background: url("images/borrow-green.png");
   background-size: 1.5rem;
 }
 
 .search-page .action .reserve:hover {
-  background: url("/images/reserve-blue.png");
+  background: url("images/reserve-blue.png");
   background-size: 1.6rem;
 }
 
