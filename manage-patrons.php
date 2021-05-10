@@ -199,7 +199,7 @@
               <div>' . $row["Date_Registered"] . '</div>
               <div>' . $row["Account_Fine"] . '</div>
               <div class="action">
-                <a href="manage-shelf-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
+              <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
                 <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
               </div>     
               </div>
@@ -216,7 +216,7 @@
               <div>' . $row["Account_Fine"] . '</div>
               <div class="action">
                 <button class="plus-account"></button> 
-                <a href="manage-shelf-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
+                <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
                 <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
               </div>     
               </div>
@@ -270,10 +270,10 @@
   <div class="delete-prompt">
     <div class="confirm-delete">
       <h2>Confirm Delete Entry</h2>
-      <form action="">
+      <form action="includes/manage-patrons(backend).php" method="GET">
         <p>Are you sure to delete this entry from the database?</p>
-
-        <input type="submit" value="DELETE">
+        <input type="hidden" name="confirmDelete">
+        <input type="submit" name="delete">
         <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
       </form>
     </div>
