@@ -215,7 +215,7 @@
               <div>' . $row["Date_Registered"] . '</div>
               <div>' . $row["Account_Fine"] . '</div>
               <div class="action">
-                <button class="plus-account"></button> 
+                <a href="includes/manage-patrons(backend).php?id=' . $row["ID"] . ' &createAccount=Submit" class="plus-account" name="createAccount"></a> 
                 <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
                 <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
               </div>     
