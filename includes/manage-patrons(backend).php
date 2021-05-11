@@ -6,3 +6,17 @@ FROM patron p LEFT JOIN patron_account pa ON p.Patron_ID = pa.Patron_ID WHERE 1"
 $patron = mysqli_query($conn, $sql);
 // $row = mysqli_fetch_assoc($patron);
 // echo json_encode($row);
+
+// delete
+if (isset($_GET['delete'])) {
+    $patron_ID = $_GET['confirmDelete'];
+    $sql = "DELETE FROM patron WHERE Patron_ID =  $patron_ID";
+    $delete = mysqli_query($conn, $sql);
+    if ($delete) {
+        mysqli_close($conn);
+        header("location:../manage-patrons.php");
+        exit;
+    } else {
+        echo "Error deleting record";
+    }
+}
