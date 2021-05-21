@@ -17,62 +17,30 @@
     <title>Edit Book Borrowed | ALMS</title>
   </head>
   <body>
+    
     <!-- NAV BAR -->
     <nav>
       <div class="menu-btn">
-        <button id="open-btn" onclick="openSideMenu()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="24"
-            height="24"
-            viewBox="0 0 172 172"
-            style="fill: #000000"
-          >
-            <g
-              fill="none"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style="mix-blend-mode: normal"
-            >
-              <path d="M0,172v-172h172v172z" fill="none"></path>
-              <g fill="#000000">
-                <path
-                  d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"
-                ></path>
-              </g>
-            </g>
-          </svg>
-        </button>
+          <button id="open-btn" onclick="openSideMenu()">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  width="24" height="24"
+  viewBox="0 0 172 172"
+  style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"></path></g></g></svg>
+          </button>
       </div>
       <div id="logo-div">
-        <a href="dashboard.html"><img src="images/logo" alt="" /></a>
-        <a href="dashboard.html">ALMS</a>
+          <a href=""><img src="images/alms-logo.png" alt=""></a>
+          <a href="">ALMS</a>
       </div>
       <div id="search-container">
-        <input type="text" placeholder="Search" name="search-input" />
+          <input type="text" placeholder="Search" name="search-input" class="search-input">
       </div>
       <ul class="main-nav">
-        <li><a href="dashboard.html" class="">Home</a></li>
-        <li onClick="showInnerUL()"><a href="#">Books</a></li>
-        <li class="user-handle">
-          <a href="index.html"
-            ><img class="user-img" src="images/default.jpg" alt=""
-          /></a>
-        </li>
+          <li><a href="dashboard.html" class="">Home</a></li>
+          <li onClick="showInnerUL()"><a href="#">Books</a></li>
+          <li class="user-handle"><a href="index.html"><img class="user-img" src="images/default.jpg" alt=""></a></li>
       </ul>
-    </nav>
+  </nav>
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">

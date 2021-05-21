@@ -142,7 +142,56 @@ nav .main-nav .li-book {
   width: 70px;
 }
 
-nav #book-arrow {
+nav .main-nav .dropdown-btn {
+  width: 30px;
+  transform: translateX(-40px);
+}
+
+nav .main-nav .dropdown-btn .dropdown-img {
+  width: 15px;
+  padding: 4px;
+  border-radius: 50%;
+  transition: 250ms;
+}
+
+nav .main-nav .dropdown-btn .dropdown-img:hover {
+  transform: scale(1.15);
+  background-color: rgba(225, 226, 228, 0.363);
+}
+
+nav .main-nav .dropdown-btn .dropdown-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  padding: 0px 12px;
+  width: 120px;
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
+  box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
+  transform-origin: left top inherit;
+  transition: 100ms;
+}
+
+nav .main-nav .dropdown-btn .dropdown-menu li {
+  width: 100%;
+  height: 3rem;
+  justify-content: left;
+  padding-left: 20px;
+  transform: translateX(-12px);
+  color: #293c7d;
+}
+
+nav .main-nav .dropdown-btn .dropdown-menu li:hover {
+  background-color: rgba(235, 228, 228, 0.349);
+}
+
+nav .main-nav .dropdown-btn .dropdown-menu li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+nav .main-nav .dropdown-btn nav #book-arrow {
   width: 12px;
   margin-left: 5px;
   transform: rotate(0deg);
@@ -598,12 +647,59 @@ main {
 
 /* Book feed */
 
+.new-librarian-container {
+  display: grid;
+  grid-template-columns: 300px 700px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4vh;
+}
+
+.side-info {
+  width: 250px;
+  height: 95.5%;
+  background-color: #267fff;
+  transform: translateX(3.6rem);
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
+}
+
+.side-info img {
+  position: absolute;
+  top: 150px;
+  left: 31%;
+  width: 100px;
+}
+
+.side-info .h2 {
+  margin-top: 280px;
+}
+
+.side-info h2 {
+  padding: 0.8rem;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
 #book-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-btn {
+  transform: translate(1rem, 2rem);
+  font-size: 0.9rem;
+}
+
+.login-btn a {
+  color: #0069ff;
 }
 
 .book-form {
@@ -715,7 +811,7 @@ input .save-edit:hover {
 }
 
 .form-title img {
-  width: 5rem;
+  width: 2.3rem;
 }
 
 .form-title h2 {
@@ -1000,9 +1096,9 @@ main .manage-booklist {
 
 /* Search page */
 
-.search-page .action .borrow {
+.action .borrow {
   background: url("https://img.icons8.com/small/96/000000/borrow-book.png");
-  background-size: 1.5rem;
+  background-size: 1.55rem;
   transform: translateY(2px);
 }
 
@@ -1088,18 +1184,4 @@ main .manage-booklist {
 
 .delete-prompt .confirm-delete form button:hover {
   background: rgb(233, 229, 229);
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  height: 15rem;
-  margin-top: 10rem;
-  background-color: rgb(109, 58, 58);
-}
-
-.footer-container {
-  width: 100%;
-  height: 100%;
-  background-color: #18213e;
 }
