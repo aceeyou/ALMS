@@ -92,3 +92,25 @@ document.querySelector(".search-input").addEventListener('keydown', function (e)
         window.location = "search.html";
       }
 });
+
+// creates account for existing patron
+function addPatronAccount() {
+  console.log("added patron account");
+}
+
+let isdropped = true;
+function dropDropDown() {
+  if(isdropped){
+    document.querySelector(".dropdown-menu").style.visibility = "visible";
+    document.querySelector(".dropdown-img").style.transform = "rotate(-180deg)";
+    isdropped = false;
+  } else {
+    document.querySelector(".dropdown-menu").style.visibility = "hidden";
+    document.querySelector(".dropdown-img").style.transform = "rotate(-360deg)";
+    isdropped = true;
+  }
+}
+
+function logoutUser() {
+  window.location = "index.html";
+}

@@ -41,6 +41,13 @@
             <li><a href="#" class="active">Home</a></li>
             <li onClick="showInnerUL()"><a href="#">Books</a></li>
             <li class="user-handle"><a href="index.html"><img class="user-img" src="images/default.jpg" alt=""></a></li>
+            <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
+                <ul class="dropdown-menu">
+                    <li><img src="images/user-default.png" alt=""> Profile</li>
+                    <li><img src="images/settings.png" alt=""> Settings</li>
+                    <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -147,7 +154,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <div class="data">5</div>
                     </div>
                     <div class="bottom">
-                        <a href="manage-borrowed.html"><button>Books Borrowed</button></a>
+                        <a href="manage-borrowed.php"><button>Books Borrowed</button></a>
                     </div>
                 </div>
             </div>
@@ -307,12 +314,6 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             </div>
         </div>
 
-
-        <footer>
-            <div class="footer-container">
-                <h2>hello</h2>
-            </div>
-        </footer>
     </main>
 
 
@@ -321,20 +322,6 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     <a href="https://icons8.com/icon/MztIdXvT0oDl/add-book" style="display: none;">Add Book icon by Icons8</a>
 
     <script src="index.js"></script>
-    <script>
-        let temp = localStorage["v"] = true;
-        JSON.parse(temp);
-        let isOpen = localStorage.getItem(isOpen);
-        console.log(isOpen);
-        
-        window.addEventListener("load", () => {
-            if(isOpen){
-                console.log('true');
-                openSideMenu();
-            } else {
-                closeSideMenu();
-            }
-        });
-    </script>
+
 </body>
 </html>

@@ -17,14 +17,24 @@
     <title>Add Librarian Form | ALMS</title>
   </head>
   <body>
-    <main>
+    <div class="new-librarian-container">
+      <div class="side-info">
+        <img src="images/alms-logo.png" alt="">
+
+        <div class="h2">
+          <h2>Automated</h2>
+          <h2>Library</h2>
+          <h2>Management</h2>
+          <h2>System</h2>
+        </div>
+      </div>
       <div id="book-form-container">
         <!-- <div class="alms-info" style="width: 250px; height:600px; padding: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(35, 13, 231);transform: translateX(10px); z-index: -1; color: #fff;">
           <h1>ALMS</h1>
         </div> -->
         <div class="book-form">
           <div class="form-title">
-            <img src="images/alms-logo.png" alt="">
+            <img src="images/user.png" alt="">
             <h2>Librarian Information</h2>
           </div>
           <form action="includes/book-reservation.php" method="POST">
@@ -108,11 +118,12 @@
             <!-- Button -->
             <input type="submit" value="SIGN UP" />
             <!-- end -->
+            <p class="login-btn">Already have an account? <a href="index.html">Log in</a></p>
 
           </form>
         </div>
       </div>
-    </main>
+    </div>
 
     <script src="index.js"></script>
   </body>
