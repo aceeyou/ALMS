@@ -40,6 +40,10 @@ html {
 
 body {
   background-color: #f2f6ff;
+  background: url("images/4861242.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 nav {
@@ -173,13 +177,6 @@ nav .main-nav .dropdown-btn .dropdown-menu {
   transform-origin: left top inherit;
   transition: all 200ms ease 0s, visibility 0s linear 0.3s,
     z-index 0s linear 0.01s;
-}
-
-nav .main-nav .dropdown-btn .dropdown-menu:hover {
-  visibility: visible;
-  z-index: 1;
-  transform: translateY(0);
-  transition-delay: 0s, 0s, 0.3s;
 }
 
 nav .main-nav .dropdown-btn .dropdown-menu button {
