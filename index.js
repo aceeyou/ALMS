@@ -102,10 +102,15 @@ let isdropped = true;
 function dropDropDown() {
   if(isdropped){
     document.querySelector(".dropdown-menu").style.visibility = "visible";
+    document.querySelector(".dropdown-menu").style.top = "50px";
+    document.querySelector(".dropdown-menu").style.transform = "translateY(0)";
+    document.querySelector(".dropdown-menu").style.height = "auto";
     document.querySelector(".dropdown-img").style.transform = "rotate(-180deg)";
-    isdropped = false;
+    isdropped = false
   } else {
-    document.querySelector(".dropdown-menu").style.visibility = "hidden";
+    document.querySelector(".dropdown-menu").style.top = "0px";
+    // document.querySelector(".dropdown-menu").style.transform = "translateY(-200px)";
+    document.querySelector(".dropdown-menu").style.height = "0";
     document.querySelector(".dropdown-img").style.transform = "rotate(-360deg)";
     isdropped = true;
   }

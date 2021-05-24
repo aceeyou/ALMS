@@ -40,6 +40,10 @@ html {
 
 body {
   background-color: #f2f6ff;
+  background: url("images/4861242.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 nav {
@@ -162,18 +166,31 @@ nav .main-nav .dropdown-btn .dropdown-img:hover {
 nav .main-nav .dropdown-btn .dropdown-menu {
   visibility: hidden;
   position: absolute;
-  top: 40px;
+  top: 50px;
   right: 10px;
   padding: 0px 12px;
-  width: 120px;
+  min-width: 150px;
+  height: 0;
   background: rgb(255, 255, 255);
   overflow-x: hidden;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
   transform-origin: left top inherit;
-  transition: 100ms;
+  transition: all 200ms ease 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
 }
 
-nav .main-nav .dropdown-btn .dropdown-menu li {
+nav .main-nav .dropdown-btn .dropdown-menu button {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  border: none;
+  outline: none;
+  /* background: none; */
+}
+
+nav .main-nav .dropdown-btn .dropdown-menu li,
+nav .main-nav .dropdown-btn .dropdown-menu button {
   width: 100%;
   height: 3rem;
   justify-content: left;
@@ -182,11 +199,13 @@ nav .main-nav .dropdown-btn .dropdown-menu li {
   color: #293c7d;
 }
 
-nav .main-nav .dropdown-btn .dropdown-menu li:hover {
+nav .main-nav .dropdown-btn .dropdown-menu li:hover,
+nav .main-nav .dropdown-btn .dropdown-menu button:hover {
   background-color: rgba(235, 228, 228, 0.349);
 }
 
-nav .main-nav .dropdown-btn .dropdown-menu li img {
+nav .main-nav .dropdown-btn .dropdown-menu li img,
+nav .main-nav .dropdown-btn .dropdown-menu button img {
   width: 20px;
   margin-right: 10px;
 }
@@ -647,19 +666,31 @@ main {
 
 /* Book feed */
 
+.form-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("images/4861242.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .new-librarian-container {
   display: grid;
   grid-template-columns: 300px 700px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 4vh;
+  height: 100vh;
 }
 
 .side-info {
   width: 250px;
-  height: 95.5%;
-  background-color: #267fff;
+  height: 690px;
+  background: linear-gradient(to bottom right, #267fff, #0d64dd);
   transform: translateX(3.6rem);
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;

@@ -26,6 +26,9 @@ body {
   color: var(--black);
   text-align: center;
   background-color: var(--bgcolor);
+  background: url("images/4861242.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 body,
@@ -43,7 +46,7 @@ body,
 }
 
 .image-container img {
-  width: 10.3rem;
+  width: 10rem;
   text-align: center;
   padding-bottom: 2.1rem;
   margin-top: 5rem;
@@ -57,11 +60,20 @@ body,
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
 }
 
-.login-container h1 {
+.forgotpassword-container {
+  height: 350px;
+}
+
+.login-container h1,
+.login-container h2 {
   font-size: 2.25rem;
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.login-container h2 {
+  font-size: 1.7rem;
 }
 
 .login-container .message {

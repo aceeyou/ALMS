@@ -75,6 +75,13 @@
         <li class="user-handle" onmouseover="openUserMenu()" onmouseout="closeUserMenu()">
           <a href="#"><img class="user-img" src="images/defaul.png" alt=""/></a>
         </li>
+        <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
+          <ul class="dropdown-menu">
+              <li><img src="images/user-default.png" alt=""> User Profile</li>
+              <li><img src="images/settings.png" alt=""> Settings</li>
+              <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
+          </ul>
+      </li>
       </ul>
     </nav>
 
@@ -344,7 +351,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
           <!-- table row data -->
           <div class="table-data book-listed-data">
-            <div>101-55-5555</div>
+            <div>101-5-55-555555-5</div>
             <div>Data Structure and Algorithm</div>
             <div>Jose Paolo, Marc Angelo</div>
             <div>4th Edition</div>
