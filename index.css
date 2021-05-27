@@ -679,7 +679,7 @@ main {
 
 .side-info {
   width: 250px;
-  height: 730px;
+  height: 840px;
   background: linear-gradient(to bottom right, #267fff, #0d64dd);
   transform: translateX(5rem);
   border-top-left-radius: 0.7rem;
@@ -726,7 +726,7 @@ main {
 .book-form {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 700px;
   padding: 30px 0 20px 60px;
   border-radius: 0.7rem;
   background-color: #fff;
@@ -734,7 +734,7 @@ main {
 }
 
 .book-form h2 {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .book-form h2 img {
@@ -748,14 +748,14 @@ main {
   display: grid;
   justify-content: center;
   width: 100%;
-  grid-template-columns: 0.1fr 2fr;
+  grid-template-columns: 0.4fr 1fr;
   grid-row-gap: 1rem;
-  margin-top: 0.6rem;
+  margin-top: 2rem;
 }
 
 .book-form form label {
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #294978;
   text-shadow: 3px 3px 8px rgba(128, 125, 125, 0.164);
 }
@@ -763,19 +763,19 @@ main {
 .book-form form input[type="text"],
 .book-form form input[type="password"] {
   width: 80%;
-  padding: 5px 30px 5px 0;
+  padding: 8px 30px 8px 0;
   border: 1px solid #cfcfcf;
   border-radius: 10px;
   text-align: start;
   text-indent: 0.9rem;
-  transform: translateX(-3.5rem);
+  transform: translateX(-1.5rem);
   outline: none;
 }
 
 .book-form input[type="submit"] {
   width: 250px;
   padding: 8px 12px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 10px;
   border-radius: 10px;
   font-weight: 700;
