@@ -6,7 +6,7 @@ $PatronID = $_POST["PatronID"];
 $Date = $_POST["Date"];
 
 // query statement
-$sql = "INSERT INTO reservation (Reservation_Date, Patron_ID, Copy_ID) VALUES ('$Date','$PatronID','$ISBN');";
+$sql = "INSERT INTO reservation (Reservation_Date, Patron_ID, ISBN) VALUES ('$Date','$PatronID','$ISBN');";
 // query to db
 $result = mysqli_query($conn, $sql);
 // check if error has occured
