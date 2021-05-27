@@ -13,10 +13,10 @@ $sql1 = "SELECT COUNT(slip_number) FROM borrow_slip WHERE return_date IS NULL;";
 $result1 = mysqli_query($conn, $sql1);
 $bookIssued = mysqli_fetch_row($result1)[0];
 
-// //books returned
-$sql2 = "SELECT COUNT(slip_number) FROM borrow_slip WHERE return_date IS NOT NULL;";
+// //books reserved
+$sql2 = "SELECT COUNT(Reservation_ID) FROM reservation;";
 $result2 = mysqli_query($conn, $sql2);
-$bookReturned = mysqli_fetch_row($result2)[0];
+$bookReserved = mysqli_fetch_row($result2)[0];
 
 
 // //number of registered patrons
