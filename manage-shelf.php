@@ -38,36 +38,36 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" />
+      <input type="text" placeholder="Search" name="search-input" class="search-input" />
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
-      <li onClick="showInnerUL()"><a href="#">Books</a></li>
       <li class="user-handle">
-        <a href="index.html"><img class="user-img" src="images/default.jpg" alt="" /></a>
+        <img class="user-img" src="images/user-default.png" alt="" />
+      </li>
+      <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
+        <ul class="dropdown-menu">
+          <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
+        </ul>
       </li>
     </ul>
   </nav>
 
   <!-- SIDE MENU / SIDEBAR -->
   <section class="side-menu">
-    <!-- Close button -->
     <button onclick="closeSideMenu()">
       <img class="close-btn" src="images/arrow-white.png" alt="" />
     </button>
 
-    <!-- User/librarian profile picture -->
     <div class="tasks">
       <div class="item user-profile">
-        <img src="images/default.jpg" alt="" />
+        <img src="images/alms-logo.png" alt="">
         <div>
-          <p>Mr. Ms. Mrs. Surname</p>
+          <p> Library Management <br>System</p>
         </div>
       </div>
 
-      <!-- Navigation -->
-
-      <!-- Action: Add new book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
           <g transform="">
@@ -81,19 +81,21 @@
         </svg>
         <a href="new-book.html" class="task">Add New Book</a>
       </div>
-      <!-- end -->
 
       <!-- Action: Add new shelf -->
       <div class="item">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-            width="28" height="28"
-            viewBox="0 0 172 172"
-            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M34.4,10.32c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v92.88h-20.64c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v13.76c0.00019,1.89978 1.54022,3.43981 3.44,3.44h10.32v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h89.44v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h10.32c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-13.76c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-72.24c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-24.08v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44zM37.84,17.2h20.64v3.44v86h-20.64zM44.72,24.08c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM65.36,24.08h20.64v3.44v79.12h-20.64zM72.24,30.96c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM92.88,30.96h17.2v3.44v72.24h-17.2zM99.76,37.84c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM116.96,37.84h17.2v68.8h-17.2zM123.84,44.72c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM44.72,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM72.24,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM99.76,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM123.84,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM13.76,113.52h20.64h27.52h27.52h24.08h24.08h20.64v6.88h-10.32h-13.76h-96.32h-13.76h-10.32zM27.52,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44zM137.6,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44z"></path></g></g></svg>
-                <a href="new-shelf.html" class="task">Add New Shelf</a>
-            </div>
-            <!-- end -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path d="M34.4,10.32c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v92.88h-20.64c-1.89978,0.00019 -3.43981,1.54022 -3.44,3.44v13.76c0.00019,1.89978 1.54022,3.43981 3.44,3.44h10.32v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h89.44v24.08c0,5.65902 4.66098,10.32 10.32,10.32c5.65902,0 10.32,-4.66098 10.32,-10.32v-24.08h10.32c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-13.76c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-72.24c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-20.64v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44h-24.08v-3.44c-0.00019,-1.89978 -1.54022,-3.43981 -3.44,-3.44zM37.84,17.2h20.64v3.44v86h-20.64zM44.72,24.08c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM65.36,24.08h20.64v3.44v79.12h-20.64zM72.24,30.96c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM92.88,30.96h17.2v3.44v72.24h-17.2zM99.76,37.84c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM116.96,37.84h17.2v68.8h-17.2zM123.84,44.72c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM44.72,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM72.24,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h6.88c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM99.76,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM123.84,92.88c-1.24059,-0.01754 -2.39452,0.63425 -3.01993,1.7058c-0.62541,1.07155 -0.62541,2.39684 0,3.46839c0.62541,1.07155 1.77935,1.72335 3.01993,1.7058h3.44c1.24059,0.01754 2.39452,-0.63425 3.01993,-1.7058c0.62541,-1.07155 0.62541,-2.39684 0,-3.46839c-0.62541,-1.07155 -1.77935,-1.72335 -3.01993,-1.7058zM13.76,113.52h20.64h27.52h27.52h24.08h24.08h20.64v6.88h-10.32h-13.76h-96.32h-13.76h-10.32zM27.52,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44zM137.6,127.28h6.88v24.08c0,1.9365 -1.5035,3.44 -3.44,3.44c-1.9365,0 -3.44,-1.5035 -3.44,-3.44z"></path>
+            </g>
+          </g>
+        </svg>
+        <a href="new-shelf.html" class="task">Add New Shelf</a>
+      </div>
+      <!-- end -->
 
-      <!-- Action: Borrow Book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -105,9 +107,6 @@
         </svg>
         <a href="book-borrow-slip.html" class="task">Borrow Book</a>
       </div>
-      <!-- end -->
-
-      <!-- Action: Reserve Book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -119,9 +118,7 @@
         </svg>
         <a href="book-reservation.html" class="task">Reserve Book</a>
       </div>
-      <!-- end -->
 
-      <!-- Action: Add new author -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -133,9 +130,7 @@
         </svg>
         <a href="new-author.html" class="task">Add New Author</a>
       </div>
-      <!-- end -->
 
-      <!-- Action: Register Patron -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -147,21 +142,6 @@
         </svg>
         <a href="new-patron.html" class="task">Register Patron</a>
       </div>
-      <!-- end -->
-
-      <!-- Action: Manage Patron -->
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
-          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-            <path d="M0,172v-172h172v172z" fill="none"></path>
-            <g fill="#ffffff">
-              <path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path>
-            </g>
-          </g>
-        </svg>
-        <a href="manage-patrons.html" class="task">Manage Patron</a>
-      </div>
-      <!-- end -->
     </div>
   </section>
 
@@ -182,37 +162,21 @@
       if (mysqli_num_rows($shelf) > 0) {
         while ($row = mysqli_fetch_assoc($shelf)) {
           echo ('<div class="table-data"> 
-          <div>' . $row["Shelf_ID"] . '</div>
-          <div>' . $row["Shelf_Row"] . '</div>
-          <div>' . $row["Shelf_Name"] . '</div>
-          <div class="action">
-            <a href="manage-shelf-edit.php?edit=' . $row["Shelf_ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Shelf_ID"] . '></button>
-          </div>     
-          </div>
-          
-          
-          ');
+      <div>' . $row["Shelf_ID"] . '</div>
+      <div>' . $row["Shelf_Row"] . '</div>
+      <div>' . $row["Shelf_Name"] . '</div>
+      <div class="action">
+        <a href="manage-shelf-edit.php?edit=' . $row["Shelf_ID"] . '" class="edit" name="edit"></a>
+        <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Shelf_ID"] . '></button>
+      </div>     
+      </div>
+      
+      
+      ');
         };
       }
 
       ?>
-
-
-
-
-      <!-- table row data -->
-      <!-- <div class="table-data">
-                <div>S1</div>
-                <div>21</div>
-                <div>History</div>
-                <div class="action">
-                  <a href="manage-shelf-edit.html" class="edit"></a>
-                  <button href="" class="delete" onclick="openDeletePrompt()"></button>
-                </div>
-              </div> -->
-      <!-- end -->
-
     </div>
   </main>
 
