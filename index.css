@@ -862,7 +862,7 @@ main .manage-booklist {
 }
 
 main .manage-booklist {
-  width: 76rem;
+  width: 78rem;
 }
 
 .book-list-table .table-name,
@@ -902,7 +902,7 @@ main .manage-booklist {
 
 .manage-booklist .column-name {
   display: grid;
-  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  grid-template-columns: 120px 240px 180px 100px 150px 100px 60px 70px 70px 85px 70px;
   width: 100%;
   margin-top: 2rem;
   border-top: 1px solid rgba(94, 94, 94, 0.274);
@@ -929,7 +929,7 @@ main .manage-booklist {
 .manage-booklist .table-data {
   display: grid;
   width: 100%;
-  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  grid-template-columns: 120px 240px 180px 100px 150px 100px 60px 70px 70px 85px 70px;
   width: 100%;
   padding: 10 5px;
 }
