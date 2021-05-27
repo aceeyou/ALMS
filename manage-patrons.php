@@ -216,42 +216,6 @@
         }
 
         ?>
-
-
-        <!-- <div class="table-data">
-      <div>100</div>
-      <div>Dana Jane</div>
-      <div>Cam Norte</div>
-      <div>Daet</div>
-      <div>09123456789</div>
-      <div>PA100</div>
-      <div>2021-05-02</div>
-      <div>12.00</div>
-      <div class="action">
-        <button class="plus-account"></button>
-        <a href="manage-patron-edit.html" class="edit"></a>
-        <button href="" class="delete" onclick="openDeletePrompt()"></button>
-      </div>
-    </div> -->
-        <!-- end -->
-
-        <!-- table row data -->
-        <!-- <div class="table-data">
-      <div>101</div>
-      <div>Jose Paolo</div>
-      <div>Sorsogon</div>
-      <div>Sorsogon City</div>
-      <div>09987654321</div>
-      <div>PA101</div>
-      <div>2021-05-02</div>
-      <div>12.00</div>
-      <div class="action">
-        <button class="plus-account"></button> -->
-        <!-- <a href="manage-patron-edit.html" class="edit"></a>
-        <button href="" class="delete" onclick="openDeletePrompt()"></button>
-      </div>
-    </div> -->
-        <!-- end -->
       </div>
     </div>
   </main>

@@ -19,19 +19,19 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// if (isset($_GET['createAccount'])) {
-//     $ID = $_GET['id'];
-//     $date = date("Y/m/d");
-//     $sql1 = "INSERT INTO `patron_account`(`Date_Registered`, `Account_Fine`, `Patron_ID`) VALUES ('$date','0','$ID')";
-//     $account = mysqli_query($conn, $sql1);
-//     if ($account) {
-//         mysqli_close($conn);
-//         header("location:../manage-patrons.php");
-//         exit;
-//     } else {
-//         echo "Error Creating record";
-//     }
-// }
+if (isset($_GET['createAccount'])) {
+    $ID = $_GET['id'];
+    $date = date("Y/m/d");
+    $sql1 = "INSERT INTO `patron_account`(`Date_Registered`, `Account_Fine`, `Patron_ID`) VALUES ('$date','0','$ID')";
+    $account = mysqli_query($conn, $sql1);
+    if ($account) {
+        mysqli_close($conn);
+        header("location:../manage-patrons.php");
+        exit;
+    } else {
+        echo "Error Creating record";
+    }
+}
 
 if (isset($_POST['SAVE'])) {
     //echo "qsadfghjykl;o";
