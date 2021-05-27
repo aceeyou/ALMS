@@ -232,10 +232,10 @@ nav .active {
 }
 
 /* Dashboard */
-
 .boxes {
   display: grid;
   justify-content: center;
+  align-content: center;
   grid-template-columns: 19.5rem 19.5rem 19.5rem;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
