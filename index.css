@@ -426,26 +426,26 @@ nav .menu-btn #open-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 70%;
   height: 200px;
   margin-left: auto;
-  margin-right: 60px;
+  margin-right: auto;
   padding: 0;
 }
 
 .tasks .item:nth-child(1) img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
 }
 
 .user-profile {
   visibility: visible;
+  margin-bottom: 50px;
   transition: 500ms;
 }
 
 .user-profile div {
-  min-width: 150px;
+  min-width: 200px;
 }
 
 .tasks .item:nth-child(1) p {
@@ -453,17 +453,15 @@ nav .menu-btn #open-btn {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  text-overflow: clip;
-  color: black;
+  color: #fff;
   border-radius: 20px;
-  min-width: 150px;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .tasks .item svg {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .tasks .item a {
@@ -825,12 +823,12 @@ main {
   margin-bottom: 10px;
 }
 
-.book-form form .save-edit:hover {
-  background: rgb(9, 211, 144);
+.book-form form input.save-edit:hover {
+  background-color: rgb(9, 211, 144);
 }
 
 input .save-edit:hover {
-  background: rgb(9, 211, 144);
+  background-color: rgb(9, 211, 144);
 }
 
 /* Library Form */
