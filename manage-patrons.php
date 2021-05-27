@@ -165,6 +165,7 @@
           <h2>Patron</h2>
           <h2>Address</h2>
           <h2>Mailing Address</h2>
+          <h2>Email Address</h2>
           <h2>Contact Number</h2>
           <h2>Account ID</h2>
           <h2>Date Registered</h2>
@@ -183,6 +184,7 @@
           <div>' . $row["ID"] . '</div>
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
           <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . $row["Patron_CodeAddress"] . '</div>
+          <div>' . $row["Patron_MailAddress"] . '</div>
           <div>' . $row["Patron_MailAddress"] . '</div>
           <div>' . $row["Contact_Number"] . '</div>
           <div>' . $row["PatronAccount_ID"] . '</div>
