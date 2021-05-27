@@ -5,91 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="images/alms-logo.png" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
-    <title>Add Book Form | ALMS</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/alms-logo.png" />
+
+    <title>Manage Book Reserved | ALMS</title>
   </head>
   <body>
-    <!-- NAV BAR -->
     <nav>
       <div class="menu-btn">
         <button id="open-btn" onclick="openSideMenu()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="24"
-            height="24"
-            viewBox="0 0 172 172"
-            style="fill: #000000"
-          >
-            <g
-              fill="none"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style="mix-blend-mode: normal"
-            >
-              <path d="M0,172v-172h172v172z" fill="none"></path>
-              <g fill="#000000">
-                <path
-                  d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"
-                ></path>
-              </g>
-            </g>
-          </svg>
-        </button>
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="24" height="24"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M21.5,35.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,78.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376zM21.5,121.83333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"></path></g></g></svg>
+            </button>
       </div>
       <div id="logo-div">
-        <a href="dashboard.html"><img src="images/logo" alt="" /></a>
+        <a href="dashboard.html"><img src="images/logo" alt=""></a>
         <a href="dashboard.html">ALMS</a>
       </div>
       <div id="search-container">
-        <input type="text" placeholder="Search" name="search-input" class="search-input"/>
+        <input type="text" placeholder="Search" name="search-input" class="search-input">
       </div>
-      <ul class="main-nav">
-        <li><a href="dashboard.html" class="">Home</a></li>
-        <li class="user-handle">
-          <img class="user-img" src="images/user-default.png" alt=""
-          />
+        <ul class="main-nav">
+          <li><a href="dashboard.html" class="">Home</a></li>
+          <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
+          <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
+            <ul class="dropdown-menu">
+                <li><img src="images/user-default.png" alt=""> User Profile</li>
+                <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
+            </ul>
         </li>
-        <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
-          <ul class="dropdown-menu">
-              <li><img src="images/user-default.png" alt=""> User Profile</li>
-              <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
-          </ul>
-      </li>
-      </ul>
+        </ul>
     </nav>
 
     <!-- SIDE MENU / SIDEBAR -->
     <section class="side-menu">
+      <!-- Close button -->
       <button onclick="closeSideMenu()">
         <img class="close-btn" src="images/arrow-white.png" alt="" />
       </button>
 
+      <!-- User/librarian profile picture -->
       <div class="tasks">
         <div class="item user-profile">
           <img src="images/alms-logo.png" alt="">
@@ -98,7 +61,10 @@
                 </div>
         </div>
 
-        <div class="item menu-active">
+        <!-- Navigation -->
+
+        <!-- Action: Add new book -->
+        <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -136,6 +102,7 @@
           </svg>
           <a href="new-book.html" class="task">Add New Book</a>
         </div>
+        <!-- end -->
 
         <!-- Action: Add new shelf -->
         <div class="item">
@@ -146,6 +113,8 @@
           <a href="new-shelf.html" class="task">Add New Shelf</a>
       </div>
       <!-- end -->
+
+        <!-- Action: Borrow Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +151,9 @@
           </svg>
           <a href="book-borrow-slip.html" class="task">Borrow Book</a>
         </div>
+        <!-- end -->
 
+        <!-- Action: Reserve Book -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -219,16 +190,20 @@
           </svg>
           <a href="book-reservation.html" class="task">Reserve Book</a>
         </div>
+        <!-- end -->
 
+        <!-- Action: Add new author -->
         <div class="item">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="32" height="32"
-viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g>
-          </svg>
-          <a href="new-author.html" class="task">Add New Author</a>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="32" height="32"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M80.625,10.75c-38.50683,0 -69.875,31.36817 -69.875,69.875c0,38.50683 31.36817,69.875 69.875,69.875c38.50683,0 69.875,-31.36817 69.875,-69.875c0,-38.50683 -31.36817,-69.875 -69.875,-69.875zM80.625,21.5c32.71192,0 59.125,26.41308 59.125,59.125c0,14.40332 -5.12304,27.54688 -13.60547,37.79297c-4.61914,-13.10156 -14.61328,-23.6416 -27.37891,-28.84864c5.33301,-4.91308 8.73438,-11.92578 8.73438,-19.69433c0,-14.78125 -12.09375,-26.875 -26.875,-26.875c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,7.76855 3.40136,14.78125 8.73438,19.69433c-12.76562,5.20703 -22.71777,15.74707 -27.33692,28.84864c-8.52441,-10.24609 -13.64746,-23.38965 -13.64746,-37.79297c0,-32.71192 26.41308,-59.125 59.125,-59.125zM80.625,53.75c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125zM80.625,96.75c18.2666,0 33.25781,12.97558 36.74317,30.19239c-10.12011,8.02051 -22.84375,12.80761 -36.74317,12.80761c-13.89942,0 -26.62304,-4.7871 -36.70117,-12.80761c3.44335,-17.2168 18.43456,-30.19239 36.70117,-30.19239z"></path></g></g>
+            </svg>
+            <a href="new-author.html" class="task">Add New Author</a>
         </div>
+        <!-- end -->
 
+        <!-- Action: Register Patron -->
         <div class="item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -265,63 +240,90 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
           </svg>
           <a href="new-patron.html" class="task">Register Patron</a>
         </div>
+        <!-- end -->
       </div>
     </section>
-
     <main>
-      <div id="book-form-container">
-        <div class="book-form">
-          <h2><img src="https://img.icons8.com/windows/96/000000/add-book.png"/>New Book Entry</h2>
-          <form action="includes/new-book.php" method="POST">
-            <label for="">ISBN</label>
-            <input
-              type="text"
-              name="ISBN"
-              id=""
-              placeholder="XXX-X-XX-XXXXXX-X"
-            />
 
-            <label for="">Book Title</label>
-            <input
-              type="text"
-              name="Book-Title"
-              id=""
-              placeholder="Harry Potter"
-            />
+      <div class="manage-books-reserved">
+        <div class="book-list-table">
+          <h2 class="table-name">Manage Books Reserved</h2>
+            <div class="column-name">
+              <!-- colomn titles -->
+              <h2>Reservation ID</h2>
+              <h2>Reservation Date</h2>
+              <h2>Patron ID</h2>
+              <h2>ISBN</h2>
+              <h2>Action</h2>
+            </div>
+              <!-- end: column-name div -->
 
-            <label for="">Book Publisher</label>
-            <input
-              type="text"
-              name="publisher"
-              id=""
-              placeholder="IDW Publishing"
-            />
+            <?php
+            include "includes/manage-reserved(backend).php";
+            if (mysqli_num_rows($shelf) > 0) {
+                while ($row = mysqli_fetch_assoc($shelf)) {
+                    echo ('<div class="table-data"> 
+            <div>' . $row["Reservation_ID"] . '</div>
+            <div>' . $row["Reservation_Date"] . '</div>
+            <div>' . $row["Patron_ID"] . '</div>
+            <div>' . $row["ISBN"] . '</div>
+            <div class="action">
+                <a href="manage-borrowed-edit.html" class="borrow"></a>
+                <a href="manage-reserved-edit.php?edit=' . $row["Reservation_ID"] . '" class="edit" name="edit"></a>
+                <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Reservation_ID"] . '></button>
+            </div>     
+            </div>
+      
+            ');
+                };
+            }
 
-            <label for="">Date Published</label>
-            <input type="text" name="date" id="" placeholder="2012-28-11" />
+            ?>
 
-            <label for="">Book Edition</label>
-            <input
-              type="text"
-              name="edition"
-              id=""
-              placeholder="First Edition"
-            />
+            <!-- table row data -->
+            <div class="table-data">
+              <div>R100</div>
+              <div>2020-05-03</div>
+              <div>100</div>
+              <div>C3</div>
+              <div class="action">
+                <a href="manage-borrowed-edit.html" class="borrow"></a>
+                <a href="manage-reserved-edit.html" class="edit"></a>
+                <button href="" class="delete" onclick="openDeletePrompt()"></button>
+              </div>
+            </div>
+              <!-- end -->
 
-            <label for="">Copy Total</label>
-            <input type="text" name="copytotal" placeholder="10">
-
-            <label for="">Shelf ID</label>
-            <input type="text" name="shelfID" placeholder="1">
-
-            <label for="">Author ID</label>
-            <input type="text" name="authorID" placeholder="101" id="">
-
-            <input type="submit" value="ADD BOOK" />
-          </form>
+            <!-- table row data -->
+            <div class="table-data">
+              <div>R101</div>
+              <div>2020-05-03</div>
+              <div>101</div>
+              <div>C4</div>
+              <div class="action">
+                <a href="manage-borrowed-edit.html" class="borrow"></a>
+                <a href="manage-reserved-edit.html" class="edit"></a>
+                <button href="" class="delete" onclick="openDeletePrompt()"></button>
+              </div>
+            </div>
+              <!-- end -->
         </div>
       </div>
     </main>
+
+    <!-- Delete Prompt Div -->
+    <div class="delete-prompt">
+      <div class="confirm-delete">
+        <h2>Confirm Delete Entry</h2>
+        <form action="">
+          <p>Are you sure to delete this entry from the database?</p>
+
+          <input type="submit" value="DELETE">
+          <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
+        </form>
+      </div>
+    </div>
+    <!-- end -->
 
     <script src="index.js"></script>
   </body>
