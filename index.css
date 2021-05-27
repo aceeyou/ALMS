@@ -134,10 +134,6 @@ nav .main-nav li a {
   font-weight: 500;
 }
 
-nav .main-nav .user-img {
-  width: 28px;
-}
-
 nav .main-nav li a:hover {
   transform: scale(1.11);
 }
@@ -222,8 +218,8 @@ nav .main-nav .user-handle {
 }
 
 nav .main-nav .user-handle img {
-  transform: translate(-7px, 8px);
-  width: 30px;
+  transform: translate(10px, 1px);
+  width: 2rem;
   border-radius: 50%;
 }
 
@@ -1064,7 +1060,12 @@ main .manage-booklist {
 
 .manage-shelf .column-name,
 .manage-shelf .table-data {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+}
+
+.manage-shelf .column-name h2:nth-child(4).column-name,
+.manage-authors .column-name h2:nth-child(4) {
+  margin-left: 20px;
 }
 
 .manage-shelf .action a {
