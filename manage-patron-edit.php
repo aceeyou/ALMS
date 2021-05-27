@@ -1,3 +1,17 @@
+<?php
+include "includes/db.php";
+
+if (isset($_GET["edit"])) {
+  $editID = $_GET['edit'];
+  $ID = $_GET['edit'];
+  $sql2 = "SELECT * FROM patron p LEFT JOIN patron_account pa ON p.Patron_ID = pa.Patron_ID WHERE p.Patron_ID = $editID;";
+  $resultEdit = mysqli_query($conn, $sql2);
+  $row = mysqli_fetch_assoc($resultEdit);
+};
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,16 +24,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
+  <link rel="icon" href="images/edit-black.png" />
 
-  <title>Manage Patron | ALMS</title>
+  <title>Edit Patron | ALMS</title>
 </head>
 
 <body>
+  <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#000000">
@@ -30,15 +45,17 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt=""></a>
+      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <input type="text" placeholder="Search" name="search-input" class="search-input" />
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
-      <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
+      <li class="user-handle">
+        <img class="user-img" src="images/user-default.png" alt="">
+      </li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
           <li><img src="images/user-default.png" alt=""> User Profile</li>
@@ -126,7 +143,7 @@
 
       <!-- Action: Add new author -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -156,121 +173,41 @@
 
   <main>
 
-    <div class="manage-patrons">
-      <div class="book-list-table">
-        <h2 class="table-name">Manage Patrons</h2>
-        <div class="column-name">
-          <!-- colomn titles -->
-          <h2>Patron ID</h2>
-          <h2>Patron</h2>
-          <h2>Address</h2>
-          <h2>Mailing Address</h2>
-          <h2>Contact Number</h2>
-          <h2>Account ID</h2>
-          <h2>Date Registered</h2>
-          <h2>Account Fine</h2>
-          <h2>Action</h2>
-        </div>
-        <!-- end: column-name div -->
+    <div id="book-form-container">
+      <div class="book-form">
+        <h2><img class="edit-icon" src="images/edit-black.png" alt="">Edit Patron Details</h2>
+        <form action="includes/manage-patrons(backend).php" method="POST">
+          <input type="hidden" name="id" value="<?php echo $editID ?>">
+          <label for="">First Name</label>
+          <input type="text" name="firstName" id="" value="<?php echo $row["Patron_Firstname"] ?>" />
+          <label for="">Middle Name</label>
+          <input type="text" name="middleName" id="" value="<?php echo $row["Patron_Middlename"] ?>" />
+          <label for="">Last Name</label>
+          <input type="text" name="lastName" id="" value="<?php echo $row["Patron_Lastname"] ?>" />
+          <label for="">City Address</label>
+          <input type="text" name="cityAddress" id="" value="<?php echo $row["Patron_CityAddress"] ?>" />
+          <label for="">Province Address</label>
+          <input type="text" name="provinceAddress" id="" value="<?php echo $row["Patron_ProvinceAddress"] ?>" />
+          <label for="">Zip Code</label>
+          <input type="text" name="zipCode" id="" value="<?php echo $row["Patron_CodeAddress"] ?>" />
+          <label for="">Mailing Address</label>
+          <input type="text" name="mailingAddress" id="" value="<?php echo $row["Patron_MailAddress"] ?>" />
+          <label for="">Email Address</label>
+          <input type="text" name="emailAddress" id="" value="<?php echo $row["Patron_EmailAddress"] ?>" />
+          <label for="">Contact Number</label>
+          <input type="text" name="contactNumber" id="" value="<?php echo $row["Contact_Number"] ?>" />
+          <label for="">Account Fine</label>
+          <input type="text" name="" id="accountFine" value="<?php echo $row["Account_Fine"] ?>" />
 
-        <!-- table row data -->
-        <?php
-        include "includes/manage-patrons(backend).php";
-        if (mysqli_num_rows($patron) > 0) {
-          while ($row = mysqli_fetch_assoc($patron)) {
-            if ($row["Patron_ID"] == !NULL) {
-              echo ('<div class="table-data"> 
-          <div>' . $row["ID"] . '</div>
-          <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Contact_Number"] . '</div>
-          <div>' . $row["PatronAccount_ID"] . '</div>
-          <div>' . $row["Date_Registered"] . '</div>
-          <div>' . $row["Account_Fine"] . '</div>
-          <div class="action">
-          <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
-          </div>
-          ');
-            } else {
-              echo ('<div class="table-data"> 
-          <div>' . $row["ID"] . '</div>
-          <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Contact_Number"] . '</div>
-          <div>' . $row["PatronAccount_ID"] . '</div>
-          <div>' . $row["Date_Registered"] . '</div>
-          <div>' . $row["Account_Fine"] . '</div>
-          <div class="action">
-            <a href="includes/manage-patrons(backend).php?id=' . $row["ID"] . ' &createAccount=Submit" class="plus-account" name="createAccount"></a> 
-            <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
-          </div>
-          ');
-            };
-          };
-        }
-
-        ?>
-
-
-        <!-- <div class="table-data">
-      <div>100</div>
-      <div>Dana Jane</div>
-      <div>Cam Norte</div>
-      <div>Daet</div>
-      <div>09123456789</div>
-      <div>PA100</div>
-      <div>2021-05-02</div>
-      <div>12.00</div>
-      <div class="action">
-        <button class="plus-account"></button>
-        <a href="manage-patron-edit.html" class="edit"></a>
-        <button href="" class="delete" onclick="openDeletePrompt()"></button>
-      </div>
-    </div> -->
-        <!-- end -->
-
-        <!-- table row data -->
-        <!-- <div class="table-data">
-      <div>101</div>
-      <div>Jose Paolo</div>
-      <div>Sorsogon</div>
-      <div>Sorsogon City</div>
-      <div>09987654321</div>
-      <div>PA101</div>
-      <div>2021-05-02</div>
-      <div>12.00</div>
-      <div class="action">
-        <button class="plus-account"></button> -->
-        <!-- <a href="manage-patron-edit.html" class="edit"></a>
-        <button href="" class="delete" onclick="openDeletePrompt()"></button>
-      </div>
-    </div> -->
-        <!-- end -->
+          <input type="submit" value="SAVE" class="save-edit" />
+        </form>
       </div>
     </div>
   </main>
 
-  <!-- Delete Prompt Div -->
-  <div class="delete-prompt">
-    <div class="confirm-delete">
-      <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-patrons(backend).php" method="GET">
-        <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
-        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-      </form>
-    </div>
-  </div>
-  <!-- end -->
+  <script src="index.js">
 
-  <script src="index.js"></script>
+  </script>
 </body>
 
 </html>
