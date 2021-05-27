@@ -134,10 +134,6 @@ nav .main-nav li a {
   font-weight: 500;
 }
 
-nav .main-nav .user-img {
-  width: 28px;
-}
-
 nav .main-nav li a:hover {
   transform: scale(1.11);
 }
@@ -222,8 +218,8 @@ nav .main-nav .user-handle {
 }
 
 nav .main-nav .user-handle img {
-  transform: translate(-7px, 8px);
-  width: 30px;
+  transform: translate(10px, 1px);
+  width: 2rem;
   border-radius: 50%;
 }
 
@@ -232,10 +228,10 @@ nav .active {
 }
 
 /* Dashboard */
-
 .boxes {
   display: grid;
   justify-content: center;
+  align-content: center;
   grid-template-columns: 19.5rem 19.5rem 19.5rem;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
@@ -426,26 +422,26 @@ nav .menu-btn #open-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 70%;
   height: 200px;
   margin-left: auto;
-  margin-right: 60px;
+  margin-right: auto;
   padding: 0;
 }
 
 .tasks .item:nth-child(1) img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
 }
 
 .user-profile {
   visibility: visible;
+  margin-bottom: 50px;
   transition: 500ms;
 }
 
 .user-profile div {
-  min-width: 150px;
+  min-width: 200px;
 }
 
 .tasks .item:nth-child(1) p {
@@ -453,17 +449,15 @@ nav .menu-btn #open-btn {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  text-overflow: clip;
-  color: black;
+  color: #fff;
   border-radius: 20px;
-  min-width: 150px;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .tasks .item svg {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .tasks .item a {
@@ -689,7 +683,7 @@ main {
 
 .side-info {
   width: 250px;
-  height: 690px;
+  height: 730px;
   background: linear-gradient(to bottom right, #267fff, #0d64dd);
   transform: translateX(3.6rem);
   border-top-left-radius: 0.7rem;
@@ -825,12 +819,12 @@ main {
   margin-bottom: 10px;
 }
 
-.book-form form .save-edit:hover {
-  background: rgb(9, 211, 144);
+.book-form form input.save-edit:hover {
+  background-color: rgb(9, 211, 144);
 }
 
 input .save-edit:hover {
-  background: rgb(9, 211, 144);
+  background-color: rgb(9, 211, 144);
 }
 
 /* Library Form */
@@ -1066,7 +1060,12 @@ main .manage-booklist {
 
 .manage-shelf .column-name,
 .manage-shelf .table-data {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+}
+
+.manage-shelf .column-name h2:nth-child(4).column-name,
+.manage-authors .column-name h2:nth-child(4) {
+  margin-left: 20px;
 }
 
 .manage-shelf .action a {
