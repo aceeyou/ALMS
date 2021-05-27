@@ -182,7 +182,7 @@
               echo ('<div class="table-data"> 
           <div>' . $row["ID"] . '</div>
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . '</div>
+          <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . $row["Patron_CodeAddress"] . '</div>
           <div>' . $row["Patron_MailAddress"] . '</div>
           <div>' . $row["Contact_Number"] . '</div>
           <div>' . $row["PatronAccount_ID"] . '</div>
@@ -198,7 +198,7 @@
               echo ('<div class="table-data"> 
           <div>' . $row["ID"] . '</div>
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . '</div>
+          <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . " " . $row["Patron_CodeAddress"] . '</div>
           <div>' . $row["Patron_MailAddress"] . '</div>
           <div>' . $row["Contact_Number"] . '</div>
           <div>' . $row["PatronAccount_ID"] . '</div>

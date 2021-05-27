@@ -177,7 +177,7 @@ if (isset($_GET["edit"])) {
           <label for="">Shelf Name</label>
           <input type="text" name="shelf-name" id="" placeholder="History" value="<?php echo $row["Shelf_Name"] ?>" />
 
-          <input type="submit" name="SAVE" class="save-edit" />
+          <input type="submit" name="SAVE" value="SAVE CHANGES" class="save-edit" />
         </form>
       </div>
     </div>
