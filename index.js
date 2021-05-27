@@ -109,7 +109,7 @@ function dropDropDown() {
     isdropped = false
   } else {
     document.querySelector(".dropdown-menu").style.top = "0px";
-    // document.querySelector(".dropdown-menu").style.transform = "translateY(-200px)";
+    document.querySelector(".dropdown-menu").style.transform = "translateY(-200px)";
     document.querySelector(".dropdown-menu").style.height = "0";
     document.querySelector(".dropdown-img").style.transform = "rotate(-360deg)";
     isdropped = true;
