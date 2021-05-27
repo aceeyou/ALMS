@@ -19,11 +19,11 @@ if (isset($_GET['delete'])) {
 }
 // edit
 if (isset($_POST['SAVE'])) {
+
     $Shelf_ID = $_POST['shelf-id'];
     $Shelf_row = $_POST['shelf-row'];
     $Shelf_name = $_POST['shelf-name'];
-
-    $sql2 = "UPDATE shelf SET Shelf_ID='$Shelf_ID',Shelf_Row='$Shelf_row',Shelf_Name='$Shelf_name'";
+    $sql2 = "UPDATE `shelf` SET `Shelf_ID`='$Shelf_ID',`Shelf_Row`='$Shelf_row',`Shelf_Name`='$Shelf_name' WHERE Shelf_ID = '$Shelf_ID'";
     $update = mysqli_query($conn, $sql2);
     if ($update) {
         mysqli_close($conn);
