@@ -102,7 +102,7 @@ nav #search-container input {
   border: 1px solid #f5f5f5;
   box-shadow: 0px 0px 4px rgba(128, 125, 125, 0.274);
   border-radius: 30px;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: 500ms;
 }
 
@@ -666,10 +666,6 @@ main {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url("images/4861242.jpg");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .new-librarian-container {
@@ -685,7 +681,7 @@ main {
   width: 250px;
   height: 730px;
   background: linear-gradient(to bottom right, #267fff, #0d64dd);
-  transform: translateX(3.6rem);
+  transform: translateX(5rem);
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
@@ -706,7 +702,7 @@ main {
   padding: 0.8rem;
   padding-left: 50px;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 #book-form-container {
@@ -730,7 +726,7 @@ main {
 .book-form {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 600px;
   padding: 30px 0 20px 60px;
   border-radius: 0.7rem;
   background-color: #fff;
@@ -738,7 +734,7 @@ main {
 }
 
 .book-form h2 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .book-form h2 img {
@@ -752,13 +748,14 @@ main {
   display: grid;
   justify-content: center;
   width: 100%;
-  grid-template-columns: 0.4fr 1fr;
+  grid-template-columns: 0.1fr 2fr;
   grid-row-gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 0.6rem;
 }
 
 .book-form form label {
   font-weight: 700;
+  font-size: 0.8rem;
   color: #294978;
   text-shadow: 3px 3px 8px rgba(128, 125, 125, 0.164);
 }
@@ -766,18 +763,19 @@ main {
 .book-form form input[type="text"],
 .book-form form input[type="password"] {
   width: 80%;
-  padding: 8px 30px 8px 0;
+  padding: 5px 30px 5px 0;
   border: 1px solid #cfcfcf;
   border-radius: 10px;
   text-align: start;
   text-indent: 0.9rem;
+  transform: translateX(-3.5rem);
   outline: none;
 }
 
 .book-form input[type="submit"] {
   width: 250px;
   padding: 8px 12px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
   font-weight: 700;
@@ -862,7 +860,7 @@ main .manage-booklist {
 }
 
 main .manage-booklist {
-  width: 76rem;
+  width: 78rem;
 }
 
 .book-list-table .table-name,
@@ -902,7 +900,7 @@ main .manage-booklist {
 
 .manage-booklist .column-name {
   display: grid;
-  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  grid-template-columns: 120px 240px 180px 100px 150px 100px 60px 70px 70px 85px 70px;
   width: 100%;
   margin-top: 2rem;
   border-top: 1px solid rgba(94, 94, 94, 0.274);
@@ -929,7 +927,7 @@ main .manage-booklist {
 .manage-booklist .table-data {
   display: grid;
   width: 100%;
-  grid-template-columns: 120px 240px 180px 110px 150px 120px 60px 70px 80px 85px;
+  grid-template-columns: 120px 240px 180px 100px 150px 100px 60px 70px 70px 85px 70px;
   width: 100%;
   padding: 10 5px;
 }

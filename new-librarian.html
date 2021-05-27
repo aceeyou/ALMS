@@ -39,7 +39,7 @@
             <img src="images/user-default.png" alt="">
             <h2>Librarian Information</h2>
           </div>
-          <form action="includes/book-reservation.php" method="POST">
+          <form action="includes/new-librarian.php" method="POST">
             <!-- Input form -->
             <label for="">First Name</label>
             <input
@@ -71,16 +71,33 @@
             <!-- end -->
 
             <!-- Input form -->
+            <label for="">City Address</label>
+            <input
+              type="text"
+              name="Librarian_CityAddress"
+              id=""
+              placeholder="Legazpi City"
+            />
+            <!-- end -->
+
+            <!-- Input form -->
+            <label for="">Province Address</label>
+            <input
+              type="text"
+              name="Librarian_ProvinceAddress"
+              id=""
+              placeholder="Albay"
+            />
+            <!-- end -->
+
+            <!-- Input form -->
             <label for="">Email Address</label>
             <input
               type="text"
-              name=""
+              name="Librarian_EmailAddress"
               id=""
               placeholder="contoso@example.com"
             />
-            <!-- end -->
-            <!-- Email address does not exist in db-->
-            <!-- Librarian_ProvinceAddress exists in alms db, but not in page-->
 
             <!-- Input form -->
             <label for="">Mailing Address</label>

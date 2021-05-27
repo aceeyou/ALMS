@@ -201,7 +201,9 @@ if (isset($_GET["edit"])) {
     </div>
   </main>
 
-  <script src="index.js"></script>
+
+  <script src="index.js">
+  </script>
 </body>
 
 </html>

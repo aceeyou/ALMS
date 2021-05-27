@@ -17,5 +17,5 @@ if ($result == false) {
     echo "Error: " . (mysqli_error($conn));
 } else {
     // successful query
-    header("Location: ../dashboard.html");
+    header("Location: ../dashboard.php");
 }

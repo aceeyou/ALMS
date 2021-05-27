@@ -56,9 +56,9 @@
     <!-- User/librarian profile picture -->
     <div class="tasks">
       <div class="item user-profile">
-        <img src="images/default.jpg" alt="" />
+        <img src="images/alms-logo.png" alt="">
         <div>
-          <p>Mr. Ms. Mrs. Surname</p>
+          <p> Library Management <br>System</p>
         </div>
       </div>
 
@@ -108,6 +108,20 @@
       </div>
       <!-- end -->
 
+      <!-- Action: Borrow Book -->
+      <div class="item">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path d="M37.625,10.75c-8.86035,0 -16.125,7.26465 -16.125,16.125v112.875h2.26758c2.35156,5.9629 7.09668,10.75 13.85742,10.75h102.125v-10.75h-102.125c-3.02344,0 -5.375,-2.35156 -5.375,-5.375c0,-3.02344 2.35156,-5.375 5.375,-5.375h102.125v-118.25zM37.625,21.5h91.375v96.75h-91.375c-1.88965,0 -3.69531,0.41993 -5.375,1.00781v-92.38281c0,-3.02344 2.35156,-5.375 5.375,-5.375zM75.25,43v32.25h-21.5l26.875,26.875l26.875,-26.875h-21.5v-32.25z"></path>
+            </g>
+          </g>
+        </svg>
+        <a href="book-borrow-slip.html" class="task">Borrow Book</a>
+      </div>
+      <!-- end -->
+
       <!-- Action: Reserve Book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
@@ -124,7 +138,7 @@
 
       <!-- Action: Add new author -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -149,22 +163,9 @@
         <a href="new-patron.html" class="task">Register Patron</a>
       </div>
       <!-- end -->
-
-      <!-- Action: Manage Patron -->
-      <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
-          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-            <path d="M0,172v-172h172v172z" fill="none"></path>
-            <g fill="#ffffff">
-              <path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.64648,0 -53.75,24.10352 -53.75,53.75h10.75c0,-23.72558 19.27442,-43 43,-43c5.24902,0 10.24609,1.0918 14.90723,2.81348c2.93945,-2.85547 6.29882,-5.16504 9.91016,-7.18067c-7.47461,-3.94726 -15.83105,-6.38281 -24.81739,-6.38281zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5zM129,96.75v11.3379c-3.40136,0.71386 -6.55078,2.0996 -9.36426,3.94726l-8.0625,-8.0625l-7.60058,7.60058l8.0625,8.0625c-1.88965,2.81348 -3.27539,5.9629 -3.98926,9.36426h-11.2959v10.75h11.2959c0.71388,3.44336 2.1416,6.55078 3.98926,9.36426l-8.0625,8.0625l7.60058,7.60058l8.0625,-8.0625c2.81348,1.84766 5.9629,3.2334 9.36426,3.94727v11.33789h10.75v-11.2959c3.44336,-0.71386 6.59277,-2.05761 9.40625,-3.94727l8.02051,8.02051l7.60058,-7.60058l-8.02051,-8.02051c1.88966,-2.81348 3.23341,-6.00489 3.94727,-9.40625h11.2959v-10.75h-11.2959c-0.71386,-3.44335 -2.05761,-6.59277 -3.94727,-9.40625l8.02051,-8.02051l-7.60058,-7.60058l-8.02051,8.02051c-2.81348,-1.88965 -6.00489,-3.2334 -9.40625,-3.94727v-11.2959zM134.375,118.25c8.98633,0 16.125,7.13868 16.125,16.125c0,8.98633 -7.13867,16.125 -16.125,16.125c-8.98632,0 -16.125,-7.13867 -16.125,-16.125c0,-8.98632 7.13868,-16.125 16.125,-16.125z"></path>
-            </g>
-          </g>
-        </svg>
-        <a href="" class="task">Manage Patron</a>
-      </div>
-      <!-- end -->
     </div>
   </section>
+
 
   <main>
     <div id="book-form-container">
@@ -204,9 +205,8 @@
     </div>
   </main>
 
-  <script src="index.js">
+  <script src="index.js"></script>
 
-  </script>
 </body>
 
 </html>
