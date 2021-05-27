@@ -13,13 +13,14 @@ $Librarian_Type = $_POST["Librarian_Type"];
 $Username = $_POST["Username"];
 $Password = $_POST["Password"];
 
-$sql = "INSERT INTO librarian(Librarian_FirstName , Librarian_MiddleName , Librarian_LastName , Librarian_CityAddress , Librarian_ProvinceAddress , Librarian_MailingAddress , Contact_Number , Librarian_Type )
+$sql1 = "INSERT INTO librarian(Librarian_FirstName , Librarian_MiddleName , Librarian_LastName , Librarian_CityAddress , Librarian_ProvinceAddress , Librarian_MailingAddress , Contact_Number , Librarian_Type )
 VALUES ('$Librarian_FirstName','$Librarian_MiddleName','$Librarian_LastName','$Librarian_CityAdress','$Librarian_ProvinceAddress','$Librarian_MailingAddress','$Contact_Number','$Librarian_Type')";
+$result1 = mysqli_query($conn, $sql1);
 
-$sql = "INSERT INTO librarian_account(Username , Librarian_Password )
+$sql2 = "INSERT INTO librarian_account(Username , Librarian_Password )
 VALUES ('$Username','$Password')";
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql2);
 
 if ($result == false) {
     //show the error, query has failed
