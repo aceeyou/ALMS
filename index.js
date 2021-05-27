@@ -9,20 +9,20 @@ window.addEventListener("load", () => {
 
 function openSideMenu() {
 
-  document.querySelector("nav").style.marginLeft = "300px";
-  document.querySelector("nav").style.width = "calc(100vw - 300px)";
+  document.querySelector("nav").style.marginLeft = "270px";
+  document.querySelector("nav").style.width = "calc(100vw - 270px)";
   document.querySelector("#logo-div").style.paddingLeft =
     "calc(10rem - 6.25rem)";
   document.querySelector('.search-input').style.width = "25rem";
 
-  document.querySelector(".side-menu").style.width = "300px";
+  document.querySelector(".side-menu").style.width = "270px";
   document.querySelector(".side-menu").style.transform = "translateX(0px)";
   document.querySelector(".side-menu").style.boxShadow =
     "3px 0px 13px rgba(0, 0, 0, 0.4)";
   document.querySelector(".side-menu").style.position = "fixed";
   document.querySelector(".side-menu").style.transition = "500ms";
 
-  document.querySelector("main").style.marginLeft = "300px";
+  document.querySelector("main").style.marginLeft = "270px";
   document.querySelector(".reports").style.width = "71rem";
   document.querySelector(".transactions").style.width = "45rem";
   document.querySelector(".new-patrons").style.width = "24rem";
@@ -41,7 +41,7 @@ function closeSideMenu() {
   document.querySelector('.search-input').style.width = "32rem";
 
   document.querySelector(".side-menu").style.width = "0";
-  document.querySelector(".side-menu").style.transform = "translateX(-300px)";
+  document.querySelector(".side-menu").style.transform = "translateX(-270px)";
   document.querySelector(".side-menu").style.boxShadow = "0";
 
   document.querySelector("main").style.marginLeft = "0";
