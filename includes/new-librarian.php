@@ -6,6 +6,7 @@ $Librarian_MiddleName = $_POST["Librarian_MiddleName"];
 $Librarian_LastName = $_POST["Librarian_LastName"];
 $Librarian_CityAddress = $_POST["Librarian_CityAddress"];
 $Librarian_ProvinceAddress = $_POST["Librarian_ProvinceAddress"];
+$Librarian_EmailAddress = $_POST["Librarian_EmailAddress"];
 $Librarian_MailingAddress = $_POST["Librarian_MailingAddress"];
 $Contact_Number = $_POST["Contact_Number"];
 $Librarian_Type = $_POST["Librarian_Type"];
@@ -25,5 +26,5 @@ if ($result == false) {
     echo "Error: " . (mysqli_error($conn));
 } else {
     //successful query
-    header("Location: ../dashboard.html");
+    header("Location: ../dashboard.php");
 }
