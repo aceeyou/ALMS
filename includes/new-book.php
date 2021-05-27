@@ -6,9 +6,13 @@ $BookTitle = $_POST["Book-Title"];
 $publisher = $_POST["publisher"];
 $date = $_POST["date"];
 $edition = $_POST["edition"];
+$copytotal = $_POST["copytotal"];
+$shelfID = $_POST["shelfID"];
+$authorID = $_POST["authorID"];
+
 
 $sql = "INSERT INTO book( ISBN ,  Book_Title ,  Book_Publisher ,  Date_Published , Book_Edition ) 
-VALUES ('$ISBN','$BookTitle','$publisher','$date','$edition')";
+VALUES ('$ISBN','$BookTitle','$publisher','$date','$edition', '$copytotal', '$shelfID', '$authorID')";
 
 $result = mysqli_query($conn, $sql);
 
