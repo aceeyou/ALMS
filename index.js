@@ -6,14 +6,12 @@ window.addEventListener("load", () => {
   openSideMenu();
 });
 
-
 function openSideMenu() {
-
   document.querySelector("nav").style.marginLeft = "270px";
   document.querySelector("nav").style.width = "calc(100vw - 270px)";
   document.querySelector("#logo-div").style.paddingLeft =
     "calc(10rem - 6.25rem)";
-  document.querySelector('.search-input').style.width = "25rem";
+  document.querySelector(".search-input").style.width = "25rem";
 
   document.querySelector(".side-menu").style.width = "270px";
   document.querySelector(".side-menu").style.transform = "translateX(0px)";
@@ -30,15 +28,13 @@ function openSideMenu() {
 
   document.querySelector("footer").style.marginLeft = "300px";
   document.querySelector("footer").style.width = "calc(99vw - 300px)";
-
 }
 
 function closeSideMenu() {
-
   document.querySelector("nav").style.width = "100vw";
   document.querySelector("nav").style.marginLeft = "0";
   document.querySelector("#logo-div").style.paddingLeft = "10rem";
-  document.querySelector('.search-input').style.width = "32rem";
+  document.querySelector(".search-input").style.width = "32rem";
 
   document.querySelector(".side-menu").style.width = "0";
   document.querySelector(".side-menu").style.transform = "translateX(-270px)";
@@ -81,17 +77,20 @@ function closeDeletePrompt() {
 }
 
 // takes input from search bar
-// then places the input to the localstrage to 
+// then places the input to the localstrage to
 // be able other pages to fetch the input
-document.querySelector(".search-input").addEventListener('keydown', function (e) {
-  var value = this.value;
-    if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
-        console.log(value);
-        document.querySelector('.search-input').value = '';
-        localStorage["value"] = value;
-        window.location = "search.html";
-      }
-});
+document
+  .querySelector(".search-input")
+  .addEventListener("keydown", function (e) {
+    var value = this.value;
+    if ((e.code === "Enter" || e.code === "NumpadEnter") && value) {
+      document.getElementById("search").onsubmit();
+      // console.log(value);
+      // document.querySelector('.search-input').value = '';
+      // localStorage["value"] = value;
+      // window.location = "search.html";
+    }
+  });
 
 // creates account for existing patron
 function addPatronAccount() {
@@ -100,16 +99,17 @@ function addPatronAccount() {
 
 let isdropped = true;
 function dropDropDown() {
-  if(isdropped){
+  if (isdropped) {
     document.querySelector(".dropdown-menu").style.visibility = "visible";
     document.querySelector(".dropdown-menu").style.top = "50px";
     document.querySelector(".dropdown-menu").style.transform = "translateY(0)";
     document.querySelector(".dropdown-menu").style.height = "auto";
     document.querySelector(".dropdown-img").style.transform = "rotate(-180deg)";
-    isdropped = false
+    isdropped = false;
   } else {
     document.querySelector(".dropdown-menu").style.top = "0px";
-    document.querySelector(".dropdown-menu").style.transform = "translateY(-200px)";
+    document.querySelector(".dropdown-menu").style.transform =
+      "translateY(-200px)";
     document.querySelector(".dropdown-menu").style.height = "0";
     document.querySelector(".dropdown-img").style.transform = "rotate(-360deg)";
     isdropped = true;

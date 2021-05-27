@@ -6,24 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
-  <title>Manage Shelf | ALMS</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="images/alms-logo.png" />
+
+  <title>Book Reservation | ALMS</title>
 </head>
 
 <body>
+
   <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#000000">
@@ -34,17 +32,15 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
-      <a href="dashboard.html">ALMS</a>
+      <a href="dashboard.php"><img src="images/logo" alt=""></a>
+      <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input" />
+      <input type="text" placeholder="Search" name="search-input" class="search-input">
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
-      <li class="user-handle">
-        <img class="user-img" src="images/user-default.png" alt="" />
-      </li>
+      <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
           <li><img src="images/user-default.png" alt=""> User Profile</li>
@@ -56,10 +52,12 @@
 
   <!-- SIDE MENU / SIDEBAR -->
   <section class="side-menu">
+    <!-- Close button -->
     <button onclick="closeSideMenu()">
       <img class="close-btn" src="images/arrow-white.png" alt="" />
     </button>
 
+    <!-- User/librarian profile picture -->
     <div class="tasks">
       <div class="item user-profile">
         <img src="images/alms-logo.png" alt="">
@@ -68,6 +66,9 @@
         </div>
       </div>
 
+      <!-- Navigation -->
+
+      <!-- Action: Add new book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
           <g transform="">
@@ -81,6 +82,7 @@
         </svg>
         <a href="new-book.html" class="task">Add New Book</a>
       </div>
+      <!-- end -->
 
       <!-- Action: Add new shelf -->
       <div class="item">
@@ -96,6 +98,7 @@
       </div>
       <!-- end -->
 
+      <!-- Action: Borrow Book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -107,6 +110,9 @@
         </svg>
         <a href="book-borrow-slip.html" class="task">Borrow Book</a>
       </div>
+      <!-- end -->
+
+      <!-- Action: Reserve Book -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -118,9 +124,10 @@
         </svg>
         <a href="book-reservation.html" class="task">Reserve Book</a>
       </div>
+      <!-- end -->
 
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -131,6 +138,7 @@
         <a href="new-author.html" class="task">Add New Author</a>
       </div>
 
+      <!-- Action: Register Patron -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -142,58 +150,85 @@
         </svg>
         <a href="new-patron.html" class="task">Register Patron</a>
       </div>
+      <!-- end -->
     </div>
   </section>
 
   <main>
+    <!-- <div class="h22"><h2>Results for the keyword " Search input "</h2></div> -->
 
-    <div class="book-list-table manage-shelf">
-      <h2 class="table-name">Manage Listed Category</h2>
-      <div class="column-name">
+    <div class="manage-booklist search-page">
+      <!-- <h2 class="table-name">Books Listed</h2> -->
+      <!-- &nbsp == whitespace/space -->
+
+      <h3 class="table-name">Results for the keyword &nbsp;&nbsp; "&nbsp; <?php echo ($_GET['search-input']) ?> &nbsp;"</h3>
+
+      <!-- If results = null -->
+      <!-- 
+                  <h3 class="table-name">No results for the keyword &nbsp;&nbsp; "&nbsp;< class="keyword-value"></> &nbsp;"</h3>
+                 -->
+
+      <div class="column-name search-feed">
         <!-- colomn titles -->
-        <h2>Shelf ID</h2>
-        <h2>Shelf Row</h2>
-        <h2>Shelf Name</h2>
+        <h2>ISBN</h2>
+        <h2>Book Title</h2>
+        <h2>Authors</h2>
+        <h2>Book Edition</h2>
+        <h2>Publication</h2>
+        <h2>Date Published</h2>
+        <h2>Total Copies</h2>
+        <h2>Copies Available</h2>
+        <h2>Shelf</h2>
         <h2>Action</h2>
       </div>
       <!-- end: column-name div -->
+      <!-- table row data -->
       <?php
-      include "includes/manage-shelf(backend).php";
-      if (mysqli_num_rows($shelf) > 0) {
-        while ($row = mysqli_fetch_assoc($shelf)) {
-          echo ('<div class="table-data"> 
-      <div>' . $row["Shelf_ID"] . '</div>
-      <div>' . $row["Shelf_Row"] . '</div>
-      <div>' . $row["Shelf_Name"] . '</div>
-      <div class="action">
-        <a href="manage-shelf-edit.php?edit=' . $row["Shelf_ID"] . '" class="edit" name="edit"></a>
-        <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Shelf_ID"] . '></button>
-      </div>     
-      </div>
-      
-      ');
+      include "includes/db.php";
+      $search = $_GET['search-input'];
+      $sql = "SELECT * FROM `book` 
+      JOIN book_author ON book.ISBN = book_author.ISBN
+      JOIN author ON author.Author_ID = book_author.Author_ID 
+      JOIN shelf ON shelf.Shelf_ID = book.Shelf_ID
+      WHERE Book_Title LIKE '%$search%' or Author_FirstName LIKE '%$search%' or Author_MiddleName LIKE '%$search%' or Author_LastName LIKE '%$search%'";
+      $result = mysqli_query($conn, $sql);
+      if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo ('
+          <div class="table-data book-listed-data">
+          <div>' . $row['ISBN'] . '</div>
+          <div>' . $row['Book_Title'] . '</div>
+          <div>' . $row['Author_FirstName'] . ' ' . $row['Author_MiddleName'] . ' ' . $row['Author_LastName'] . '</div>
+          <div>' . $row['Book_Edition'] . '</div>
+          <div>' . $row['Book_Publisher'] . '</div>
+          <div>' . $row['Date_Published'] . '</div>
+          <div>' . $row['Copy_Total'] . '</div>
+          <div>' . $row['Copy_Available'] . '</div>
+          <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
+          <div class="action">
+          <a href="book-borrow-slip.html" class="borrow"></a>
+          <a href="book-reservation.html" class="reserve"></a>
+        </div>
+
+
+          </div>
+          ');
         };
       }
-
       ?>
+
+
     </div>
   </main>
 
-  <!-- Delete Prompt Div -->
-  <div class="delete-prompt">
-    <div class="confirm-delete">
-      <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-shelf(backend).php" method="GET">
-        <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
-        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-      </form>
-    </div>
-  </div>
-  <!-- end -->
-
   <script src="index.js"></script>
+  <script>
+    window.onload = function searchQuery() {
+      let keyW = localStorage["value"];
+
+      document.querySelector('.keyword-value').innerHTML = keyW;
+    }
+  </script>
 </body>
 
 </html>
