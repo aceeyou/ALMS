@@ -199,7 +199,7 @@ include "includes/display.php"
                         <div class="data"><?php echo $bookReserved  ?></div>
                     </div>
                     <div class="bottom">
-                        <a href="manage-reserved.html"><button>Books Reserved</button></a>
+                        <a href="manage-reserved.php"><button>Books Reserved</button></a>
                     </div>
                 </div>
             </div>
