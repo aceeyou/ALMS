@@ -683,7 +683,7 @@ main {
 
 .side-info {
   width: 250px;
-  height: 690px;
+  height: 730px;
   background: linear-gradient(to bottom right, #267fff, #0d64dd);
   transform: translateX(3.6rem);
   border-top-left-radius: 0.7rem;
