@@ -13,16 +13,31 @@ $Librarian_Type = $_POST["Librarian_Type"];
 $Username = $_POST["Username"];
 $Password = $_POST["Password"];
 
-$sql1 = "INSERT INTO librarian(Librarian_FirstName , Librarian_MiddleName , Librarian_LastName , Librarian_CityAddress , Librarian_ProvinceAddress , Librarian_MailingAddress , Contact_Number , Librarian_Type )
-VALUES ('$Librarian_FirstName','$Librarian_MiddleName','$Librarian_LastName','$Librarian_CityAdress','$Librarian_ProvinceAddress','$Librarian_MailingAddress','$Contact_Number','$Librarian_Type')";
+// inseert in library table
+$sql1 = "INSERT INTO `librarian`(`Librarian_FirstName`, `Librarian_MiddleName`, `Librarian_LastName`, `Librarian_CityAddress`, `Librarian_ProvinceAddress`, `Librarian_EmailAddress`, `Librarian_MailingAddress`, `Contact_Number`, `Librarian_Type`) 
+VALUES ('$Librarian_FirstName','$Librarian_MiddleName','$Librarian_LastName','$Librarian_CityAddress','$Librarian_ProvinceAddress','$Librarian_EmailAddress','$Librarian_MailingAddress','$Contact_Number','$Librarian_Type')";
 $result1 = mysqli_query($conn, $sql1);
 
-$sql2 = "INSERT INTO librarian_account(Username , Librarian_Password )
-VALUES ('$Username','$Password')";
-
+// get latest id 
+$sql2 = "SELECT Librarian_ID  FROM  `librarian` 
+ORDER BY Librarian_ID DESC LIMIT 0 , 1";
 $result = mysqli_query($conn, $sql2);
+$id = (int) mysqli_fetch_assoc($result)['Librarian_ID'];
 
-if ($result == false) {
+// insert in library account
+$sql3 = "INSERT INTO `librarian_account`(`Username`, `Librarian_Password`, `Librarian_ID`) VALUES ('$Username','$Password','$id')";
+mysqli_query($conn, $sql3);
+
+// insert in part time full time library table
+if ($Librarian_Type == "P") {
+    $sql4 = "INSERT INTO `part_time_librarian`(`PLibrarian_ID`, `Hourly_Rate`) VALUES ('$id','300')";
+} else {
+    $sql4 = "INSERT INTO `regular_librarian`(`RLibrarian_ID`, `Monthly_Rate`) VALUES ('$id','50000')";
+}
+$result2 = mysqli_query($conn, $sql4);
+
+
+if ($result1 == false) {
     //show the error, query has failed
     echo "Error: " . (mysqli_error($conn));
 } else {
