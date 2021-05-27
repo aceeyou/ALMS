@@ -1043,7 +1043,7 @@ main .manage-booklist {
 
 .manage-patrons .column-name,
 .manage-patrons .table-data {
-  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.2fr 0.2fr;
+  grid-template-columns: 0.13fr 0.3fr 0.25fr 0.38fr 0.28fr 0.25fr 0.15fr 0.25fr 0.15fr 0.15fr;
 }
 
 .manage-books-borrowed .column-name,

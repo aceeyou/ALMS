@@ -18,147 +18,155 @@
   </head>
   <body>
     <div class="form-cont">
-    <div class="new-librarian-container">
-      <div class="side-info">
-        <img src="images/alms-logo.png" alt="">
+      <div class="new-librarian-container">
+        <div class="side-info">
+          <img src="images/alms-logo.png" alt="" />
 
-        <div class="h2">
-          <h2>Automated</h2>
-          <h2>Library</h2>
-          <h2>Management</h2>
-          <h2>System</h2>
+          <div class="h2">
+            <h2>Automated</h2>
+            <h2>Library</h2>
+            <h2>Management</h2>
+            <h2>System</h2>
+          </div>
         </div>
-      </div>
 
-      <div id="book-form-container">
-        <!-- <div class="alms-info" style="width: 250px; height:600px; padding: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(35, 13, 231);transform: translateX(10px); z-index: -1; color: #fff;">
+        <div id="book-form-container">
+          <!-- <div class="alms-info" style="width: 250px; height:600px; padding: 40px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(35, 13, 231);transform: translateX(10px); z-index: -1; color: #fff;">
           <h1>ALMS</h1>
         </div> -->
-        <div class="book-form">
-          <div class="form-title">
-            <img src="images/user-default.png" alt="">
-            <h2>Librarian Information</h2>
+          <div class="book-form">
+            <div class="form-title">
+              <img src="images/user-default.png" alt="" />
+              <h2>Librarian Information</h2>
+            </div>
+            <form action="includes/new-librarian.php" method="POST">
+              <!-- Input form -->
+              <label for="">First Name</label>
+              <input
+                type="text"
+                name="Librarian_FirstName"
+                id=""
+                placeholder="Juan"
+              />
+              <!-- end -->
+
+              <!-- Input form -->
+              <label for="">Middle Name</label>
+              <input
+                type="text"
+                name="Librarian_MiddleName"
+                id=""
+                placeholder="Ramos"
+              />
+              <!-- end -->
+
+              <!-- Input form -->
+              <label for="">Last Name</label>
+              <input
+                type="text"
+                name="Librarian_LastName"
+                id=""
+                placeholder="Dela Cruz"
+              />
+              <!-- end -->
+
+              <!-- Input form -->
+              <label for="">City Address</label>
+              <input
+                type="text"
+                name="Librarian_CityAddress"
+                id=""
+                placeholder="Legazpi City"
+              />
+              <!-- end -->
+
+              <!-- Input form -->
+              <label for="">Province Address</label>
+              <input
+                type="text"
+                name="Librarian_ProvinceAddress"
+                id=""
+                placeholder="Albay"
+              />
+              <!-- end -->
+
+              <!-- Input form -->
+              <label for="">Email Address</label>
+              <input
+                type="text"
+                name="Librarian_EmailAddress"
+                id=""
+                placeholder="contoso@example.com"
+              />
+
+              <!-- Input form -->
+              <label for="">Mailing Address</label>
+              <input
+                type="text"
+                name="Librarian_MailingAddress"
+                id=""
+                placeholder="Street, Subdivision"
+              />
+
+              <label for="">Contact Number</label>
+              <input
+                type="text"
+                name="Contact_Number"
+                id=""
+                placeholder="0934123876"
+              />
+
+              <!-- Input form -->
+              <label for="">Username</label>
+              <input
+                type="text"
+                name="Username"
+                id=""
+                placeholder="@juandela_cruz"
+              />
+
+              <label for="">Password</label>
+              <input
+                type="password"
+                name="Password"
+                id=""
+                placeholder="8-20 characters"
+              />
+
+              <label for="">Confirm Password</label>
+              <input
+                type="password"
+                name="Confirm_Password"
+                id=""
+                placeholder="Re-enter password"
+              />
+              <!-- end -->
+
+              <div>
+                <label for="">Type of Job</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" name="Librarian_Type" value="P" />
+                <em>Part time</em>
+
+                &nbsp;&nbsp;&nbsp;
+
+                <input type="checkbox" name="Librarian_Type" value="R" />
+                <em>Full time</em>
+              </div>
+
+              <!-- Button -->
+              <input type="submit" value="SIGN UP" />
+              <!-- end -->
+              <p class="login-btn">
+                Already have an account? <a href="index.html">Log in</a>
+              </p>
+            </form>
           </div>
-          <form action="includes/new-librarian.php" method="POST">
-            <!-- Input form -->
-            <label for="">First Name</label>
-            <input
-              type="text"
-              name="Librarian_FirstName"
-              id=""
-              placeholder="Juan"
-            />
-            <!-- end -->
-
-            <!-- Input form -->
-            <label for="">Middle Name</label>
-            <input
-              type="text"
-              name="Librarian_MiddleName"
-              id=""
-              placeholder="Ramos"
-            />
-            <!-- end -->
-
-            <!-- Input form -->
-            <label for="">Last Name</label>
-            <input
-              type="text"
-              name="Librarian_LastName"
-              id=""
-              placeholder="Dela Cruz"
-            />
-            <!-- end -->
-
-            <!-- Input form -->
-            <label for="">City Address</label>
-            <input
-              type="text"
-              name="Librarian_CityAddress"
-              id=""
-              placeholder="Legazpi City"
-            />
-            <!-- end -->
-
-            <!-- Input form -->
-            <label for="">Province Address</label>
-            <input
-              type="text"
-              name="Librarian_ProvinceAddress"
-              id=""
-              placeholder="Albay"
-            />
-            <!-- end -->
-
-            <!-- Input form -->
-            <label for="">Email Address</label>
-            <input
-              type="text"
-              name="Librarian_EmailAddress"
-              id=""
-              placeholder="contoso@example.com"
-            />
-
-            <!-- Input form -->
-            <label for="">Mailing Address</label>
-            <input
-              type="text"
-              name="Librarian_MailingAddress"
-              id=""
-              placeholder="Street, Subdivision"
-            />
-
-            <!-- Input form -->
-            <label for="">Username</label>
-            <input
-              type="text"
-              name="Username"
-              id=""
-              placeholder="@juandela_cruz"
-            />
-
-            <label for="">Password</label>
-            <input
-              type="password"
-              name="Password"
-              id=""
-              placeholder="8-20 characters"
-            />
-
-            <label for="">Confirm Password</label>
-            <input
-              type="password"
-              name="Confirm_Password"
-              id=""
-              placeholder="Re-enter password"
-            />
-            <!-- end -->
-
-            <div>
-              <label for="">Type of Job</label>
-            </div>
-            <div class="checkbox-container">
-              <input type="checkbox" name="parttime" />
-              <em>Part time</em>
-
-              &nbsp;&nbsp;&nbsp;
-
-              <input type="checkbox" name="fulltime" />
-              <em>Full time</em>
-            </div>
-
-            <!-- Button -->
-            <input type="submit" value="SIGN UP" />
-            <!-- end -->
-            <p class="login-btn">Already have an account? <a href="index.html">Log in</a></p>
-
-          </form>
         </div>
       </div>
-    </div>
     </div>
 
     <script src="index.js"></script>
   </body>
-
 </html>

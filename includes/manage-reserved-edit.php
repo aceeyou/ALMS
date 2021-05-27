@@ -1,21 +1,40 @@
+<?php
+include "includes/db.php";
+
+if (isset($_GET["edit"])) {
+  $editID = $_GET['edit'];
+  $sql2 = "SELECT * FROM `reservation` WHERE Reservation_ID = $editID;";
+  $resultEdit = mysqli_query($conn, $sql2);
+  $row = mysqli_fetch_assoc($resultEdit);
+};
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ALMS </title>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rubik:wght@300&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>Manage Patron | ALMS</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/alms-logo.png">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+
+  <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
@@ -30,18 +49,19 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt=""></a>
-      <a href="dashboard.html">ALMS</a>
+      <a href=""><img src="images/alms-logo.png" alt=""></a>
+      <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
       <input type="text" placeholder="Search" name="search-input" class="search-input">
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.html" class="">Home</a></li>
+      <li><a href="#" class="active">Home</a></li>
+      <!-- <li onClick="showInnerUL()"><a href="#">Books</a></li> -->
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
-          <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li><a href="user-profile.html"><img src="images/user-default.png" alt=""> User Profile</a></li>
           <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
         </ul>
       </li>
@@ -50,25 +70,19 @@
 
   <!-- SIDE MENU / SIDEBAR -->
   <section class="side-menu">
-    <!-- Close button -->
-    <button onclick="closeSideMenu()">
-      <img class="close-btn" src="images/arrow-white.png" alt="" />
-    </button>
+    <button id="close-btn" onclick="closeSideMenu()"><img src="images/arrow-white.png" alt=""></button>
 
-    <!-- User/librarian profile picture -->
     <div class="tasks">
+
       <div class="item user-profile">
         <img src="images/alms-logo.png" alt="">
         <div>
-          <p> Library Management <br>System</p>
+          <p>Library Management <br>System</p>
         </div>
       </div>
 
-      <!-- Navigation -->
-
-      <!-- Action: Add new book -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g transform="">
             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
               <path d="M0,172v-172h172v172z" fill="none"></path>
@@ -80,7 +94,6 @@
         </svg>
         <a href="new-book.html" class="task">Add New Book</a>
       </div>
-      <!-- end -->
 
       <!-- Action: Add new shelf -->
       <div class="item">
@@ -96,9 +109,8 @@
       </div>
       <!-- end -->
 
-      <!-- Action: Borrow Book -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -108,11 +120,9 @@
         </svg>
         <a href="book-borrow-slip.html" class="task">Borrow Book</a>
       </div>
-      <!-- end -->
 
-      <!-- Action: Reserve Book -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -122,9 +132,7 @@
         </svg>
         <a href="book-reservation.html" class="task">Reserve Book</a>
       </div>
-      <!-- end -->
 
-      <!-- Action: Add new author -->
       <div class="item">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -136,11 +144,9 @@
         </svg>
         <a href="new-author.html" class="task">Add New Author</a>
       </div>
-      <!-- end -->
 
-      <!-- Action: Register Patron -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -150,91 +156,35 @@
         </svg>
         <a href="new-patron.html" class="task">Register Patron</a>
       </div>
-      <!-- end -->
+
+
+
     </div>
   </section>
 
+
   <main>
+    <div id="book-form-container">
+      <div class="book-form">
+        <h2><img class="edit-icon" src="/images/edit-black.png" alt="">Edit Book Reserved</h2>
+        <form action="includes/manage-reserved(backend).php" method="POST">
+          <label for="">Reservation ID</label>
+          <input type="text" name="reservation-id" id="" placeholder="R100" value="<?php echo $row["Reservation_ID"] ?>" />
 
-    <div class="manage-patrons">
-      <div class="book-list-table">
-        <h2 class="table-name">Manage Patrons</h2>
-        <div class="column-name">
-          <!-- colomn titles -->
-          <h2>Patron ID</h2>
-          <h2>Patron</h2>
-          <h2>Address</h2>
-          <h2>Mailing Address</h2>
-          <h2>Email Address</h2>
-          <h2>Contact Number</h2>
-          <h2>Account ID</h2>
-          <h2>Date Registered</h2>
-          <h2>Account Fine</h2>
-          <h2>Action</h2>
-        </div>
-        <!-- end: column-name div -->
+          <label for="">Reservation Date</label>
+          <input type="text" name="reservation-date" id="" placeholder="2020-05-03" value="<?php echo $row["Reservation_Date"] ?>" />
 
-        <!-- table row data -->
-        <?php
-        include "includes/manage-patrons(backend).php";
-        if (mysqli_num_rows($patron) > 0) {
-          while ($row = mysqli_fetch_assoc($patron)) {
-            if ($row["Patron_ID"] == !NULL) {
-              echo ('<div class="table-data"> 
-          <div>' . $row["ID"] . '</div>
-          <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . $row["Patron_CodeAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Contact_Number"] . '</div>
-          <div>' . $row["PatronAccount_ID"] . '</div>
-          <div>' . $row["Date_Registered"] . '</div>
-          <div>' . $row["Account_Fine"] . '</div>
-          <div class="action">
-          <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
-          </div>
-          ');
-            } else {
-              echo ('<div class="table-data"> 
-          <div>' . $row["ID"] . '</div>
-          <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
-          <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . " " . $row["Patron_CodeAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Contact_Number"] . '</div>
-          <div>' . $row["PatronAccount_ID"] . '</div>
-          <div>' . $row["Date_Registered"] . '</div>
-          <div>' . $row["Account_Fine"] . '</div>
-          <div class="action">
-            <a href="includes/manage-patrons(backend).php?id=' . $row["ID"] . ' &createAccount=Submit" class="plus-account" name="createAccount"></a> 
-            <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
-          </div>
-          ');
-            };
-          };
-        }
+          <label for="">Patron ID</label>
+          <input type="text" name="patron-id" id="" placeholder="100" value="<?php echo $row["Patron_ID"] ?>" />
 
-        ?>
+          <label for="">ISBN</label>
+          <input type="text" name="isbn" id="" placeholder="C3" value="<?php echo $row["ISBN"] ?>" />
+
+          <input type="submit" name="SAVE" class="save-edit" />
+        </form>
       </div>
     </div>
   </main>
-
-  <!-- Delete Prompt Div -->
-  <div class="delete-prompt">
-    <div class="confirm-delete">
-      <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-patrons(backend).php" method="GET">
-        <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
-        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-      </form>
-    </div>
-  </div>
-  <!-- end -->
 
   <script src="index.js"></script>
 </body>
