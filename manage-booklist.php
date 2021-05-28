@@ -36,8 +36,9 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
-    </div>
+      <form action="search.php" method="GET" id="search">
+                      <input type="text" placeholder="Search" name="search-input" class="search-input">
+                  </form>    </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
@@ -197,7 +198,7 @@
           <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ISBN"] . '></button>
           </div>
           </div>
-        
+
           ');
         };
       }

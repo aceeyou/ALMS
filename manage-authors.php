@@ -35,8 +35,9 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input" />
-    </div>
+      <form action="search.php" method="GET" id="search">
+                      <input type="text" placeholder="Search" name="search-input" class="search-input">
+                  </form>    </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
       <li class="user-handle">
@@ -192,7 +193,7 @@
       include "includes/manage-authors(backend).php";
       if (mysqli_num_rows($authors) > 0) {
         while ($row = mysqli_fetch_assoc($authors)) {
-          echo ('  
+          echo ('
         <div class="table-data">
             <div>' . $row["Author_ID"] . '</div>
             <div>' . $row["Author_FirstName"] . ' ' . $row["Author_MiddleName"] . ' ' . $row["Author_LastName"] . '</div>
@@ -201,7 +202,7 @@
               <a href="editpage-author.php?edit=' . $row["Author_ID"] . '" class="edit" name="edit"></a>
               <button class="delete" onclick="openDeletePrompt(this)" value=' . $row["Author_ID"] . '></button>
             </div>
-          </div>            
+          </div>
           ');
         };
       } ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -41,7 +41,9 @@ session_start();
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input" />
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
@@ -170,10 +172,10 @@ session_start();
 
   $session = $_SESSION['ID'];
 
-  $sql = "SELECT * FROM `librarian` 
+  $sql = "SELECT * FROM `librarian`
   LEFT JOIN `librarian_account` ON librarian.Librarian_ID = librarian_account.Librarian_ID
-  LEFT JOIN `part_time_librarian` ON librarian.Librarian_ID = part_time_librarian.PLibrarian_ID 
-  LEFT JOIN `regular_librarian` ON librarian.Librarian_ID = regular_librarian.RLibrarian_ID 
+  LEFT JOIN `part_time_librarian` ON librarian.Librarian_ID = part_time_librarian.PLibrarian_ID
+  LEFT JOIN `regular_librarian` ON librarian.Librarian_ID = regular_librarian.RLibrarian_ID
   WHERE librarian.Librarian_ID = $session";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);

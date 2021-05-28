@@ -34,7 +34,9 @@
       <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.php" class="">Home</a></li>
@@ -172,7 +174,7 @@
         include "includes/manage-reserved(backend).php";
         if (mysqli_num_rows($shelf) > 0) {
           while ($row = mysqli_fetch_assoc($shelf)) {
-            echo ('<div class="table-data"> 
+            echo ('<div class="table-data">
             <div>' . $row["Reservation_ID"] . '</div>
             <div>' . $row["Reservation_Date"] . '</div>
             <div>' . $row["Patron_ID"] . '</div>
@@ -180,9 +182,9 @@
             <div class="action">
             <a href="manage-reserved-edit.php?edit=' . $row["Reservation_ID"] . '" class="edit" name="edit"></a>
             <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Reservation_ID"] . '></button>
-          </div>       
+          </div>
             </div>
-      
+
             ');
           };
         }

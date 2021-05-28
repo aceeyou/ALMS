@@ -34,7 +34,9 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
@@ -116,7 +118,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
         </div>
     </section>
-    
+
   <main>
 
     <div class="manage-books-borrowed">
@@ -145,14 +147,14 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <div>' . $row["Due_Date"] . '</div>
             <div>' . $row["Return_Date"] . '</div>
             <div>' . $row["PatronAccount_ID"] . '</div>
-            <div>' . $row["ISBN"] . '</div>  
+            <div>' . $row["ISBN"] . '</div>
             <div class="action">
               <a href="manage-borrowed-edit.php?edit=' . $row["Slip_Number"] . '" class="edit" name="edit"></a>
               <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Slip_Number"] . '></button>
-          </div>      
+          </div>
             </div>
-            
-            
+
+
             ');
         };
       }

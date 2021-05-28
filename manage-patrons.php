@@ -34,7 +34,9 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
@@ -180,7 +182,7 @@
         if (mysqli_num_rows($patron) > 0) {
           while ($row = mysqli_fetch_assoc($patron)) {
             if ($row["Patron_ID"] == !NULL) {
-              echo ('<div class="table-data"> 
+              echo ('<div class="table-data">
           <div>' . $row["ID"] . '</div>
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
           <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . $row["Patron_CodeAddress"] . '</div>
@@ -193,11 +195,11 @@
           <div class="action">
           <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
             <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
+          </div>
           </div>
           ');
             } else {
-              echo ('<div class="table-data"> 
+              echo ('<div class="table-data">
           <div>' . $row["ID"] . '</div>
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
           <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . " " . $row["Patron_CodeAddress"] . '</div>
@@ -208,10 +210,10 @@
           <div>' . $row["Date_Registered"] . '</div>
           <div>' . $row["Account_Fine"] . '</div>
           <div class="action">
-            <a href="includes/manage-patrons(backend).php?id=' . $row["ID"] . ' &createAccount=Submit" class="plus-account" name="createAccount"></a> 
+            <a href="includes/manage-patrons(backend).php?id=' . $row["ID"] . ' &createAccount=Submit" class="plus-account" name="createAccount"></a>
             <a href="manage-patron-edit.php?edit=' . $row["ID"] . '" class="edit" name="edit"></a>
             <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ID"] . '></button>
-          </div>     
+          </div>
           </div>
           ');
             };

@@ -53,8 +53,9 @@ if (isset($_GET["edit"])) {
       <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
-    </div>
+      <form action="search.php" method="GET" id="search">
+                      <input type="text" placeholder="Search" name="search-input" class="search-input">
+                  </form>    </div>
     <ul class="main-nav">
       <li><a href="#" class="active">Home</a></li>
       <!-- <li onClick="showInnerUL()"><a href="#">Books</a></li> -->

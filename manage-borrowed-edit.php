@@ -48,8 +48,9 @@ if (isset($_GET["edit"])) {
       <a href="">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
-    </div>
+      <form action="search.php" method="GET" id="search">
+                      <input type="text" placeholder="Search" name="search-input" class="search-input">
+                  </form>    </div>
     <ul class="main-nav">
       <li><a href="dashboard.php" class="">Home</a></li>
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>

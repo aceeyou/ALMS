@@ -36,7 +36,9 @@
       <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
@@ -164,7 +166,7 @@
       <h3 class="table-name">Results for the keyword &nbsp;&nbsp; "&nbsp; <?php echo ($_GET['search-input']) ?> &nbsp;"</h3>
 
       <!-- If results = null -->
-      <!-- 
+      <!--
                   <h3 class="table-name">No results for the keyword &nbsp;&nbsp; "&nbsp;< class="keyword-value"></> &nbsp;"</h3>
                  -->
 
@@ -186,9 +188,9 @@
       <?php
       include "includes/db.php";
       $search = $_GET['search-input'];
-      $sql = "SELECT * FROM `book` 
+      $sql = "SELECT * FROM `book`
       JOIN book_author ON book.ISBN = book_author.ISBN
-      JOIN author ON author.Author_ID = book_author.Author_ID 
+      JOIN author ON author.Author_ID = book_author.Author_ID
       JOIN shelf ON shelf.Shelf_ID = book.Shelf_ID
       WHERE Book_Title LIKE '%$search%' or Author_FirstName LIKE '%$search%' or Author_MiddleName LIKE '%$search%' or Author_LastName LIKE '%$search%'";
       $result = mysqli_query($conn, $sql);

@@ -38,7 +38,9 @@
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input" />
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
@@ -161,16 +163,16 @@
       include "includes/manage-shelf(backend).php";
       if (mysqli_num_rows($shelf) > 0) {
         while ($row = mysqli_fetch_assoc($shelf)) {
-          echo ('<div class="table-data"> 
+          echo ('<div class="table-data">
       <div>' . $row["Shelf_ID"] . '</div>
       <div>' . $row["Shelf_Row"] . '</div>
       <div>' . $row["Shelf_Name"] . '</div>
       <div class="action">
         <a href="manage-shelf-edit.php?edit=' . $row["Shelf_ID"] . '" class="edit" name="edit"></a>
         <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Shelf_ID"] . '></button>
-      </div>     
       </div>
-      
+      </div>
+
       ');
         };
       }
