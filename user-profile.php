@@ -1,3 +1,9 @@
+<?php
+
+session_start()
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,18 +16,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
+  <link rel="icon" href="images/edit-black.png" />
 
-  <title>Manage Book Entry | ALMS</title>
+  <title>User Profile | ALMS</title>
 </head>
 
 <body>
-
   <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#000000">
@@ -32,18 +37,21 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt=""></a>
+      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
       <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <input type="text" placeholder="Search" name="search-input" class="search-input" />
     </div>
     <ul class="main-nav">
       <li><a href="dashboard.html" class="">Home</a></li>
-      <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
+      <li class="user-handle">
+        <img class="user-img" src="images/user-default.png" alt="" />
+      </li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
           <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li><img src="images/settings.png" alt=""> Settings</li>
           <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
         </ul>
       </li>
@@ -60,9 +68,9 @@
     <!-- User/librarian profile picture -->
     <div class="tasks">
       <div class="item user-profile">
-        <img src="images/alms-logo.png" alt="">
+        <img src="images/alms-logo.png">
         <div>
-          <p> Library Management <br>System</p>
+          <p>Library Managament<br>System</p>
         </div>
       </div>
 
@@ -128,7 +136,7 @@
 
       <!-- Action: Add new author -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -156,84 +164,44 @@
     </div>
   </section>
 
+  <?php
+  include 'includes/login.php';
+  // echo $pass;
+  ?>
+
+
   <main>
+    <div id="book-form-container">
+      <div class="book-form">
+        <h2><img class="edit-icon" src="images/user-default.png" alt="">User Profile</h2>
+        <form action="includes/new-patron.php" method="POST">
+          <label for="">First Name</label>
+          <input type="text" name="firstName" id="" placeholder="Jhemerlyn" value="<?php echo $_SESSION['ID'] ?>" />
+          <label for="">Middle Name</label>
+          <input type="text" name="middleName" id="" placeholder="Felipe" />
+          <label for="">Last Name</label>
+          <input type="text" name="lastName" id="" placeholder="Pedro" />
+          <label for="">Email Address</label>
+          <input type="text" name="emailAddress" id="" placeholder="contoso@example.com" />
+          <label for="">Mailing Address</label>
+          <input type="text" name="mailingAddress" id="" placeholder="Street, Subdivision" />
+          <label for="">Username</label>
+          <input type="text" name="Username" id="" placeholder="@juandela_cruz" />
 
-    <div class="manage-booklist">
-      <h2 class="table-name">Books Listed</h2>
-      <div class="column-name">
-        <!-- colomn titles -->
-        <h2>ISBN</h2>
-        <h2>Book Title</h2>
-        <h2>Authors</h2>
-        <h2>Book Edition</h2>
-        <h2>Publication</h2>
-        <h2>Date Published</h2>
-        <h2>Total Copies</h2>
-        <h2>Quantity Borrowed</h2>
-        <h2>Copies Available</h2>
-        <h2>Shelf</h2>
-        <h2>Action</h2>
+          <label for="">Password</label>
+          <input type="password" name="Password" id="" placeholder="8-20 characters" />
+
+          <label for="">Confirm Password</label>
+          <input type="password" name="Confirm_Password" id="" placeholder="Re-enter password" />
+
+          <input type="submit" value="SAVE CHANGES" class="save-edit" />
+        </form>
       </div>
-      <!-- end: column-name div -->
-
-      <?php
-      include "includes/manage-booklist(backend).php";
-      if (mysqli_num_rows($book) > 0) {
-        while ($row = mysqli_fetch_assoc($book)) {
-          echo ('
-          <div class="table-data book-listed-data">
-          <div>' . $row['ISBN'] . '</div>
-          <div>' . $row['Book_Title'] . '</div>
-          <div>' . $row['authors'] . '</div>
-          <div>' . $row['Book_Edition'] . '</div>
-          <div>' . $row['Book_Publisher'] . '</div>
-          <div>' . $row['Date_Published'] . '</div>
-          <div>' . $row['Copy_Total'] . '</div>
-          <div>' . $row['Quantity_Borrowed'] . '</div>
-          <div>' . $row['Copy_Available'] . '</div>
-          <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
-          <div class="action">
-          <a href="manage-book-edit.php?edit=' . $row["ISBN"] . '" class="edit" name="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ISBN"] . '></button>
-          </div>
-          </div>
-        
-          ');
-        };
-      }
-
-
-      ?>
-
     </div>
-
   </main>
 
-  <!-- Delete Prompt Div -->
-  <div class="delete-prompt">
-    <div class="confirm-delete">
-      <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-booklist(backend).php" method="GET">
-        <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
-        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-      </form>
-    </div>
-  </div>
-  <!-- end -->
+  <script src="index.js">
 
-  <script src="index.js"></script>
-  <script>
-    let isOpen = localStorage["isOpen"];
-
-    window.addEventListener("load", () => {
-      if (isOpen) {
-        openSideMenu();
-      } else {
-        break;
-      }
-    });
   </script>
 </body>
 

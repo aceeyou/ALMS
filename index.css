@@ -1226,11 +1226,11 @@ main .manage-booklist {
   height: 100vh;
 }
 
-.image {
+.main-container .image {
   margin-bottom: 10px;
 }
 
-.image img {
+.main-container .image img {
   width: 150px;
   height: 150px;
 }

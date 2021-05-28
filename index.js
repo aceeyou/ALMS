@@ -119,3 +119,10 @@ function dropDropDown() {
 function logoutUser() {
   window.location = "index.html";
 }
+
+
+// Get username input
+// let logUserName = document.querySelector("#log-username").value;
+
+// localStorage[username] = logUserName;
+// console.log(localStorage[username]);
