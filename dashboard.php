@@ -71,7 +71,7 @@ include "includes/display.php"
             <div class="item user-profile">
                 <img src="images/alms-logo.png" alt="">
                 <div>
-                    <p>Library Management <br>System</p>
+                    <p> Automated Library <br>Management System</p>
                 </div>
             </div>
 

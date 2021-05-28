@@ -71,7 +71,7 @@ session_start();
       <div class="item user-profile">
         <img src="images/alms-logo.png">
         <div>
-          <p>Library Managament<br>System</p>
+          <p> Automated Library <br>Management System</p>
         </div>
       </div>
 
