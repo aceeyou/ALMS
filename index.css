@@ -1270,7 +1270,7 @@ main .manage-booklist {
 }
 
 .forgot-form img {
-  width: 30px;
+  width: 27px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -1297,7 +1297,6 @@ main .manage-booklist {
 
 .forgot-form input::-webkit-input-placeholder {
   font-style: normal;
-  text-align: center;
 }
 
 .button {
