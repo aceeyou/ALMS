@@ -174,7 +174,7 @@ if (isset($_GET["edit"])) {
         <h2><img class="edit-icon" src="images/edit-black.png" alt="">Edit Book Borrowed</h2>
         <form action="includes/manage-borrowed(backend).php" method="POST">
           <label for="">Slip No.</label>
-          <input type="text" name="slip-no" id="" placeholder="S100" value="<?php echo $row['Slip_Number'] ?>" />
+          <input type="text" name="slip-no" id="" disabled="disabled" placeholder="S100" value="<?php echo $row['Slip_Number'] ?>" />
 
           <label for="">Borrow Date</label>
           <input type="text" name="borrow-date" id="" placeholder="2020-04-20" value="<?php echo $row['Borrow_Date'] ?>" />
