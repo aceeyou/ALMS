@@ -178,7 +178,7 @@ if (isset($_GET["edit"])) {
         <h2><img class="edit-icon" src="images/edit-black.png" alt="">Edit Book Reserved</h2>
         <form action="includes/manage-reserved(backend).php " method="POST">
           <label for="">Reservation ID</label>
-          <input type="text" name="reservation-id" id="" disabled="disabled" placeholder="R100" value="<?php echo $row['Reservation_ID'] ?>" />
+          <input type="text" name="reservation-id" id="" placeholder="R100" value="<?php echo $row['Reservation_ID'] ?>" />
 
           <label for="">Reservation Date</label>
           <input type="text" name="reservation-date" id="" placeholder="2020-05-03" value="<?php echo $row['Reservation_Date'] ?>" />

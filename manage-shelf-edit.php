@@ -171,7 +171,7 @@ if (isset($_GET["edit"])) {
         <h2><img class="edit-icon" src="/images/edit-black.png" alt="">Edit Listed Category</h2>
         <form action="includes/manage-shelf(backend).php" method="POST">
           <label for="">Shelf ID</label>
-          <input type="text" name="shelf-id" id="" disabled="disabled" placeholder="S1" value="<?php echo $row["Shelf_ID"] ?>" />
+          <input type="text" name="shelf-id" id="" placeholder="S1" value="<?php echo $row["Shelf_ID"] ?>" />
 
           <label for="">Shelf Row</label>
           <input type="text" name="shelf-row" id="" placeholder="21" value="<?php echo $row["Shelf_Row"] ?>" />

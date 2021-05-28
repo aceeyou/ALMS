@@ -179,7 +179,6 @@
         <h2>Publication</h2>
         <h2>Date Published</h2>
         <h2>Total Copies</h2>
-        <h2>Copies Available</h2>
         <h2>Shelf</h2>
         <h2>Action</h2>
       </div>
@@ -205,7 +204,6 @@
           <div>' . $row['Book_Publisher'] . '</div>
           <div>' . $row['Date_Published'] . '</div>
           <div>' . $row['Copy_Total'] . '</div>
-          <div>' . $row['Copy_Available'] . '</div>
           <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
           <div class="action">
           <a href="book-borrow-slip.html" class="borrow"></a>

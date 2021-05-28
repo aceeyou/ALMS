@@ -208,10 +208,10 @@ session_start();
           <input type="text" name="Username" id="" placeholder="@juandela_cruz" value="<?php echo $row["Username"] ?>"/>
 
           <label for="">Password</label>
-          <input type="password" name="Password" id="" placeholder="8-20 characters"/>
+          <input type="text" name="Password" id="" placeholder="8-20 characters" value="<?php echo $row["Librarian_Password"]?>"/>
 
           <label for="">Confirm Password</label>
-          <input type="password" name="Confirm_Password" id="" placeholder="Re-enter password" />
+          <input type="text" name="Confirm_Password" id="" placeholder="Re-enter password" value="<?php echo $row["Librarian_Password"]?>"/>
 
           <input type="submit" value="SAVE CHANGES" class="save-edit" name="SAVE"/>
         </form>
