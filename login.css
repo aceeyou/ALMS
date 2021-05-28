@@ -55,7 +55,7 @@ body,
 .login-container {
   background-color: var(--white);
   width: 32rem;
-  height: 380px;
+  height: 350px;
   border-radius: 0.75rem;
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
 }
