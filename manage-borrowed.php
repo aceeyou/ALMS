@@ -30,18 +30,20 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt=""></a>
-      <a href="dashboard.html">ALMS</a>
+      <a href="dashboard.php"><img src="images/logo" alt=""></a>
+      <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.html" class="">Home</a></li>
+      <li><a href="dashboard.php" class="">Home</a></li>
       <li class="user-handle"><a href="index.html"><img class="user-img" src="images/user-default.png" alt=""></a></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
           <ul class="dropdown-menu">
-              <li><img src="images/user-default.png" alt=""> User Profile</li>
+              <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
               <li><img src="images/settings.png" alt=""> Settings</li>
               <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
           </ul>
@@ -58,7 +60,7 @@
             <div class="item user-profile">
                 <img src="images/alms-logo.png" alt="">
                 <div>
-                    <p> Library  Management <br>System</p>
+                    <p> Automated Library <br>Management System</p>
                 </div>
             </div>
 
@@ -116,7 +118,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
         </div>
     </section>
-    
+
   <main>
 
     <div class="manage-books-borrowed">
@@ -145,14 +147,14 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <div>' . $row["Due_Date"] . '</div>
             <div>' . $row["Return_Date"] . '</div>
             <div>' . $row["PatronAccount_ID"] . '</div>
-            <div>' . $row["ISBN"] . '</div>  
+            <div>' . $row["ISBN"] . '</div>
             <div class="action">
               <a href="manage-borrowed-edit.php?edit=' . $row["Slip_Number"] . '" class="edit" name="edit"></a>
               <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Slip_Number"] . '></button>
-          </div>      
+          </div>
             </div>
-            
-            
+
+
             ');
         };
       }

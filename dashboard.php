@@ -41,8 +41,8 @@ include "includes/display.php"
             </button>
         </div>
         <div id="logo-div">
-            <a href=""><img src="images/alms-logo.png" alt=""></a>
-            <a href="">ALMS</a>
+            <a href="dashboard.php"><img src="images/alms-logo.png" alt=""></a>
+            <a href="dashboard.php">ALMS</a>
         </div>
         <div id="search-container">
             <form action="search.php" method="GET" id="search">
@@ -55,7 +55,7 @@ include "includes/display.php"
             <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
             <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
                 <ul class="dropdown-menu">
-                    <li><a href="user-profile.html"><img src="images/user-default.png" alt=""> User Profile</a></li>
+                    <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
                     <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
                 </ul>
             </li>
@@ -71,7 +71,7 @@ include "includes/display.php"
             <div class="item user-profile">
                 <img src="images/alms-logo.png" alt="">
                 <div>
-                    <p>Library Management <br>System</p>
+                    <p> Automated Library <br>Management System</p>
                 </div>
             </div>
 
