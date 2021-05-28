@@ -184,7 +184,7 @@
           <div class="table-data book-listed-data">
           <div>' . $row['ISBN'] . '</div>
           <div>' . $row['Book_Title'] . '</div>
-          <div>' . $row['Author_FirstName'] . ' ' . $row['Author_MiddleName'] . ' ' . $row['Author_LastName'] . '</div>
+          <div>' . $row['authors'] . '</div>
           <div>' . $row['Book_Edition'] . '</div>
           <div>' . $row['Book_Publisher'] . '</div>
           <div>' . $row['Date_Published'] . '</div>
