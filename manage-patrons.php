@@ -30,8 +30,8 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt=""></a>
-      <a href="dashboard.html">ALMS</a>
+      <a href="dashboard.php"><img src="images/logo" alt=""></a>
+      <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
       <form action="search.php" method="GET" id="search">
@@ -39,7 +39,7 @@
             </form>
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.html" class="">Home</a></li>
+      <li><a href="dashboard.php" class="">Home</a></li>
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">

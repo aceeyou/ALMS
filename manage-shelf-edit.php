@@ -49,7 +49,7 @@ if (isset($_GET["edit"])) {
       </button>
     </div>
     <div id="logo-div">
-      <a href=""><img src="images/alms-logo.png" alt=""></a>
+      <a href="dashboard.php"><img src="images/alms-logo.png" alt=""></a>
       <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
