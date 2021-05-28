@@ -189,12 +189,12 @@
           <div>' . $row['Book_Publisher'] . '</div>
           <div>' . $row['Date_Published'] . '</div>
           <div>' . $row['Copy_Total'] . '</div>
-          <div>' . $row['Copy_Available'] . '</div>
+          <div>' . $row['Quantity_Borrowed'] . '</div>
           <div>' . $row['Copy_Available'] . '</div>
           <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
           <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
+          <a href="manage-book-edit.php?edit=' . $row["ISBN"] . '" class="edit" name="edit"></a>
+          <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ISBN"] . '></button>
           </div>
           </div>
         
@@ -204,6 +204,7 @@
 
 
       ?>
+
     </div>
 
   </main>
@@ -212,10 +213,10 @@
   <div class="delete-prompt">
     <div class="confirm-delete">
       <h2>Confirm Delete Entry</h2>
-      <form action="">
+      <form action="includes/manage-booklist(backend).php" method="GET">
         <p>Are you sure to delete this entry from the database?</p>
-
-        <input type="submit" value="DELETE">
+        <input type="hidden" name="confirmDelete">
+        <input type="submit" name="delete">
         <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
       </form>
     </div>

@@ -23,12 +23,13 @@ $sql1 = 'SELECT COUNT(*) as count, ISBN FROM `borrow_slip` WHERE Return_Date IS 
 $borrowed = mysqli_query($conn, $sql1);
 
 while ($row = mysqli_fetch_assoc($borrowed)) {
-    $sql2 = "UPDATE `book` SET `Quantity_Borrowed`=" . $row['count'] . " WHERE ISBN =" . $row['ISBN'];
+    $sql2 = "UPDATE `book` SET `Quantity_Borrowed`= $row[count] WHERE ISBN ='$row[ISBN]'";
+    // echo $sql2;
     mysqli_query($conn, $sql2);
 }
 
 if ($result == false) {
-    //show the error, query has failed
+    // show the error, query has failed
     echo "Error: " . (mysqli_error($conn));
 } else {
     // successful query

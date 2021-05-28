@@ -60,10 +60,6 @@ body,
   box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
 }
 
-.forgotpassword-container {
-  height: 350px;
-}
-
 .login-container h1,
 .login-container h2 {
   font-size: 2.25rem;
