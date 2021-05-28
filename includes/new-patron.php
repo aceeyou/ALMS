@@ -12,8 +12,8 @@ $mailingAddress = $_POST["mailingAddress"];
 $emailAddress = $_POST["emailAddress"];
 $contactNumber = $_POST["contactNumber"];
 
-$sql = "INSERT INTO patron(Patron_Firstname, Patron_Middlename, Patron_Lastname, Patron_CityAddress, Patron_ProvinceAddress, Patron_CodeAddress, Patron_MailAddress, Contact_Number) 
-VALUES ('$firstName','$middleName','$lastName','$cityAddress','$provinceAddress','$zipCode','$emailAddress','$contactNumber')";
+$sql = "INSERT INTO patron(Patron_Firstname, Patron_Middlename, Patron_Lastname, Patron_CityAddress, Patron_ProvinceAddress, Patron_CodeAddress, Patron_MailAddress, Patron_EmailAddress, Contact_Number) 
+VALUES ('$firstName','$middleName','$lastName','$cityAddress','$provinceAddress','$zipCode', '$mailingAddress', '$emailAddress','$contactNumber')";
 
 $result = mysqli_query($conn, $sql);
 
@@ -39,4 +39,4 @@ if (isset($_POST['account'])) {
     }
 }
 // succesfull query
-header("Location: ../dashboard.html");
+header("Location: ../dashboard.php");
