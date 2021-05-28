@@ -48,3 +48,15 @@ if (isset($_POST['SAVE'])) {
         echo "Error updating record";
     }
 }
+
+$sql1 = "SELECT COUNT(borrow_slip.Slip_Number) as count, book.ISBN as ISBN FROM `borrow_slip` 
+RIGHT JOIN book ON book.ISBN = borrow_slip.ISBN
+WHERE 1
+GROUP BY book.ISBN";
+$borrowed1 = mysqli_query($conn, $sql1);
+
+
+while ($row1 = mysqli_fetch_assoc($borrowed1)) {
+    $sql2 = "UPDATE `book` SET `Quantity_Borrowed`= $row1[count] WHERE ISBN ='$row1[ISBN]'";
+    mysqli_query($conn, $sql2);
+}
