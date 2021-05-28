@@ -34,12 +34,12 @@ if (isset($_POST['SAVE'])) {
     $authorID = $_POST["authorID"];
 
 
-    $sql = "UPDATE book( ISBN ,  Book_Title ,  Book_Publisher ,  Date_Published , Book_Edition ) 
-VALUES ('$ISBN','$BookTitle','$publisher','$date','$edition', '$copytotal', '$shelfID')";
+    $sql = "UPDATE `book` SET `ISBN`='$ISBN',`Book_Title`='$BookTitle',`Book_Publisher`='$publisher',`Date_Published`='$date',`Book_Edition`='$edition',
+    `Copy_Total`='$copytotal',`Shelf_ID`='$shelfID',`Author_ID`='$authorID' WHERE ISBN='$ISBN'";
 
     $result = mysqli_query($conn, $sql);
 
-    $sql2 = "UPDATE book_author(ISBN, AuthorID) VALUES ('$ISBN, '$authorID')";
+    $sql2 = "UPDATE `book_author` SET `ISBN`='$ISBN',`Author_ID`='$authorID' WHERE ISBN = '$ISBN'";
 
     $result1 = mysqli_query($conn, $sql);
 
