@@ -63,20 +63,21 @@
         </button>
       </div>
       <div id="logo-div">
-        <a href="dashboard.html"><img src="images/logo" alt="" /></a>
-        <a href="dashboard.html">ALMS</a>
+        <a href="dashboard.php"><img src="images/logo" alt="" /></a>
+        <a href="dashboard.php">ALMS</a>
       </div>
       <div id="search-container">
-        <input type="text" placeholder="Search" name="search-input" class="search-input"/>
-      </div>
+        <form action="search.php" method="GET" id="search">
+                        <input type="text" placeholder="Search" name="search-input" class="search-input">
+                    </form>      </div>
       <ul class="main-nav">
-        <li><a href="dashboard.html" class="">Home</a></li>
+        <li><a href="dashboard.php" class="">Home</a></li>
         <li class="user-handle" onmouseover="openUserMenu()" onmouseout="closeUserMenu()">
           <img class="user-img" src="images/user-default.png" alt=""/>
         </li>
         <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
           <ul class="dropdown-menu">
-              <li><img src="images/user-default.png" alt=""> User Profile</li>
+              <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
               <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
           </ul>
       </li>
@@ -93,7 +94,7 @@
         <div class="item user-profile">
           <img src="images/alms-logo.png" alt="">
                 <div>
-                    <p> Library  Management <br>System</p>
+                    <p> Automated Library <br>Management System</p>
                 </div>
         </div>
 
@@ -304,7 +305,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <div class="copies-available">35</div>
             <div>a6</div>
             <div class="action">
-              <a href="manage-book-edit.html" class="edit"></a>
+              <a href="manage-book-edit.php" class="edit"></a>
               <button href="" class="delete"></button>
             </div>
           </div>
@@ -322,7 +323,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <div class="copies-available">22</div>
             <div>d0111</div>
             <div class="action">
-              <a href="manage-book-edit.html" class="edit"></a>
+              <a href="manage-book-edit.php" class="edit"></a>
               <button href="" class="delete"></button>
             </div>
           </div>

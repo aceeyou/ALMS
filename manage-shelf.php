@@ -34,20 +34,22 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
-      <a href="dashboard.html">ALMS</a>
+      <a href="dashboard.php"><img src="images/logo" alt="" /></a>
+      <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input" />
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.html" class="">Home</a></li>
+      <li><a href="dashboard.php" class="">Home</a></li>
       <li class="user-handle">
         <img class="user-img" src="images/user-default.png" alt="" />
       </li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
-          <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
           <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
         </ul>
       </li>
@@ -64,7 +66,7 @@
       <div class="item user-profile">
         <img src="images/alms-logo.png" alt="">
         <div>
-          <p> Library Management <br>System</p>
+          <p> Automated Library <br>Management System</p>
         </div>
       </div>
 
@@ -161,16 +163,16 @@
       include "includes/manage-shelf(backend).php";
       if (mysqli_num_rows($shelf) > 0) {
         while ($row = mysqli_fetch_assoc($shelf)) {
-          echo ('<div class="table-data"> 
+          echo ('<div class="table-data">
       <div>' . $row["Shelf_ID"] . '</div>
       <div>' . $row["Shelf_Row"] . '</div>
       <div>' . $row["Shelf_Name"] . '</div>
       <div class="action">
         <a href="manage-shelf-edit.php?edit=' . $row["Shelf_ID"] . '" class="edit" name="edit"></a>
         <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Shelf_ID"] . '></button>
-      </div>     
       </div>
-      
+      </div>
+
       ');
         };
       }

@@ -36,14 +36,16 @@
       <a href="dashboard.php">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <form action="search.php" method="GET" id="search">
+                <input type="text" placeholder="Search" name="search-input" class="search-input">
+            </form>
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.html" class="">Home</a></li>
+      <li><a href="dashboard.php" class="">Home</a></li>
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
-          <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
           <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
         </ul>
       </li>
@@ -62,7 +64,7 @@
       <div class="item user-profile">
         <img src="images/alms-logo.png" alt="">
         <div>
-          <p> Library Management <br>System</p>
+          <p> Automated Library <br>Management System</p>
         </div>
       </div>
 
@@ -164,7 +166,7 @@
       <h3 class="table-name">Results for the keyword &nbsp;&nbsp; "&nbsp; <?php echo ($_GET['search-input']) ?> &nbsp;"</h3>
 
       <!-- If results = null -->
-      <!-- 
+      <!--
                   <h3 class="table-name">No results for the keyword &nbsp;&nbsp; "&nbsp;< class="keyword-value"></> &nbsp;"</h3>
                  -->
 
@@ -185,9 +187,9 @@
       <?php
       include "includes/db.php";
       $search = $_GET['search-input'];
-      $sql = "SELECT * FROM `book` 
+      $sql = "SELECT * FROM `book`
       JOIN book_author ON book.ISBN = book_author.ISBN
-      JOIN author ON author.Author_ID = book_author.Author_ID 
+      JOIN author ON author.Author_ID = book_author.Author_ID
       JOIN shelf ON shelf.Shelf_ID = book.Shelf_ID
       WHERE Book_Title LIKE '%$search%' or Author_FirstName LIKE '%$search%' or Author_MiddleName LIKE '%$search%' or Author_LastName LIKE '%$search%'";
       $result = mysqli_query($conn, $sql);
