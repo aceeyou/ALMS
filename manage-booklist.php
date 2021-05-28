@@ -181,7 +181,6 @@
       if (mysqli_num_rows($book) > 0) {
         while ($row = mysqli_fetch_assoc($book)) {
           echo ('
-
           <div class="table-data book-listed-data">
           <div>' . $row['ISBN'] . '</div>
           <div>' . $row['Book_Title'] . '</div>
@@ -205,43 +204,6 @@
 
 
       ?>
-      <!-- table row data -->
-      <div class="table-data book-listed-data">
-        <div>111-1-11-11111-1</div>
-        <div>Introduction to Programming | C Lang</div>
-        <div>Dana Jane, Patrick Ray</div>
-        <div>1st Edition</div>
-        <div>EEE Publication department company</div>
-        <div>2015-01-25</div>
-        <div class="total-copies">550</div>
-        <div class="total-borrowed">215</div>
-        <div class="copies-available">35</div>
-        <div>a6</div>
-        <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
-        </div>
-      </div>
-      <!-- end -->
-
-      <!-- table row data -->
-      <div class="table-data book-listed-data">
-        <div>555-5-55-555555-5</div>
-        <div>Data Structure and Algorithm</div>
-        <div>Jose Paolo, Marc Angelo</div>
-        <div>OnlyFans Edition</div>
-        <div>EEE Publication</div>
-        <div>2014-02-14</div>
-        <div class="total-copies">30</div>
-        <div class="total-borrowed">33</div>
-        <div class="copies-available">22</div>
-        <div>mm555</div>
-        <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
-        </div>
-      </div>
-      <!-- end -->
     </div>
 
   </main>
