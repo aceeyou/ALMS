@@ -129,7 +129,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
           <h2>Due Date</h2>
           <h2>Return Date</h2>
           <h2>Patron Account ID</h2>
-          <h2>Copy ID</h2>
+          <h2>ISBN</h2>
           <h2>Action</h2>
         </div>
         <!-- end: column-name div -->
@@ -145,20 +145,19 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <div>' . $row["Due_Date"] . '</div>
             <div>' . $row["Return_Date"] . '</div>
             <div>' . $row["PatronAccount_ID"] . '</div>
-            <div>' . $row["Copy_ID"] . '</div>  
+            <div>' . $row["ISBN"] . '</div>  
             <div class="action">
-            <a href="manage-borrowed-edit.php?edit=' . $row["Slip_Number"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Slip_Number"] . '></button>
+              <a href="manage-borrowed-edit.php?edit=' . $row["Slip_Number"] . '" class="edit" name="edit"></a>
+              <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Slip_Number"] . '></button>
           </div>      
             </div>
             
             
             ');
-          };
-        }
-        ?>
+        };
+      }
 
-      </div>
+      ?>
     </div>
   </main>
 
@@ -176,7 +175,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
   </div>
   <!-- end -->
 
+  <script src="index.js"></script>
 </body>
-<script type="text/javascript" src="index.js"></script>
 
 </html>

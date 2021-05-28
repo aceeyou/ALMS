@@ -12,10 +12,12 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="icon" href="images/alms-logo.png" />
 
-  <title>Manage Book Reserved | ALMS</title>
+  <title>Manage Book Entry | ALMS</title>
 </head>
 
 <body>
+
+  <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
@@ -30,14 +32,14 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.php"><img src="images/logo" alt=""></a>
-      <a href="dashboard.php">ALMS</a>
+      <a href="dashboard.html"><img src="images/logo" alt=""></a>
+      <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
       <input type="text" placeholder="Search" name="search-input" class="search-input">
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.php" class="">Home</a></li>
+      <li><a href="dashboard.html" class="">Home</a></li>
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
@@ -153,53 +155,67 @@
       <!-- end -->
     </div>
   </section>
+
   <main>
 
-    <div class="manage-books-reserved">
-      <div class="book-list-table">
-        <h2 class="table-name">Manage Books Reserved</h2>
-        <div class="column-name">
-          <!-- colomn titles -->
-          <h2>Reservation ID</h2>
-          <h2>Reservation Date</h2>
-          <h2>Patron ID</h2>
-          <h2>ISBN</h2>
-          <h2>Action</h2>
-        </div>
-        <!-- end: column-name div -->
-
-        <?php
-        include "includes/manage-reserved(backend).php";
-        if (mysqli_num_rows($shelf) > 0) {
-          while ($row = mysqli_fetch_assoc($shelf)) {
-            echo ('<div class="table-data"> 
-            <div>' . $row["Reservation_ID"] . '</div>
-            <div>' . $row["Reservation_Date"] . '</div>
-            <div>' . $row["Patron_ID"] . '</div>
-            <div>' . $row["ISBN"] . '</div>
-            <div class="action">
-            <a href="manage-reserved-edit.php?edit=' . $row["Reservation_ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Reservation_ID"] . '></button>
-          </div>       
-            </div>
-      
-            ');
-          };
-        }
-
-        ?>
+    <div class="manage-booklist">
+      <h2 class="table-name">Books Listed</h2>
+      <div class="column-name">
+        <!-- colomn titles -->
+        <h2>ISBN</h2>
+        <h2>Book Title</h2>
+        <h2>Authors</h2>
+        <h2>Book Edition</h2>
+        <h2>Publication</h2>
+        <h2>Date Published</h2>
+        <h2>Total Copies</h2>
+        <h2>Quantity Borrowed</h2>
+        <h2>Copies Available</h2>
+        <h2>Shelf</h2>
+        <h2>Action</h2>
       </div>
+      <!-- end: column-name div -->
+
+      <?php
+      include "includes/manage-booklist(backend).php";
+      if (mysqli_num_rows($book) > 0) {
+        while ($row = mysqli_fetch_assoc($book)) {
+          echo ('
+          <div class="table-data book-listed-data">
+          <div>' . $row['ISBN'] . '</div>
+          <div>' . $row['Book_Title'] . '</div>
+          <div>' . $row['Author_FirstName'] . ' ' . $row['Author_MiddleName'] . ' ' . $row['Author_LastName'] . '</div>
+          <div>' . $row['Book_Edition'] . '</div>
+          <div>' . $row['Book_Publisher'] . '</div>
+          <div>' . $row['Date_Published'] . '</div>
+          <div>' . $row['Copy_Total'] . '</div>
+          <div>' . $row['Copy_Available'] . '</div>
+          <div>' . $row['Copy_Available'] . '</div>
+          <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
+          <div class="action">
+          <a href="manage-book-edit.html" class="edit"></a>
+          <button href="" class="delete" onclick="openDeletePrompt()"></button>
+          </div>
+          </div>
+        
+          ');
+        };
+      }
+
+
+      ?>
     </div>
+
   </main>
 
   <!-- Delete Prompt Div -->
   <div class="delete-prompt">
     <div class="confirm-delete">
       <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-reserved(backend).php" method="GET">
+      <form action="">
         <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
+
+        <input type="submit" value="DELETE">
         <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
       </form>
     </div>
@@ -207,6 +223,17 @@
   <!-- end -->
 
   <script src="index.js"></script>
+  <script>
+    let isOpen = localStorage["isOpen"];
+
+    window.addEventListener("load", () => {
+      if (isOpen) {
+        openSideMenu();
+      } else {
+        break;
+      }
+    });
+  </script>
 </body>
 
 </html>

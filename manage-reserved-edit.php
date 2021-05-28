@@ -1,3 +1,16 @@
+<?php
+include "includes/db.php";
+
+if (isset($_GET["edit"])) {
+  $editID = $_GET['edit'];
+  $sql = "SELECT * FROM `reservation` WHERE Reservation_ID = $editID;";
+  $resultEdit = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($resultEdit);
+};
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,16 +23,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="images/alms-logo.png" />
+  <link rel="icon" href="images/edit-black.png" />
 
-  <title>Manage Book Reserved | ALMS</title>
+  <title>Edit Book Reserved | ALMS</title>
 </head>
 
 <body>
+  <!-- NAV BAR -->
   <nav>
     <div class="menu-btn">
       <button id="open-btn" onclick="openSideMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#000000">
@@ -30,15 +44,17 @@
       </button>
     </div>
     <div id="logo-div">
-      <a href="dashboard.php"><img src="images/logo" alt=""></a>
-      <a href="dashboard.php">ALMS</a>
+      <a href="dashboard.html"><img src="images/logo" alt="" /></a>
+      <a href="dashboard.html">ALMS</a>
     </div>
     <div id="search-container">
-      <input type="text" placeholder="Search" name="search-input" class="search-input">
+      <input type="text" placeholder="Search" name="search-input" class="search-input" />
     </div>
     <ul class="main-nav">
-      <li><a href="dashboard.php" class="">Home</a></li>
-      <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
+      <li><a href="dashboard.html" class="">Home</a></li>
+      <li class="user-handle">
+        <img class="user-img" src="images/user-default.png" alt="">
+      </li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
           <li><img src="images/user-default.png" alt=""> User Profile</li>
@@ -126,7 +142,7 @@
 
       <!-- Action: Add new author -->
       <div class="item">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172" style="fill: #000000">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
             <g fill="#ffffff">
@@ -153,58 +169,29 @@
       <!-- end -->
     </div>
   </section>
+
   <main>
+    <div id="book-form-container">
+      <div class="book-form">
+        <h2><img class="edit-icon" src="images/edit-black.png" alt="">Edit Book Reserved</h2>
+        <form action="includes/manage-reserved(backend).php " method="POST">
+          <label for="">Reservation ID</label>
+          <input type="text" name="reservation-id" id="" placeholder="R100" value="<?php echo $row['Reservation_ID'] ?>" />
 
-    <div class="manage-books-reserved">
-      <div class="book-list-table">
-        <h2 class="table-name">Manage Books Reserved</h2>
-        <div class="column-name">
-          <!-- colomn titles -->
-          <h2>Reservation ID</h2>
-          <h2>Reservation Date</h2>
-          <h2>Patron ID</h2>
-          <h2>ISBN</h2>
-          <h2>Action</h2>
-        </div>
-        <!-- end: column-name div -->
+          <label for="">Reservation Date</label>
+          <input type="text" name="reservation-date" id="" placeholder="2020-05-03" value="<?php echo $row['Reservation_Date'] ?>" />
 
-        <?php
-        include "includes/manage-reserved(backend).php";
-        if (mysqli_num_rows($shelf) > 0) {
-          while ($row = mysqli_fetch_assoc($shelf)) {
-            echo ('<div class="table-data"> 
-            <div>' . $row["Reservation_ID"] . '</div>
-            <div>' . $row["Reservation_Date"] . '</div>
-            <div>' . $row["Patron_ID"] . '</div>
-            <div>' . $row["ISBN"] . '</div>
-            <div class="action">
-            <a href="manage-reserved-edit.php?edit=' . $row["Reservation_ID"] . '" class="edit" name="edit"></a>
-            <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["Reservation_ID"] . '></button>
-          </div>       
-            </div>
-      
-            ');
-          };
-        }
+          <label for="">Patron ID</label>
+          <input type="text" name="patron-id" id="" placeholder="100" value="<?php echo $row['Patron_ID'] ?>" />
 
-        ?>
+          <label for="">ISBN</label>
+          <input type="text" name="isbn" id="" placeholder="C3" value="<?php echo $row['ISBN'] ?>" />
+
+          <input type="submit" name="SAVE" value="SAVE CHANGES" class="save-edit" />
+        </form>
       </div>
     </div>
   </main>
-
-  <!-- Delete Prompt Div -->
-  <div class="delete-prompt">
-    <div class="confirm-delete">
-      <h2>Confirm Delete Entry</h2>
-      <form action="includes/manage-reserved(backend).php" method="GET">
-        <p>Are you sure to delete this entry from the database?</p>
-        <input type="hidden" name="confirmDelete">
-        <input type="submit" name="delete">
-        <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
-      </form>
-    </div>
-  </div>
-  <!-- end -->
 
   <script src="index.js"></script>
 </body>

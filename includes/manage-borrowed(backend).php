@@ -2,7 +2,7 @@
 include "db.php";
 
 // display 
-$sql = "SELECT * FROM borrow_slip WHERE return_date IS NULL;";
+$sql = "SELECT * FROM borrow_slip;";
 $borrowed = mysqli_query($conn, $sql);
 
 //delete author
@@ -27,14 +27,16 @@ if (isset($_POST['SAVE'])) {
     $Due_Date = $_POST["due-date"];
     $Return_Date = $_POST["return-date"];
     $PatronAccount_ID  = $_POST["pacct-id"];
-    $Copy_ID = $_POST["copy-no"];
+    $ISBN = $_POST["copy-no"];
 
-    if ($returnDate == 'null' or $returnDate == "") {
-        $sql = "UPDATE borrow_slip SET Slip_Number='$Slip_Number',`Borrow_Date`='$Borrow_Date',`Due_Date`='$Due_Date',
-        `Return_Date`=NULL,`PatronAccount_ID`='$PatronAccount_ID',`Copy_ID`='$Copy_ID';";
+    //echo $Return_Date;
+
+    if ($Return_Date == 'null' or $Return_Date == "") {
+        $sql = "UPDATE borrow_slip SET Slip_Number=$Slip_Number,`Borrow_Date`='$Borrow_Date',`Due_Date`='$Due_Date',
+        `Return_Date`=NULL,`PatronAccount_ID`='$PatronAccount_ID',`ISBN`='$ISBN';";
     } else {
-        $sql = "UPDATE borrow_slip SET Slip_Number='$Slip_Number',`Borrow_Date`='$Borrow_Date',`Due_Date`='$Due_Date',
-    `Return_Date`='$Return_Date',`PatronAccount_ID`='$PatronAccount_ID',`Copy_ID`='$Copy_ID';";
+        $sql = "UPDATE borrow_slip SET Slip_Number=$Slip_Number,`Borrow_Date`='$Borrow_Date',`Due_Date`='$Due_Date',
+    `Return_Date`='$Return_Date',`PatronAccount_ID`='$PatronAccount_ID',`ISBN`='$ISBN';";
     }
     $update = mysqli_query($conn, $sql);
     if ($update) {
