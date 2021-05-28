@@ -1,8 +1,8 @@
-<?php
+<?php 
 
-session_start()
+session_start();
+
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -166,7 +166,18 @@ session_start()
 
   <?php
   include 'includes/login.php';
-  // echo $pass;
+  include 'includes/db.php';
+
+  $session = $_SESSION['ID'];
+
+  $sql = "SELECT * FROM `librarian` 
+  LEFT JOIN `librarian_account` ON librarian.Librarian_ID = librarian_account.Librarian_ID
+  LEFT JOIN `part_time_librarian` ON librarian.Librarian_ID = part_time_librarian.PLibrarian_ID 
+  LEFT JOIN `regular_librarian` ON librarian.Librarian_ID = regular_librarian.RLibrarian_ID 
+  WHERE librarian.Librarian_ID = $session";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
+
   ?>
 
 
@@ -174,27 +185,34 @@ session_start()
     <div id="book-form-container">
       <div class="book-form">
         <h2><img class="edit-icon" src="images/user-default.png" alt="">User Profile</h2>
-        <form action="includes/new-patron.php" method="POST">
+        <form action="includes/user-profile-edit.php" method="POST">
+          <input type="hidden" name="librarianID" id="" placeholder="heh" value="<?php echo $row["Librarian_ID"]?>" />
           <label for="">First Name</label>
-          <input type="text" name="firstName" id="" placeholder="Jhemerlyn" value="<?php echo $_SESSION['ID'] ?>" />
+          <input type="text" name="firstName" id="" placeholder="Jhemerlyn" value="<?php echo $row["Librarian_FirstName"] ?>" />
           <label for="">Middle Name</label>
-          <input type="text" name="middleName" id="" placeholder="Felipe" />
+          <input type="text" name="middleName" id="" placeholder="Felipe" value="<?php echo $row["Librarian_MiddleName"] ?>"/>
           <label for="">Last Name</label>
-          <input type="text" name="lastName" id="" placeholder="Pedro" />
+          <input type="text" name="lastName" id="" placeholder="Pedro" value="<?php echo $row["Librarian_LastName"] ?>"/>
           <label for="">Email Address</label>
-          <input type="text" name="emailAddress" id="" placeholder="contoso@example.com" />
+          <input type="text" name="emailAddress" id="" placeholder="contoso@example.com" value="<?php echo $row["Librarian_EmailAddress"] ?>"/>
           <label for="">Mailing Address</label>
-          <input type="text" name="mailingAddress" id="" placeholder="Street, Subdivision" />
+          <input type="text" name="mailingAddress" id="" placeholder="Street, Subdivision" value="<?php echo $row["Librarian_MailingAddress"] ?>"/>
+          <label for="">Contact number</label>
+          <input type="text" name="contactNumber" id="" placeholder="09123456789" value="<?php echo $row["Contact_Number"] ?>"/>
+          <label for="">Hourly Rate</label>
+          <input type="text" name="hourlyRate" id="" placeholder="null" value="<?php echo $row["Hourly_Rate"] ?>"/>
+          <label for="">Monthly Rate</label>
+          <input type="text" name="monthlyRate" id="" placeholder="null" value="<?php echo $row["Monthly_Rate"] ?> "/>
           <label for="">Username</label>
-          <input type="text" name="Username" id="" placeholder="@juandela_cruz" />
+          <input type="text" name="Username" id="" placeholder="@juandela_cruz" value="<?php echo $row["Username"] ?>"/>
 
           <label for="">Password</label>
-          <input type="password" name="Password" id="" placeholder="8-20 characters" />
+          <input type="password" name="Password" id="" placeholder="8-20 characters"/>
 
           <label for="">Confirm Password</label>
           <input type="password" name="Confirm_Password" id="" placeholder="Re-enter password" />
 
-          <input type="submit" value="SAVE CHANGES" class="save-edit" />
+          <input type="submit" value="SAVE CHANGES" class="save-edit" name="SAVE"/>
         </form>
       </div>
     </div>
