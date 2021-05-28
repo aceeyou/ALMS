@@ -235,8 +235,9 @@ nav .active {
   grid-template-columns: 19.5rem 19.5rem 19.5rem;
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
-  align-content: center;
-  margin-top: 1.125rem;
+  width: 100%;
+  height: 82vh;
+  /* margin-top: 1.125rem; */
 }
 
 .boxes .content {
