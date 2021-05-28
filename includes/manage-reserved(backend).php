@@ -11,7 +11,7 @@ if (isset($_GET['delete'])) {
     $delete = mysqli_query($conn, $sql);
     if ($delete) {
         mysqli_close($conn);
-        header("location:../manage-reservation.php");
+        header("location:../manage-reserved.php");
         exit;
     } else {
         echo "Error deleting record";

@@ -181,7 +181,6 @@
       if (mysqli_num_rows($book) > 0) {
         while ($row = mysqli_fetch_assoc($book)) {
           echo ('
-
           <div class="table-data book-listed-data">
           <div>' . $row['ISBN'] . '</div>
           <div>' . $row['Book_Title'] . '</div>

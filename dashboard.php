@@ -171,7 +171,7 @@ include "includes/display.php"
                         <div class="data"><?php echo $totalBooks ?></div>
                     </div>
                     <div class="bottom">
-                        <a href="manage-booklist.html"><button>Book Listed</button></a>
+                        <a href="manage-booklist.php"><button>Book Listed</button></a>
                     </div>
                 </div>
             </div>
