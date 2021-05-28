@@ -1213,3 +1213,129 @@ main .manage-booklist {
 .delete-prompt .confirm-delete form button:hover {
   background: rgb(233, 229, 229);
 }
+
+/* Forgot Password */
+
+.main-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.image {
+  margin-bottom: 10px;
+}
+
+.image img {
+  width: 150px;
+  height: 150px;
+}
+
+.forgotpass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 33rem;
+  height: 420px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba(128, 125, 125, 0.274);
+}
+
+.forgotpass-container h2 {
+  font-size: 2rem;
+}
+
+.forgotpass-container .message {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.forgot-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 32rem;
+  height: 500px;
+}
+
+.forgot-form form {
+  margin-top: 1.5rem;
+}
+
+.forgot-form img {
+  width: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.forgot-form .username-container,
+.forgot-form .new-pass {
+  display: flex;
+  padding: 6px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.forgot-form .username-container input,
+.forgot-form .new-pass input {
+  padding: 5px 10px;
+  width: 230px;
+  margin-left: 30px;
+  text-align: start;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+
+.forgot-form input::-webkit-input-placeholder {
+  font-style: normal;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button input,
+.button button {
+  width: 340px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: #217dff;
+  color: #fff;
+}
+
+.button p {
+  font-size: 0.85rem;
+}
+
+.button p a {
+  color: #0069ff;
+}
+
+.button input:hover,
+.button button:hover {
+  background: #3d8eff;
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
