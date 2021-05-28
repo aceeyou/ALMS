@@ -7,9 +7,9 @@ if (isset($_GET["edit"])) {
   JOIN book_author ON book.ISBN = book_author.ISBN
   JOIN author ON author.Author_ID = book_author.Author_ID
   JOIN shelf ON shelf.Shelf_ID = book.Shelf_ID
-  WHERE ISBN = $editID";
+  WHERE book.ISBN = '$editID'";
   $resultEdit = mysqli_query($conn, $sql2);
-  //$row = mysqli_fetch_assoc($resultEdit);
+  $row = mysqli_fetch_assoc($resultEdit);
 };
 
 ?>

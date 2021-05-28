@@ -171,7 +171,6 @@
         <h2>Date Published</h2>
         <h2>Total Copies</h2>
         <h2>Quantity Borrowed</h2>
-        <h2>Copies Available</h2>
         <h2>Shelf</h2>
         <h2>Action</h2>
       </div>
@@ -191,7 +190,6 @@
           <div>' . $row['Date_Published'] . '</div>
           <div>' . $row['Copy_Total'] . '</div>
           <div>' . $row['Quantity_Borrowed'] . '</div>
-          <div>' . $row['Copy_Available'] . '</div>
           <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
           <div class="action">
           <a href="manage-book-edit.php?edit=' . $row["ISBN"] . '" class="edit" name="edit"></a>
