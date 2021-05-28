@@ -190,12 +190,12 @@
           <div>' . $row['Book_Publisher'] . '</div>
           <div>' . $row['Date_Published'] . '</div>
           <div>' . $row['Copy_Total'] . '</div>
-          <div>' . $row['Copy_Available'] . '</div>
+          <div>' . $row['Quantity_Borrowed'] . '</div>
           <div>' . $row['Copy_Available'] . '</div>
           <div>' . $row['Shelf_Row'] . ' ' . $row['Shelf_Name'] . '</div>
           <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
+          <a href="manage-book-edit.php?edit=' . $row["ISBN"] . '" class="edit" name="edit"></a>
+          <button href="" class="delete" onclick="openDeletePrompt(this)" value=' . $row["ISBN"] . '></button>
           </div>
           </div>
         
@@ -205,43 +205,7 @@
 
 
       ?>
-      <!-- table row data -->
-      <div class="table-data book-listed-data">
-        <div>111-1-11-11111-1</div>
-        <div>Introduction to Programming | C Lang</div>
-        <div>Dana Jane, Patrick Ray</div>
-        <div>1st Edition</div>
-        <div>EEE Publication department company</div>
-        <div>2015-01-25</div>
-        <div class="total-copies">550</div>
-        <div class="total-borrowed">215</div>
-        <div class="copies-available">35</div>
-        <div>a6</div>
-        <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
-        </div>
-      </div>
-      <!-- end -->
 
-      <!-- table row data -->
-      <div class="table-data book-listed-data">
-        <div>555-5-55-555555-5</div>
-        <div>Data Structure and Algorithm</div>
-        <div>Jose Paolo, Marc Angelo</div>
-        <div>OnlyFans Edition</div>
-        <div>EEE Publication</div>
-        <div>2014-02-14</div>
-        <div class="total-copies">30</div>
-        <div class="total-borrowed">33</div>
-        <div class="copies-available">22</div>
-        <div>mm555</div>
-        <div class="action">
-          <a href="manage-book-edit.html" class="edit"></a>
-          <button href="" class="delete" onclick="openDeletePrompt()"></button>
-        </div>
-      </div>
-      <!-- end -->
     </div>
 
   </main>
@@ -250,10 +214,10 @@
   <div class="delete-prompt">
     <div class="confirm-delete">
       <h2>Confirm Delete Entry</h2>
-      <form action="">
+      <form action="includes/manage-booklist(backend).php" method="GET">
         <p>Are you sure to delete this entry from the database?</p>
-
-        <input type="submit" value="DELETE">
+        <input type="hidden" name="confirmDelete">
+        <input type="submit" name="delete">
         <button type="button" onclick="closeDeletePrompt()">CANCEL</button>
       </form>
     </div>

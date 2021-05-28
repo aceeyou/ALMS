@@ -12,14 +12,20 @@ $authorID = $_POST["authorID"];
 
 
 $sql = "INSERT INTO book( ISBN ,  Book_Title ,  Book_Publisher ,  Date_Published , Book_Edition ) 
-VALUES ('$ISBN','$BookTitle','$publisher','$date','$edition', '$copytotal', '$shelfID', '$authorID')";
+VALUES ('$ISBN','$BookTitle','$publisher','$date','$edition', '$copytotal', '$shelfID')";
 
 $result = mysqli_query($conn, $sql);
 
+$sql2 = "INSERT INTO book_author(ISBN, AuthorID) VALUES ('$ISBN, '$authorID')";
+
+$result1 = mysqli_query($conn, $sql);
+
 if ($result == false) {
-    // show the error, query has failed
+    // show the error, query has failed  
     echo "Error: " . (mysqli_error($conn));
 } else {
     // succesfull query
-    header("Location: ../dashboard.html");
+    header("Location: ../dashboard.php");
 }
+
+
