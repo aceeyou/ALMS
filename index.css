@@ -679,8 +679,8 @@ main {
 
 .side-info {
   width: 250px;
-  height: 840px;
-  background: linear-gradient(to bottom right, #267fff, #0d64dd);
+  height: 873px;
+  background-color: #294978;
   transform: translateX(5rem);
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
@@ -700,9 +700,11 @@ main {
 
 .side-info h2 {
   padding: 0.8rem;
-  padding-left: 50px;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: white;
 }
 
 #book-form-container {
@@ -715,7 +717,7 @@ main {
 }
 
 .login-btn {
-  transform: translate(1rem, 2rem);
+  transform: translate(1rem, 0.5rem);
   font-size: 0.9rem;
 }
 
