@@ -51,7 +51,7 @@ if (isset($_POST['SAVE'])) {
 
 $sql1 = "SELECT COUNT(borrow_slip.Slip_Number) as count, book.ISBN as ISBN FROM `borrow_slip` 
 RIGHT JOIN book ON book.ISBN = borrow_slip.ISBN
-WHERE 1
+WHERE  borrow_slip.Return_Date IS NULL
 GROUP BY book.ISBN";
 $borrowed1 = mysqli_query($conn, $sql1);
 
