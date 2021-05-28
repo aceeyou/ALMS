@@ -197,7 +197,7 @@ if (isset($_GET["edit"])) {
           <label for="">Contact Number</label>
           <input type="text" name="contactNumber" id="" value="<?php echo $row["Contact_Number"] ?>" />
           <label for="">Account Fine</label>
-          <input type="text" name="" id="accountFine" value="<?php echo $row["Account_Fine"] ?>" />
+          <input type="text" name="accountFine" id="" value="<?php echo $row["Account_Fine"] ?>" />
 
           <input type="submit" name="SAVE" value="SAVE CHANGES" class="save-edit" />
         </form>
