@@ -1,3 +1,19 @@
+<?php
+include "includes/db.php";
+
+if (isset($_GET["edit"])) {
+  $editID = $_GET['edit'];
+  $sql2 = "SELECT * FROM `book` 
+  JOIN book_author ON book.ISBN = book_author.ISBN
+  JOIN author ON author.Author_ID = book_author.Author_ID 
+  JOIN shelf ON shelf.Shelf_ID = book.Shelf_ID
+  WHERE ISBN = $editID";
+  $resultEdit = mysqli_query($conn, $sql2);
+  //$row = mysqli_fetch_assoc($resultEdit);
+};
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -315,6 +331,7 @@
                   type="text"
                   name="ISBN"
                   id=""
+                  value="<?php echo $row['ISBN']?>"
                   placeholder="XXX-X-XX-XXXXXX-X"
                 />
 
@@ -323,6 +340,7 @@
                   type="text"
                   name="Book-Title"
                   id=""
+                  value="<?php echo $row['Book_Title']?>"
                   placeholder="Harry Potter"
                 />
 
@@ -331,18 +349,30 @@
                   type="text"
                   name="publisher"
                   id=""
+                  value="<?php echo $row['Book_Publisher']?>"
                   placeholder="IDW Publishing"
                 />
 
                 <label for="">Date Published</label>
-                <input type="text" name="date" id="" placeholder="2012-28-11" />
+                <input type="text" name="date" id="" value="<?php echo $row['Date_Published']?>"placeholder="2012-28-11" />
+
                 <label for="">Book Edition</label>
                 <input
                   type="text"
                   name="edition"
                   id=""
+                  value="<?php echo $row['Book_Edition']?>"
                   placeholder="First Edition"
                 />
+
+                <label for="">Copy Total</label>
+            <input type="text" name="copytotal" value="<?php echo $row['Copy_Total']?>" placeholder="10">
+
+            <label for="">Shelf ID</label>
+            <input type="text" name="shelfID" value="<?php echo $row['Shelf_ID']?>" placeholder="1">
+
+            <label for="">Author ID</label>
+            <input type="text" name="authorID" value="<?php echo $row['Author_ID']?>" placeholder="101" id="">
 
                 <input type="submit" value="SAVE CHANGES" class="save-edit"/>
               </form>
