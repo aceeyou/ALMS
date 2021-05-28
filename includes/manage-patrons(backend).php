@@ -1,7 +1,7 @@
 <?php
 include "db.php";
 
-$sql = "SELECT p.Patron_ID AS ID, p.Patron_Firstname, p.Patron_Middlename, p.Patron_Lastname, p.Patron_CityAddress, p.Patron_ProvinceAddress, p.Patron_CodeAddress, p.Patron_MailAddress,p.Contact_Number,pa.Patron_ID,pa.PatronAccount_ID,pa.Date_Registered,pa.Account_Fine 
+$sql = "SELECT p.Patron_ID AS ID, p.Patron_Firstname, p.Patron_Middlename, p.Patron_Lastname, p.Patron_CityAddress, p.Patron_ProvinceAddress, p.Patron_CodeAddress, p.Patron_MailAddress, p.Patron_EmailAddress, p.Contact_Number,pa.Patron_ID,pa.PatronAccount_ID,pa.Date_Registered,pa.Account_Fine 
 FROM patron p LEFT JOIN patron_account pa ON p.Patron_ID = pa.Patron_ID WHERE 1";
 $patron = mysqli_query($conn, $sql);
 
@@ -46,9 +46,10 @@ if (isset($_POST['SAVE'])) {
     $emailAddress = $_POST['emailAddress'];
     $contactNumber = $_POST['contactNumber'];
     $accountFine = $_POST['accountFine'];
+
     $sql2 = "UPDATE patron p
     LEFT JOIN patron_account pa ON p.Patron_ID = pa.Patron_ID 
-    SET Account_Fine = 120,`Patron_Firstname`='$firstName',`Patron_Middlename`='$middleName',`Patron_Lastname`='$lastName',
+    SET `Patron_Firstname`='$firstName',`Patron_Middlename`='$middleName',`Patron_Lastname`='$lastName',
     `Patron_CityAddress`='$cityAddress',`Patron_ProvinceAddress`='$provinceAddress',`Patron_CodeAddress`='$zipCode',`Patron_MailAddress`='$mailingAddress',
     `Patron_EmailAddress`='$emailAddress',`Contact_Number`='$contactNumber', Account_Fine = '$accountFine' WHERE p.Patron_ID = $patronID";
     $update = mysqli_query($conn, $sql2);
