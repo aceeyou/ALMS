@@ -1,11 +1,11 @@
 <?php
-include_once "db.php";
+include_once "includes/db.php";
 
 $Username = $_POST["username"];
 $NewPass = $_POST["newpassword"];
 $ConfirmPass = $_POST["confirmpass"];
 
-$sql1 = "SELECT `Username` FROM `librarian_account` WHERE Username = $Username";
+$sql1 = "SELECT `Username` FROM `librarian_account` WHERE Username = '$Username'";
 $result1 = mysqli_query($conn, $sql1);
 
 if ($result1 != NULL) {
@@ -15,9 +15,8 @@ if ($result1 != NULL) {
         echo "Passwords do not match, try again.";
     }
 } else {
-    echo '<script>alert("Account does not exist.");window.location = "../index.html";</script>';
-    
-}  
+    echo '<script>alert("Account does not exist.");window.location = "index.html";</script>';
+}
 
 $result = mysqli_query($conn, $sql);
 
@@ -26,5 +25,5 @@ if ($result == false) {
     echo "Error: " . (mysqli_error($conn));
 } else {
     // succesfull query
-    header("Location: ../index.html");
+    header("Location: index.html");
 }
