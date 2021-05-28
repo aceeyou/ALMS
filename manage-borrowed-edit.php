@@ -56,7 +56,7 @@ if (isset($_GET["edit"])) {
       <li class="user-handle"><img class="user-img" src="images/user-default.png" alt=""></li>
       <li class="dropdown-btn" onclick="dropDropDown()"><img class="dropdown-img" src="images/down-arrow.png" alt="">
         <ul class="dropdown-menu">
-          <li><img src="images/user-default.png" alt=""> User Profile</li>
+          <li><a href="user-profile.php"><img src="images/user-default.png" alt=""> User Profile</a></li>
           <li onclick="logoutUser()"><img src="images/logout.png" alt=""> Log out</li>
         </ul>
       </li>
