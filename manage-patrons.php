@@ -185,7 +185,7 @@
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
           <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . $row["Patron_CodeAddress"] . '</div>
           <div>' . $row["Patron_MailAddress"] . '</div>
-          <div>' . $row["Patron_MailAddress"] . '</div>
+          <div>' . $row["Patron_EmailAddress"] . '</div>
           <div>' . $row["Contact_Number"] . '</div>
           <div>' . $row["PatronAccount_ID"] . '</div>
           <div>' . $row["Date_Registered"] . '</div>
@@ -202,6 +202,7 @@
           <div>' . $row["Patron_Firstname"] . " " . $row["Patron_Middlename"] . " " . $row["Patron_Lastname"] .  '</div>
           <div>' . $row["Patron_CityAddress"] . " " . $row["Patron_ProvinceAddress"] . " " . $row["Patron_CodeAddress"] . '</div>
           <div>' . $row["Patron_MailAddress"] . '</div>
+          <div>' . $row["Patron_EmailAddress"] . '</div>
           <div>' . $row["Contact_Number"] . '</div>
           <div>' . $row["PatronAccount_ID"] . '</div>
           <div>' . $row["Date_Registered"] . '</div>
