@@ -34,17 +34,18 @@ if (isset($_POST['SAVE'])) {
     $authorID = $_POST["authorID"];
 
 
-    $sql = "UPDATE `book` SET `ISBN`='$ISBN',`Book_Title`='$BookTitle',`Book_Publisher`='$publisher',`Date_Published`='$date',`Book_Edition`='$edition',
-    `Copy_Total`='$copytotal',`Shelf_ID`='$shelfID',`Author_ID`='$authorID' WHERE ISBN='$ISBN'";
+    $sql = "UPDATE `book` SET `Book_Title`='$BookTitle', `Book_Publisher` = '$publisher', `Date_Published` = '$date', `Book_Edition` = '$edition', `Copy_Total` = '$copytotal', `Shelf_ID` = '$shelfID' WHERE `ISBN`='$ISBN'";
 
     $result = mysqli_query($conn, $sql);
 
     $sql2 = "UPDATE `book_author` SET `ISBN`='$ISBN',`Author_ID`='$authorID' WHERE ISBN = '$ISBN'";
 
-    $result1 = mysqli_query($conn, $sql);
+    $result1 = mysqli_query($conn, $sql2);
 
-    $update = mysqli_query($conn, $sql);
-    if ($update) {
+    // $update = mysqli_query($conn, $sql);
+
+    echo $ISBN;
+    if ($result) {
         mysqli_close($conn);
         header("location:../manage-booklist.php");
         exit;
