@@ -34,8 +34,7 @@ if (isset($_POST['SAVE'])) {
     $authorID = $_POST["authorID"];
 
 
-    $sql = "UPDATE `book` SET `ISBN`='$ISBN',`Book_Title`='$BookTitle',`Book_Publisher`='$publisher',`Date_Published`='$date',`Book_Edition`='$edition',
-    `Copy_Total`='$copytotal',`Shelf_ID`='$shelfID' WHERE ISBN='$ISBN'";
+    $sql = "UPDATE `book` SET `Book_Title`='$BookTitle', `Book_Publisher` = '$publisher', `Date_Published` = '$date', `Book_Edition` = '$edition', `Copy_Total` = '$copytotal', `Shelf_ID` = '$shelfID' WHERE `ISBN`='$ISBN'";
 
     $result = mysqli_query($conn, $sql);
 
